@@ -10,14 +10,6 @@
 Метод – функція класу.
 Об'єкт (екземпляр класу) - конкретна реалізація; щось створене з урахуванням шаблона
 Об'єкти створюються за допомогою конструкції мови new, наприклад: new User.
-
-Усі значення в PHP можна передавати або за значенням або за посиланням:
-- Передача значення – передається копія значення.
-- Надсилання за посиланням – передає посилання на місце в пам'яті, де зберігається значення.
-
-Об'єкти так само, як і інші типи даних, можна порівнювати.
-Об'єкти нестрого рівні, якщо всі їхні властивості рівні.
-Об'єкти строго рівні, лише якщо порівнюється сам із собою той самий об'єкт.
 */
 
 // Порядок дій:
@@ -33,16 +25,13 @@ class Snake
 {
 }
 
-// екземпляри класу Cat
+// екземпляр класу Cat
 $murzik = new Cat();
-$barsik = new Cat();
-$barsik2 = new Cat();
 
-
-// екземпляри класу Snake
-$kaa = new Snake();
+// екземпляр класу Snake
 $anaconda = new Snake();
 
+// шаблон Human
 class Human
 {
   public $name;    //null
@@ -61,4 +50,42 @@ $user->surname = "Kuzmich";
 $user->age = 27;
 
 echo "Username -> $user->name <br>";
-echo $user->sayHello();
+echo $user->sayHello() . '<br>';
+
+// шаблон Pet
+class Pet
+{
+  public $name;
+  public $age = 0;
+}
+
+$cat = new Pet();
+print_r($cat->age);
+echo '<br>';
+
+$cat->name = 'Businka';
+$cat->age = 4;
+
+print_r([$cat->name, $cat->age]);
+echo '<br>';
+
+// шаблон Player
+class Player
+{
+  public $name;
+  public $lastName;
+  public $nickName;
+
+  public function getFullName()
+  {
+    return $this->name . ' (' . $this->nickName . ') ' . $this->lastName;
+  }
+}
+
+$player = new Player();
+$player->name = 'Nadiia';
+$player->lastName = 'Kuzmich';
+$player->nickName = 'Speranza';
+$playerFullName = $player->getFullName();
+
+echo 'Now I am taking interview with ' . $playerFullName;
