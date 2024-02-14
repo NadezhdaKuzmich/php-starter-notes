@@ -87,3 +87,32 @@ class Auto
 $auto = new Auto();
 $auto->name = Auto::AUDI;
 var_dump($auto->imagine());
+
+// self::ConstName
+class Product
+{
+  const TYPE_PHONE = 'phone';
+  const TYPE_BOOK = 'book';
+
+  public $name;
+  public $price;
+  public $type;
+
+  public function create($name, $price)
+  {
+    if (strpos($name, 'Samsung') !== false) {
+      $this->type = self::TYPE_PHONE;
+    } else {
+      $this->type = self::TYPE_BOOK;
+    }
+
+    $this->price = $price;
+    $this->name = $name;
+  }
+}
+
+$product1 = new Product();
+$product1->create('Samsung s24', 57999);
+echo '<pre>';
+var_dump($product1);
+echo '</pre>';

@@ -44,6 +44,7 @@ class Dog
 echo "In Ukraine default cat name is " . Cat::$defaultName . '. <br>';
 echo "In Ukraine default dog name is " . Dog::$defaultName . '. <br>';
 
+// Country
 class Country
 {
   // ключові слова
@@ -54,4 +55,28 @@ class Country
   }
 }
 
-echo "Now we are speaking about " . Country::getDefaultName() . '...';
+echo "Now we are speaking about " . Country::getDefaultName() . '...<br>';
+
+// DataCenter
+class Adidas
+{
+  public static $slogan = 'All or nothing';
+}
+class Nike
+{
+  public static $slogan = 'Just do it';
+}
+
+class DataCenter
+{
+  public function getData()
+  {
+    return [
+      'slogan Adidas' => Adidas::$slogan,
+      'slogan Nike' => Nike::$slogan,
+    ];
+  }
+}
+
+$dc = new DataCenter();
+print_r($dc->getData());
