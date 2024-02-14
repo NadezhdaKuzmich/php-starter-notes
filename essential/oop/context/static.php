@@ -54,5 +54,4 @@ class Country
   }
 }
 
-// вызов имяКласса::имяМетода()
 echo "Now we are speaking about " . Country::getDefaultName() . '...';
