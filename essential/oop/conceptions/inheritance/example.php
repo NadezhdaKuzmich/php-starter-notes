@@ -42,7 +42,6 @@ class Mitsubishi extends Car
   {
     parent::__construct('Mitsubishi', $color, $maxSpeed);
   }
-
 }
 
 $audi = new Car('AUDI', 'white', 550);
