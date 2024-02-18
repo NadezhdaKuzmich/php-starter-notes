@@ -120,3 +120,31 @@ class X implements B
   {
   }
 }
+
+// множинне успадкування інтерфейсів
+// єдине "чисте" успадкування в PHP
+interface First
+{
+  public function getFirst();
+}
+
+interface Second
+{
+  public function getSecond();
+}
+
+// з класами такий трюк не прокотить
+interface Third extends First, Second
+{
+}
+
+class SomeClass implements Third
+{
+  public function getFirst()
+  {
+  }
+
+  public function getSecond()
+  {
+  }
+}
