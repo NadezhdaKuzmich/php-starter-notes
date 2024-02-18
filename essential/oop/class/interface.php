@@ -1,21 +1,46 @@
 <?php
 
 /*
-Інтерфейс - сутність, що містить тільки абстрактні методи.
+Інтерфейс
 - Окрема конструкція мови.
-- Може містити тільки сигнатури публічних методів, або константи.
+- Може містити тільки сигнатури публічних методів (public, static), 
+або константи. 
+- Сутність, що містить тільки абстрактні методи.
+- Дає змогу виділити загальну ідею без реалізації.
 */
 
+interface ICalculator
+{
+  public function calculate($x, $y);
+}
+
+// В абстрактному класі не треба реалізовувати методи інтерфейсу
+abstract class Calculator implements ICalculator
+{
+}
+
+class Summary extends Calculator
+{
+  public function calculate($x, $y)
+  {
+    echo "sum: $x + $y = " . $x + $y;
+  }
+}
+
+$sum = new Summary();
+echo $sum->calculate(2, 3) . "<br>";
+
+// В всередині звичайного класу ОБОВ'ЯЗКОВЕ 
+// перевизначення методів інтерфейсу
 interface Storage
 {
   public function save();
   public function delete();
 }
 
+// implements
 class FileStorage implements Storage
 {
-  // ОБОВ'ЯЗКОВЕ перевизначення
-  // методів інтерфейсу всередині
   public function save()
   {
     echo "save";
