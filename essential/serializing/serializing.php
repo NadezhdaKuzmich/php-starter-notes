@@ -12,16 +12,21 @@
 У-пакувати (Серіалізація) ====> Роз-пакувати (Десеріалізація)
 
 Є різні способи серіалізації/десеріалізації об'єкта:
-1. __sleep/__wakeup
-2. Serializable
-3. __serialize/__unserialize
+1. __sleep/__wakeup - Deprecated
+- Classes that implement this interface no longer support __sleep() and __wakeup().
+
+2. Serializable - Deprecated
+- As of PHP 8.1.0, a class which implements Serializable without also implementing 
+__serialize() and __unserialize() will generate a deprecation warning.
+
+3. __serialize/__unserialize 
 */
 
 class User
 {
-  protected $password;
-  protected $age;
-  protected $phone;
+  public $password;
+  public $age;
+  public $phone;
 
   public function __construct($login, $password, $age = null, $phone = null)
   {
@@ -31,30 +36,31 @@ class User
     $this->phone = $phone;
   }
 
-  // має повернути масив з іменами всіх змінних цього об'єкта, які мають бути серіалізовані
-  public function __sleep()
-  {
-    return [
-      'login',
-      'age',
-      'phone'
-    ];
-  }
+  // // має повернути масив з іменами всіх змінних цього об'єкта, які мають бути серіалізовані
+  // public function __sleep() // Deprecated
+  // {
+  //   return [
+  //     'login',
+  //     'age',
+  //     'phone'
+  //   ];
+  // }
 
-  // робить додаткові дії над об'єктом, які можуть знадобиться під час "десеріалізації"
-  // прик: відновити доступ до бази, ...
-  public function __wakeup()
-  {
-    $this->password = 123;
-  }
+  // // робить додаткові дії над об'єктом, які можуть знадобиться під час "десеріалізації"
+  // // прик: відновити доступ до бази, ...
+  // public function __wakeup() // Deprecated
+  // {
+  //   $this->password = 123;
+  // }
 }
 
-$user = new User('hello123', 'qwerty', 123, '123-444-56');
-$s = serialize($user);
+// $user = new User('hello123', 'qwerty', 123, '123-444-56');
+// $s = serialize($user);
+// $s2 = unserialize($s);
 
-echo "<pre>";
-var_dump(
-  $s,
-  unserialize($s)
-);
-echo "</pre>";
+// echo "<pre>";
+// var_dump(
+//   $s,
+//   $s2
+// );
+// echo "</pre>";

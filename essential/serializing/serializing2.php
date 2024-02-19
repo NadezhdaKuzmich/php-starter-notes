@@ -29,10 +29,12 @@ class User
   }
 }
 
-$user = new User('dozer111', 'asdasd1', 123, '123-444-56');
+$user = new User('hello123', 'qwerty', 123, '123-444-56');
 $serializedData = serialize($user);
 
+echo '<pre>';
 var_dump(
   $serializedData,
   unserialize($serializedData)
 );
+echo '</pre>';
