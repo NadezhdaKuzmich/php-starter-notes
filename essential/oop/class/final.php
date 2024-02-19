@@ -24,3 +24,12 @@ class Dog extends Animal
   //   echo "Woof! Woof!";
   // }
 }
+
+final class First
+{
+}
+
+// Fatal error: Class Second cannot extend final class
+// class Second extends First
+// {
+// }
