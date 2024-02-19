@@ -19,13 +19,19 @@ class User
   public function __serialize(): array
   {
     return [
-      'login'
+      'login' => $this->login,
+      'password' => $this->password,
+      'age' => $this->age,
+      'phone' => $this->phone
     ];
   }
 
   public function __unserialize(array $data): void
   {
-    $this->login = $data[0];
+    $this->login = $data['login'];
+    $this->password = $data['password'];
+    $this->age = $data['age'];
+    $this->phone = $data['phone'];
   }
 }
 

@@ -9,10 +9,10 @@
 
 class User implements Serializable
 {
-  protected $login;
-  protected $password;
-  protected $age;
-  protected $phone;
+  public $login;
+  public $password;
+  public $age;
+  public $phone;
 
   public function __construct($login, $password, $age = null, $phone = null)
   {
@@ -26,26 +26,32 @@ class User implements Serializable
   public function __serialize(): array
   {
     return [
-      'key' => 'value'
+      'login' => $this->login,
+      'password' => $this->password,
+      'age' => $this->age,
+      'phone' => $this->phone
     ];
   }
 
   // виконається
   public function __unserialize(array $data): void
   {
-    $this->login = 'key';
+    $this->login = $data['login'];
+    $this->password = $data['password'];
+    $this->age = $data['age'];
+    $this->phone = $data['phone'];
   }
 
   // не виконається
   public function serialize()
   {
-    return ['another key' => 'another value'];
+    die('не виконається');
   }
 
   // не виконається
   public function unserialize($serialized)
   {
-    $this->age = 27;
+    die('не виконається');
   }
 }
 
