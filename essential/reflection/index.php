@@ -27,9 +27,11 @@ class Person
   public function firstMethod()
   {
   }
+
   final protected function secondMethod()
   {
   }
+
   private static function thirdMethod()
   {
   }
@@ -38,39 +40,59 @@ class Person
   {
     return 'Hello ' . $name;
   }
+
+  private function sayHiTo($name)
+  {
+    return 'Hi ' . $name;
+  }
 }
 
 //  ReflectionProperty 
 $person = new Person();
 $ReflectionProperty = new ReflectionProperty(Person::class, "name");
-$ReflectionProperty->setAccessible(true);
 $name = $ReflectionProperty->getValue($person);
 
 // ReflectionClass
 $reflectionClass = new ReflectionClass($person);
+
+$propName = $reflectionClass->getProperty('name');
+$propName->setValue($person, 'Nadia');
+
 $props = $reflectionClass->getProperties();
+
 $protectedProps = $reflectionClass->getProperties(ReflectionProperty::IS_PROTECTED);
+
 $methods = $reflectionClass->getMethods();
+$hiMethod = $reflectionClass->getMethod('sayHiTo');
+$hiMethod->setAccessible(true);
 
 // ReflectionMethod
 $reflectionMethod = new ReflectionMethod('Person', 'sayHelloTo');
 
 echo "<pre>";
+// ReflectionProperty 
 print_r($name);
-echo "<br>";
+echo "<hr>";
 
+// ReflectionClass
+echo $propName->getValue($person);
+echo "<hr>";
 var_dump([
   $props,
   $protectedProps,
   $methods
 ]);
-echo "<br>";
+echo "<hr>";
+echo $hiMethod->invoke($person, 'World');
+echo "<hr>";
 
+// ReflectionMethod
 echo $reflectionMethod->invoke(new Person(), 'World');
-echo "<br>";
+echo "<hr>";
 echo $reflectionMethod->invokeArgs(new Person(), array('PHP'));
-echo "<br>";
+echo "<hr>";
 var_dump($reflectionMethod->getDeclaringClass());
+echo "<hr>";
 echo "</pre>";
 
 class A
@@ -96,8 +118,9 @@ $methods = $reflector->getMethods();
 
 echo "<pre>";
 echo "Class Name: " . $reflector->getName() . "<br>";
-echo "<br>";
+echo "<hr>";
 var_dump($methods);
+echo "<hr>";
 echo "</pre>";
 
 $i = 1;
@@ -106,3 +129,95 @@ foreach ($properties as $property) {
   $a->{"echo" . ucfirst($property->getName())}();
   $i++;
 }
+echo "<hr/>";
+
+// Custom ClassAnalyzer
+class ClassAnalyzer
+{
+  private $className;
+  private $reflector;
+
+  public function __construct(string $className)
+  {
+    try {
+      $this->className = $className;
+      $this->reflector = new ReflectionClass($this->className);
+    } catch (ReflectionException $e) {
+      throw new $e('::class of <fullClassName> does not exists');
+    }
+  }
+
+  public function showPropMeth(): string
+  {
+    $resultString = '';
+    $classType = \Reflection::getModifierNames($this->reflector->getModifiers());
+    $resultString .= "Class: {$this->className}";
+    $resultString .= (!empty($classType[0])) ? " is $classType[0]" : '';
+    $resultString .= \PHP_EOL;
+    $resultString .= $this->createCountList();
+    return $resultString;
+  }
+
+  protected function createCountList(): string
+  {
+    $reflector = $this->reflector;
+    $properties = $reflector->getProperties();
+    $methods = $reflector->getMethods();
+
+    $resultArray = [
+      'properties' =>
+        [
+          'public' => 0,
+          'protected' => 0,
+          'private' => 0,
+        ],
+      'methods' =>
+        [
+          'public' => 0,
+          'protected' => 0,
+          'private' => 0,
+        ],
+    ];
+
+    foreach ($properties as $property) {
+      if ($property->isPublic()) {
+        $resultArray['properties']['public']++;
+      } elseif ($property->isProtected()) {
+        $resultArray['properties']['protected']++;
+      } else {
+        $resultArray['properties']['private']++;
+      }
+    }
+
+    foreach ($methods as $method) {
+      if ($method->isPublic()) {
+        $resultArray['methods']['public']++;
+      } elseif ($method->isProtected()) {
+        $resultArray['methods']['protected']++;
+      } else {
+        $resultArray['methods']['private']++;
+      }
+    }
+    return $this->createProtMethViewString($resultArray);
+  }
+
+  protected function createProtMethViewString(array $propMethArray): string
+  {
+    $resultString = '';
+    foreach ($propMethArray as $dataKey => $dataType) {
+      $resultString .= \sprintf('<comment>%s</comment>', \ucfirst($dataKey) . ':' . \PHP_EOL);
+
+      foreach ($dataType as $securityLevel => $count) {
+        $resultString .= "\t $securityLevel: $count" . \PHP_EOL;
+      }
+    }
+    return $resultString;
+  }
+}
+
+$analyzer1 = new ClassAnalyzer(Person::class);
+$analyzer2 = new ClassAnalyzer(A::class);
+
+echo $analyzer1->showPropMeth();
+echo "<hr/>";
+echo $analyzer2->showPropMeth();
