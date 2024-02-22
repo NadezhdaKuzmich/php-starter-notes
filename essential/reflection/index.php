@@ -33,26 +33,44 @@ class Person
   private static function thirdMethod()
   {
   }
+
+  public function sayHelloTo($name)
+  {
+    return 'Hello ' . $name;
+  }
 }
 
+//  ReflectionProperty 
 $person = new Person();
 $ReflectionProperty = new ReflectionProperty(Person::class, "name");
 $ReflectionProperty->setAccessible(true);
 $name = $ReflectionProperty->getValue($person);
 
-$reflect = new ReflectionClass($person);
-$props = $reflect->getProperties();
-$protectedProps = $reflect->getProperties(ReflectionProperty::IS_PROTECTED);
-$methods = $reflect->getMethods();
+// ReflectionClass
+$reflectionClass = new ReflectionClass($person);
+$props = $reflectionClass->getProperties();
+$protectedProps = $reflectionClass->getProperties(ReflectionProperty::IS_PROTECTED);
+$methods = $reflectionClass->getMethods();
+
+// ReflectionMethod
+$reflectionMethod = new ReflectionMethod('Person', 'sayHelloTo');
 
 echo "<pre>";
 print_r($name);
 echo "<br>";
+
 var_dump($props);
 echo "<br>";
 var_dump($protectedProps);
 echo "<br>";
 var_dump($methods);
+echo "<br>";
+
+echo $reflectionMethod->invoke(new Person(), 'World');
+echo "<br>";
+echo $reflectionMethod->invokeArgs(new Person(), array('PHP'));
+echo "<br>";
+var_dump($reflectionMethod->getDeclaringClass());
 echo "</pre>";
 
 class A
