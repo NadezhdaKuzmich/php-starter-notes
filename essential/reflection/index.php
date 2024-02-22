@@ -59,11 +59,11 @@ echo "<pre>";
 print_r($name);
 echo "<br>";
 
-var_dump($props);
-echo "<br>";
-var_dump($protectedProps);
-echo "<br>";
-var_dump($methods);
+var_dump([
+  $props,
+  $protectedProps,
+  $methods
+]);
 echo "<br>";
 
 echo $reflectionMethod->invoke(new Person(), 'World');
