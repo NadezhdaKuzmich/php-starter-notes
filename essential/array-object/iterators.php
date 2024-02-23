@@ -47,8 +47,10 @@ $data = [1 => 'first', 2 => 'second', 3 => 'third'];
 $it = new MyIterator($data);
 echo $it->current();
 echo "<hr>";
+
 $it->next();
 echo $it->current();
+echo "<hr>";
 
 foreach ($it as $value) {
   var_dump($value);
