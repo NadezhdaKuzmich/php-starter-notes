@@ -38,6 +38,11 @@ BadMethodCallException
 - spl_autoload_register
 - spl_object_id - унікальний ID об'єкта
 - spl_object_hash - унікальний hash об'єкта
+
+Stack - це колекція типу "Останній увійшов, перший вийшов" 
+(Last In, First Out або LIFO), яка дає змогу працювати тільки 
+з найбільш верхнім (останнім) значенням. Ітерація відбувається 
+від кінця до початку з видаленням взятого елемента.
 */
 
 $stack = new SplStack();
