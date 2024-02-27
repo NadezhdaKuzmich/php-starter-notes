@@ -87,11 +87,9 @@ class Pears extends Fruits implements CutInterface
     }
     return $result;
   }
-  public function slice(
-    $num,
-    $quantity
-  ) {
-    echo 'We have sliced ' . $quantity . ' pears to ' . $num . ' parts.';
+  public function slice($num, $quantity)
+  {
+    return 'We have sliced ' . $quantity . ' pears to ' . $num . ' parts.';
   }
 }
 class Apple extends Fruits
@@ -109,8 +107,9 @@ class Apple extends Fruits
 
 $fruitpear = new Pears;
 $result = $fruitpear->findColor();
-echo 'We have found ' . $result . ' apples. <hr>';
+echo 'We have found ' . $result . ' pears. <hr>';
 $result = $fruitpear->slice(10, 2);
+echo $result;
 
 $fruitapple = new Apple;
 $result = $fruitapple->checkWeight();
