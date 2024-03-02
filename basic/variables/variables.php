@@ -25,16 +25,37 @@ $var і $Var - 2 різні змінні
 до змінних можна отримати доступ тільки всередині функції, в 
 якій вони були визначені.
 */
+
 // $aZ_ = 'value';
 $myFirstVar = 'PHP Variable';
 var_dump($myFirstVar);
 
+// Змінній можна присвоїти значення іншої змінної
+$newVar = $myFirstVar;
+// var_dump($newVar);
+
 // Дії зі змінними:
 // Присвоєння значення
 $name = "Nadiia";
+
 // перевірка існування
-$isAgeSet = isset($age);
-$isNameSet = isset($name);
+$isNameSet = isset($name); // 1
+$isAgeSet = isset($age); // 
+// echo "</br>isNameSet: $isNameSet isAgeSet: $isAgeSet";
+
 // знищення
 unset($name);
 // var_dump($name);
+
+/*
+Посилання на змінну
+Посилання в PHP дають змогу створити дві змінні, що вказують на 
+одне й те саме значення. Таким чином, коли виконується наступне, 
+то змінна $var2 вказує на те саме значення, що і $var :
+*/
+$var = 'Text';
+$var2 = &$var;
+echo "</br>var: $var</br> var2: $var2 </br>";
+
+$var = 'My text';
+echo "</br>var: $var</br> var2: $var2";
