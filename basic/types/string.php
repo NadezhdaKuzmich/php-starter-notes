@@ -213,3 +213,39 @@ echo '<br>';
 $clean = trim($binary, "\x00..\x1F");
 var_dump($clean);
 echo '</pre>';
+echo '<hr>';
+
+// Безпека:
+// md5 - повертає MD5-хеш рядка.
+$str = 'яблуко';
+echo md5($str);
+echo '<br>';
+
+if (md5($str) === '04c695a04f4694573a036261ea22e4f8')
+  echo "-> Перевірку пройдено!";
+
+echo '<hr>';
+
+// intval - повертає ціле значення змінної.
+$number = intval('42.2');
+
+if ($number)
+  echo "Результат: $number";
+
+echo '<hr>';
+
+// htmlspecialchars - перетворює спеціальні символи на HTML-сутності.
+$new = htmlspecialchars("<a href='https://www.google.com/'>Test</a>");
+echo "<a href='https://www.google.com/'>Test</a>";
+echo '<br>';
+
+echo $new; // &lt;a href=&#039;test&#039;&gt;Test&lt;/a&gt;
+echo '<hr>';
+
+// strip_tags - видаляє HTML і PHP-теги з рядка.
+$text = '<h3>Заголовок.</h3><!-- Коментар --> <a href="#">Ще текст</a>';
+echo strip_tags($text);
+echo '<br>';
+
+// Дозволяємо <h3> і <a>
+echo strip_tags($text, '<h3><a>');
