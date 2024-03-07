@@ -26,3 +26,8 @@ var_dump($arr);
 echo "<br>";
 var_dump($arr[5]);
 // var_dump($arr[2]); // Warning: Undefined array key 2 
+echo "<br>";
+
+$arr = array("1", "2", "3", "4");
+$arr[] = '5';
+print_r($arr);
