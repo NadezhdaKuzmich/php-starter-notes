@@ -12,8 +12,6 @@
 доступу до значення елемента.
 */
 
-echo "<pre>";
-
 // Значення ключа string | int
 $arr = [
   1 => "a", // 1
@@ -22,6 +20,8 @@ $arr = [
   true => "d", // true -> 1, false -> 0
   null => "e"  // ""
 ];
+
+echo "<pre>";
 print_r($arr);
 
 $boys = [
