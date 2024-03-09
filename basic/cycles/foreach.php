@@ -14,34 +14,52 @@ foreach (масив as значення) {
 foreach (масив as ключ => значення) { 
   тіло_цикла;
 }
-
-breack
-- часто буває зручно при виникненні деяких умов мати можливість 
-достроково завершити цикл. Таку можливість надає оператор break. 
-Він працює з такими конструкціями як: while, do while, for, foreach 
-або switch.
-
-continue 
-- використовується всередині циклічних структур для пропуску частини 
-поточної ітерації циклу, що залишилася, і, за дотримання умов, початку 
-наступної ітерації.
 */
+
+$arr = ["one", "two", "three"];
+
+foreach ($arr as $value) {
+  echo "Значення: $value<br>";
+}
+echo '<hr>';
 
 $nums = [1, 2, 3, 4];
 
 foreach ($nums as $num) {
   if ($num % 2 === 0) {
-    echo $num . "<br>";
+    echo "$num | ";
   }
 }
+echo '<br>';
 
 foreach ($nums as $num) {
   if ($num % 2 !== 0) {
     continue;
   }
-
-  echo $num . "<br>";
+  echo "$num | ";
 }
+echo '<hr>';
+
+$a = [
+  "one" => 1,
+  "two" => 2,
+  "three" => 3,
+  "seventeen" => 17
+];
+
+foreach ($a as $k => $v) {
+  echo "[$k] => $v <br>";
+}
+echo '<hr>';
+
+$arr = [1, 2, 3, 4];
+
+foreach ($arr as &$value) {
+  $value *= 2;
+}
+
+var_dump($arr);
+echo '<hr>';
 
 $persons = [
   "Ігор" => "25",
@@ -50,5 +68,5 @@ $persons = [
 ];
 
 foreach ($persons as $name => $age) {
-  echo "Ім'я: " . $name . ". Вік: " . $age . ". <br>";
+  echo "Ім'я: $name <br> Вік: $age <br><br>";
 }
