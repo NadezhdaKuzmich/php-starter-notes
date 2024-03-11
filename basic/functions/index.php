@@ -16,6 +16,7 @@ myFunction();
 // Оголошення та виклик функцій у PHP
 hi();
 // HI();
+echo '<hr>';
 
 function sayHello()
 {
@@ -27,6 +28,17 @@ function hi()
   sayHello();
 }
 
+function outer()
+{
+  inner();
+}
+
+function inner()
+{
+  echo 'HI!';
+}
+
+outer();
 echo '<hr>';
 
 // $var = 'hello';
