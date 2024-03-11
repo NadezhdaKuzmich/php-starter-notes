@@ -42,7 +42,6 @@ outer();
 echo '<hr>';
 
 // $var = 'hello';
-
 // function giveError()
 // {
 //   echo $var; // Warning: Undefined variable $var
@@ -54,7 +53,6 @@ echo '<hr>';
 Зазвичай використовується для обробки локальних даних або як callback 
 function.
 */
-
 $anonymous = function ($x, $y) {
   return [$x, $y];
 };
