@@ -36,19 +36,42 @@ POST
 користувачем
 - надсилання зазвичай відбувається сабмітом
 форми
+
+- За завантаження файлів на сервер через форму відповідає 
+масив $_FILES.
+- Налаштування на скачування зазвичай налаштовується 
+заголовками.
+- Надіслати файли через форму можна тільки з атрибутом 
+enctype="multipart/formdata".
 */
 ?>
 
-<h2>POST method</h2>
-<form action="welcome_post.php" method="post">
-  Name: <input type="text" name="name"><br>
-  E-mail: <input type="text" name="email"><br>
-  <input type="submit">
-</form>
+<!DOCTYPE html>
+<html>
 
-<h2>GET method</h2>
-<form action="welcome_get.php" method="get">
-  Name: <input type="text" name="name"><br>
-  E-mail: <input type="text" name="email"><br>
-  <input type="submit">
-</form>
+<body>
+
+  <h2>POST method</h2>
+  <form action="welcome_post.php" method="post">
+    Name: <input type="text" name="name"><br>
+    E-mail: <input type="text" name="email"><br>
+    <input type="submit">
+  </form>
+
+  <h2>GET method</h2>
+  <form action="welcome_get.php" method="get">
+    Name: <input type="text" name="name"><br>
+    E-mail: <input type="text" name="email"><br>
+    <input type="submit">
+  </form>
+
+  <h2>File Upload</h2>
+  <form action="upload.php" method="post" enctype="multipart/form-data">
+    Select image to upload:
+    <input type="file" name="fileToUpload" id="fileToUpload"><br>
+    <input type="submit" value="Upload Image" name="submit">
+  </form>
+
+</body>
+
+</html>
