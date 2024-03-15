@@ -13,9 +13,8 @@ session_start();
 if (isset ($_POST['userName']) && !empty ($_POST['userName'])) {
   $_SESSION['userName'] = $_POST['userName'];
   setcookie('userName', $_POST['userName'], time() + 50);
-  // echo $_SESSION['userName'] . '<br />';
-  // echo $_COOKIE['userName'];
 }
+
 ?>
 
 <form action="#" method="post">
