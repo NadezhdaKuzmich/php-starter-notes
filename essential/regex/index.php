@@ -95,8 +95,18 @@ foreach ($parts as $part) {
 }
 echo '<hr>';
 
+$search = preg_quote("://", "/");
+$input = 'https://www.w3schools.com/';
+$pattern = "/$search/";
+if (preg_match($pattern, $input)) {
+  echo "The input is a URL.";
+} else {
+  echo "The input is not a URL.";
+}
+echo '<hr>';
+
 $pattern = "/^J/";
-$names = array("Jhon Carter", "Clark Kent", "John Rambo");
+$names = ["John Doe", "Clark Kent", "John Snow"];
 $matches = preg_grep($pattern, $names);
 
 foreach ($matches as $match) {
