@@ -74,10 +74,31 @@ $str = "PHP Regular Expressions";
 $pattern = "/php/i";
 echo preg_match($pattern, $str) . '<hr>';
 
+$str = "Apples and bananas.";
+$pattern = "/ba(na){2}/i";
+echo preg_match($pattern, $str) . '<hr>';
+
 $str = "The rain in SPAIN falls mainly on the plains.";
 $pattern = "/ain/i";
 echo preg_match_all($pattern, $str) . '<hr>';
 
 $str = "Frontend Developer";
 $pattern = "/frontend/i";
-echo preg_replace($pattern, "Fullstack", $str);
+echo preg_replace($pattern, "Fullstack", $str) . '<hr>';
+
+$pattern = "/[\s,]+/";
+$text = "My favourite colors are purple, green and yellow.";
+$parts = preg_split($pattern, $text);
+
+foreach ($parts as $part) {
+  echo $part . "<br>";
+}
+echo '<hr>';
+
+$pattern = "/^J/";
+$names = array("Jhon Carter", "Clark Kent", "John Rambo");
+$matches = preg_grep($pattern, $names);
+
+foreach ($matches as $match) {
+  echo $match . "<br>";
+}
