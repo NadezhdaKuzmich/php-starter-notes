@@ -95,6 +95,27 @@ foreach ($parts as $part) {
 }
 echo '<hr>';
 
+$date = "1970-01-01 00:00:00";
+$pattern = "/[-\s:]/";
+$components = preg_split($pattern, $date);
+foreach ($components as $component) {
+  echo $component . "/";
+}
+echo '<hr>';
+
+$date = "1970-01-01 00:00:00";
+$pattern = "/([-\s:])/";
+$components = preg_split(
+  $pattern,
+  $date,
+  -1,
+  PREG_SPLIT_DELIM_CAPTURE
+);
+foreach ($components as $component) {
+  echo $component . "/";
+}
+echo '<hr>';
+
 $search = preg_quote("://", "/");
 $input = 'https://www.w3schools.com/';
 $pattern = "/$search/";
