@@ -5,13 +5,13 @@
 - action=mailto: - відкриє програму надсилання повідомлень.
 */
 
-if (mail("test.email.php.od@gmail.com", "My Subject", "Example message")) {
-    echo "messege acepted for delivery";
-} else {
-    echo "some error happen";
-}
+// if (mail("test.email.php.od@gmail.com", "My Subject", "Example message")) {
+//     echo "messege acepted for delivery";
+// } else {
+//     echo "some error happen";
+// }
 
-echo '<hr>';
+// echo '<hr>';
 
 ?>
 
