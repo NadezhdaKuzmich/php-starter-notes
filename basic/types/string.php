@@ -28,6 +28,12 @@ echo "3. Якось Арнольд сказав: \"I'll be back\"\n";
 // экранирование $ (знака доллара)
 echo "4. Ім'я зберігається у змінній \$name";
 echo "</pre>";
+echo '<br>';
+
+$dog_name = "Tadpole";
+$favorite_food = "treat";
+$color = "brown";
+echo "I have a {$color}ish dog named $dog_name and her favorite food is {$favorite_food}s.";
 
 /*
 Heredoc (like string in "")
