@@ -2,6 +2,22 @@
 
 /*
 Арифметичні оператори
+
+Operations will be evaluated in the following order:
+1.Any operation wrapped in parentheses (())
+2. Exponents (**)
+3. Multiplication (*) and division (/)
+4. Addition (+) and subtraction (-).
+
+The acronym PEMDAS can be helpful for remembering the 
+order of precedence for these arithmetic operations.
+
+Operation:	   Long Syntax:	   Short Syntax:
+- Add	-        $x = $x + $y	     $x += $y
+- Subtract -   $x = $x - $y	     $x -= $y
+- Multiply -   $x = $x * $y	     $x *= $y
+- Divide -     $x = $x / $y	     $x /= $y
+- Mod -        $x = $x % $y	     $x %= $y
 */
 
 // Додавання
@@ -83,4 +99,13 @@ echo '<br>';
 // Зміна знака
 $var = 10;
 $var = -$var;
-echo $var;
+echo $var . '<br>';
+
+// operators will return integers whenever the result 
+// of the operation evaluates to a whole number
+echo 8.9 + 1.1 . '<br>';
+
+$num_cookies = 24;
+$num_friends = 7;
+$cookies_per_friend = $num_cookies / $num_friends;
+echo $cookies_per_friend;

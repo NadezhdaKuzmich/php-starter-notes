@@ -39,13 +39,14 @@ $newVar = $myFirstVar;
 $name = "Nadiia";
 
 // перевірка існування
-$isNameSet = isset($name); // 1
-$isAgeSet = isset($age); // 
+$isNameSet = isset ($name); // 1
+$isAgeSet = isset ($age); // 
 // echo "</br>isNameSet: $isNameSet isAgeSet: $isAgeSet";
 
 // знищення
 unset($name);
 // var_dump($name);
+echo "<hr>";
 
 /*
 Посилання на змінну
@@ -55,7 +56,14 @@ unset($name);
 */
 $var = 'Text';
 $var2 = &$var;
-echo "</br>var: $var</br> var2: $var2 </br>";
+echo "var: $var</br> var2: $var2 <hr>";
 
 $var = 'My text';
-echo "</br>var: $var</br> var2: $var2";
+echo "var: $var</br> var2: $var2 <hr>";
+
+$first_player_rank = "Beginner";
+$second_player_rank =& $first_player_rank;
+echo $second_player_rank . "<hr>";
+
+$first_player_rank = "Intermediate";
+echo $second_player_rank;
