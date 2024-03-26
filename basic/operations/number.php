@@ -3,6 +3,10 @@
 /*
 Арифметичні оператори
 
+1. *, /, % operators have equal precedence.
+2. + , - operators have equal precedence.
+3. *, / , % have a higher precedence than + , -.
+
 Operations will be evaluated in the following order:
 1.Any operation wrapped in parentheses (())
 2. Exponents (**)
@@ -11,6 +15,18 @@ Operations will be evaluated in the following order:
 
 The acronym PEMDAS can be helpful for remembering the 
 order of precedence for these arithmetic operations.
+
+- Left associativity occurs when an expression is evaluated 
+from left to right. For example * and / have the same 
+precedence and their associativity is left to righ.
+
+- Right associativity occurs when an expression is evaluated 
+from right to left. Like most programming languages, 
+"=" and "print" in PHP have right associativity.
+
+Thus, precedence and associativity are two characteristics 
+of operators that determine the evaluation order of 
+subexpressions in absence of brackets.
 
 Operation:	   Long Syntax:	   Short Syntax:
 - Add	-        $x = $x + $y	     $x += $y

@@ -2,6 +2,19 @@
 
 /*
 Операції порівняння
+
+For basic equality testing, the equal operator '==' is used. 
+For more comprehensive checks, use the identical operator '==='.
+
+Spaceship Operator 
+The spaceship operator (<=>) is a special kind of comparison operator. 
+It returns:
+1. if first expression is lesser than the second expression -> '-1'.
+2. if the first expression is greater than the second expression -> '1'.
+3. if the first expression is equal to the second expression -> '0'.
+
+Remember: 
+Objects are not comparable, and doing so will result in undefined behavior.
 */
 
 // дорівнює (після перетворення типів)
@@ -63,3 +76,17 @@ echo '<br>';
 echo '13 >= 7 ';
 var_dump(13 >= 7);
 echo '<br>';
+
+// Spaceship Operator 
+// Integers
+echo (1 <=> 1) . ', '; //prints 0
+echo (1 <=> 2) . ', '; //prints -1
+echo (2 <=> 1) . '<br>'; //prints 1
+// Floats
+echo (1.5 <=> 1.5) . ', '; //prints 0
+echo (1.5 <=> 2.5) . ', '; //prints -1
+echo (2.5 <=> 1.5) . '<br>'; //prints 1
+// Strings
+echo ("a" <=> "a") . ', '; //prints 0
+echo ("a" <=> "b") . ', '; //prints -1
+echo ("b" <=> "a") . '<br>'; //prints 1
