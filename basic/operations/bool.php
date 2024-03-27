@@ -23,6 +23,15 @@ true або false.
 
 • $a || $b   – АБО (більший пріоритет ніж or)
 - Повертає true тільки тоді, коли хоч одне значення дорівнює true.
+
+Note: The && and || operators have higher precedence than and and or respectively.
+Since the precedence of or and and is lower, the '=' operator is executed first.
+
+Evaluation	                Result	        Evaluated as
+$e = false || true	         True	       $e = (false || true)
+$e = false or true	         False	     ($e = false) or true
+
+Because of this, it’s safer to use '&&' and '||' instead of 'and' and 'or' respectively.
 */
 
 $positive = 5 > 1; // true
@@ -72,6 +81,23 @@ echo '<br>';
 
 echo 'true || false or true ';
 var_dump($positive || $negative or true);
+echo '<hr>';
+
+// Difference Between and/or against &&/||
+$e = false or true; // evaluated as ($e = false) || true
+echo "When using or, the value of e is: " . $e;
+echo '<hr>';
+
+$e = 'first' or 'second';
+echo "When using or, the value of e is: " . $e;
+echo '<hr>';
+
+$e = false || true; // evaluated as $e = (false || true)
+echo "When using ||, the value of e is: " . $e;
+echo '<hr>';
+
+$e = false || false;
+echo "When using ||, the value of e is: " . $e;
 echo '<hr>';
 
 /*
