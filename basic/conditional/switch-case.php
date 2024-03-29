@@ -11,11 +11,13 @@ switch (вираз)
     break; 
   default:
     інструкція_3;
+
+break is used at the end of each block to prevent the code from running into the 
+next case automatically.
 */
 
 // Инструкция switch-case
 $result = 2 + 2;
-
 switch ($result) { // == 
   case 3:
     echo "Замало";
@@ -32,11 +34,10 @@ switch ($result) { // ==
   default:
     echo "Немає таких значень";
 }
-echo "<br>";
+echo "<hr>";
 
 // Інструкція switch-case, угруповання case
 $result2 = 1 + 2;
-
 switch ($result2) {
   case 4:
     echo "Правильно!";
@@ -50,4 +51,18 @@ switch ($result2) {
 
   default:
     echo "Результат виглядає дивним. Чесно.";
+}
+echo "<hr>";
+
+$x = 2;
+switch ($x) {
+  case 1:
+    echo "Your value for case 1 is $x";
+    break;
+  case 2:
+    echo "Your value for case 2 is $x";
+    break;
+  default:
+    echo "Your value in default case is $x";
+    break;
 }

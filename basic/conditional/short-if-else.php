@@ -15,5 +15,8 @@ $hour = 12;
 // }
 
 $state = $hour > 19 ? "Відчинено" : "Зачинено";
+echo $state . "<hr>";
 
-echo $state;
+$a = 1;
+$b = 2;
+echo ($a > $b) ? "a is greater than b" : "a is NOT greater than b" . "<hr>";
