@@ -66,3 +66,31 @@ switch ($x) {
     echo "Your value in default case is $x";
     break;
 }
+echo "<hr>";
+
+function calculate($num1, $num2, $operator) {
+  echo "Number 1 is: $num1 <br>";
+  echo "Number 2 is: $num2 <br>";
+  echo "Operator is: $operator <br>";
+
+  switch ($operator) {
+    case '+':
+      $result = $num1 + $num2;
+      break;
+    case '-':
+      $result = $num1 - $num2;
+      break;
+    case '*':
+      $result = $num1 * $num2;
+      break;
+    case '/':
+      $result = $num1 / $num2;
+      break;
+    default:
+      echo "Wrong operator";
+  }
+
+  return $result;
+}
+
+echo calculate(5.5, 6.5, '+');
