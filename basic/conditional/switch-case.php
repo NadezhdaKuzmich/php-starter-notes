@@ -68,29 +68,40 @@ switch ($x) {
 }
 echo "<hr>";
 
-function calculate($num1, $num2, $operator) {
+function calculate($num1, $num2, $operator)
+{
   echo "Number 1 is: $num1 <br>";
   echo "Number 2 is: $num2 <br>";
   echo "Operator is: $operator <br>";
 
-  switch ($operator) {
-    case '+':
-      $result = $num1 + $num2;
-      break;
-    case '-':
-      $result = $num1 - $num2;
-      break;
-    case '*':
-      $result = $num1 * $num2;
-      break;
-    case '/':
-      $result = $num1 / $num2;
-      break;
-    default:
-      echo "Wrong operator";
+  try {
+    switch ($operator) {
+      case '+':
+        $result = $num1 + $num2;
+        break;
+      case '-':
+        $result = $num1 - $num2;
+        break;
+      case '*':
+        $result = $num1 * $num2;
+        break;
+      case '/':
+        $result = $num1 / $num2;
+        break;
+      default:
+        echo "Wrong operator";
+    }
+    echo $result;
+    return $result;
+  } catch (DivisionByZeroError) {
+    echo 'Got DivisionByZeroError!';
+  } catch (TypeError) {
+    echo 'Got TypeError!';
+  } finally {
+    echo '<hr>';
   }
-
-  return $result;
 }
 
-echo calculate(5.5, 6.5, '+');
+calculate(5.5, 6.5, '+');
+calculate(2, 0, '/');
+calculate('Hi', 2, '-');
