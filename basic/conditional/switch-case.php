@@ -76,32 +76,36 @@ function calculate($num1, $num2, $operator)
 
   try {
     switch ($operator) {
-      case '+':
+      case "+":
         $result = $num1 + $num2;
         break;
-      case '-':
+
+      case "-":
         $result = $num1 - $num2;
         break;
-      case '*':
+
+      case "*":
         $result = $num1 * $num2;
         break;
-      case '/':
+
+      case "/":
         $result = $num1 / $num2;
         break;
+        
       default:
         echo "Wrong operator";
     }
-    echo $result;
-    return $result;
+    echo "Result: $num1 $operator $num2 = $result";
   } catch (DivisionByZeroError) {
-    echo 'Got DivisionByZeroError!';
+    echo "Error! You got division by zero error!";
   } catch (TypeError) {
-    echo 'Got TypeError!';
+    echo "Error! You got type error!";
   } finally {
-    echo '<hr>';
+    echo "<hr>";
   }
 }
 
-calculate(5.5, 6.5, '+');
-calculate(2, 0, '/');
-calculate('Hi', 2, '-');
+calculate(5.5, 6.5, "+");
+calculate(4, 9, "*");
+calculate(2, 0, "/");
+calculate("Hello", "World", "-");
