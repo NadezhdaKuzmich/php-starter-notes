@@ -3,7 +3,7 @@
 /*
 Цикл foreach
 Конструкція foreach надає простий спосіб перебору масивів.
-Foreach працює тільки з масивами та об'єктами, і буде генерувати 
+Foreach працює тільки з масивами та об"єктами, і буде генерувати 
 помилку при спробі використання зі змінними інших типів або 
 неініціалізованими змінними.
 
@@ -21,7 +21,7 @@ $arr = ["one", "two", "three"];
 foreach ($arr as $value) {
   echo "Значення: $value<br>";
 }
-echo '<hr>';
+echo "<hr>";
 
 $nums = [1, 2, 3, 4];
 
@@ -30,7 +30,7 @@ foreach ($nums as $num) {
     echo "$num | ";
   }
 }
-echo '<br>';
+echo "<hr>";
 
 foreach ($nums as $num) {
   if ($num % 2 !== 0) {
@@ -38,7 +38,14 @@ foreach ($nums as $num) {
   }
   echo "$num | ";
 }
-echo '<hr>';
+echo "<hr>";
+
+$itemsToWrite = ["Alpha", "Bravo", "Charlie"];
+
+foreach ($itemsToWrite as $item) {
+  echo "$item\n";
+}
+echo "<hr>";
 
 $a = [
   "one" => 1,
@@ -50,7 +57,7 @@ $a = [
 foreach ($a as $k => $v) {
   echo "[$k] => $v <br>";
 }
-echo '<hr>';
+echo "<hr>";
 
 $arr = [1, 2, 3, 4];
 
@@ -59,7 +66,7 @@ foreach ($arr as &$value) {
 }
 
 var_dump($arr);
-echo '<hr>';
+echo "<hr>";
 
 $persons = [
   "Ігор" => "25",
