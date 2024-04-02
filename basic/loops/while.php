@@ -66,3 +66,13 @@ while ($i < 10) {
 
   echo "$i | ";
 }
+echo "<hr>";
+
+$x = 4;
+$y = 0;
+while ($y <= 10) {
+  $y += $x;
+  $x += 1;
+}
+echo "The value of 'x' is: $x <br>";
+echo "The value of 'y' is: $y";
