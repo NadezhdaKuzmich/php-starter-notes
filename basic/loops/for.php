@@ -53,6 +53,15 @@ for ($i = 0; $i < 10; $i++) {
 echo "Final value of i is: $i <br>";
 echo "<hr>";
 
+$rows = 5;
+for ($i = 1; $i <= $rows; $i++) {
+  for ($j = 1; $j <= $i; $j++) {
+    echo "a ";
+  }
+  echo "<br>";
+}
+echo "<hr>";
+
 $week = [
   1 => "Понеділок",
   "Вівторок",
