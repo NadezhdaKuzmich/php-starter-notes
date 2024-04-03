@@ -75,4 +75,28 @@ while ($y <= 10) {
   $x += 1;
 }
 echo "The value of 'x' is: $x <br>";
-echo "The value of 'y' is: $y";
+echo "The value of 'y' is: $y <hr>";
+
+$i = 0;
+while ($i < 10) {
+  $i = $i * 2;
+  echo "Value of i is: $i <br>";
+  $i++;
+}
+echo "Final value of i is: $i <hr>";
+
+$num = 1;
+$answer_string = "";
+
+while ($num < 10) {
+  for ($i = 1; $i <= 10; $i++) {
+    $result = $num * $i;
+    echo "$num x $i  = $result <br>";
+    // strval - повертає строкове значення змінної.
+    $answer_string .= strval($result) . " ";
+  }
+
+  echo "<br> Answers: $answer_string <hr>";
+  $answer_string = "";
+  $num++;
+}

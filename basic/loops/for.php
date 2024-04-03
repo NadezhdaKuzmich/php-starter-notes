@@ -45,6 +45,14 @@ for ($i = 1; $i < 10; $i++) {
 }
 echo "<hr>";
 
+$i;
+for ($i = 0; $i < 10; $i++) {
+  $i = $i * 2;
+  echo "Value of i is: $i <br>";
+}
+echo "Final value of i is: $i <br>";
+echo "<hr>";
+
 $week = [
   1 => "Понеділок",
   "Вівторок",
