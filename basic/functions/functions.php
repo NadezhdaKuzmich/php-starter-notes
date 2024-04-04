@@ -14,6 +14,13 @@ myFunction();
 */
 
 // Оголошення та виклик функцій у PHP
+function exampleFunc()
+{
+  echo "This is a user-defined function!";
+}
+exampleFunc();
+echo '<hr>';
+
 hi();
 // HI();
 echo '<hr>';
@@ -53,6 +60,7 @@ echo '<hr>';
 Зазвичай використовується для обробки локальних даних або як callback 
 function.
 */
+
 $anonymous = function ($x, $y) {
   return [$x, $y];
 };
