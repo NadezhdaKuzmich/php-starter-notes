@@ -2,8 +2,13 @@
 
 /*
 Індексні масиви
-Масив PHP - це впорядкований набір даних, який встановлює відповідність між значенням і ключем.
-Індексний масив – це масив з числовим індексом. Значення зберігаються та доступні лінійно – одне за одним.
+Масив PHP - це впорядкований набір даних, який встановлює 
+відповідність між значенням і ключем.
+Індексний масив – це масив з числовим індексом. Значення 
+зберігаються та доступні лінійно – одне за одним.
+
+The simplest form of an array is indexed by an integer, and 
+ordered by the index, with the first element lying at index 0.
 */
 
 // empty array
@@ -22,6 +27,7 @@ $arr = [
 $arr[] = 'four';
 $arr[5] = 'five';
 
+echo "<pre>";
 var_dump($arr);
 echo "<br>";
 var_dump($arr[5]);
@@ -31,3 +37,8 @@ echo "<br>";
 $arr = array("1", "2", "3", "4");
 $arr[] = '5';
 print_r($arr);
+echo "</pre>";
+
+// Trying to output an array with an echo will simply print 
+// the data type instead and warning:
+// echo $arr; // Warning: Array to string conversion...

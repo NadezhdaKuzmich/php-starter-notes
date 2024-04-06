@@ -37,4 +37,6 @@ $boys[] = 2;
 print_r($boys);
 print_r($boys['Joe']);
 
+$fruits = array("Type" => "Citrus", 1 => "Orange", 2 => "Grapefruit", 3 => "Lemon");
+print_r($fruits);
 echo "</pre>";
