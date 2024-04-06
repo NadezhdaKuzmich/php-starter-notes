@@ -42,3 +42,18 @@ echo "</pre>";
 // Trying to output an array with an echo will simply print 
 // the data type instead and warning:
 // echo $arr; // Warning: Array to string conversion...
+
+function findMaxVal($arr)
+{
+  $max = $arr[0];
+
+  foreach ($arr as $num) {
+    if ($max < $num) {
+      $max = $num;
+    }
+  }
+
+  return $max;
+}
+
+echo findMaxVal([2, 6, 3, 12, 9, 11]);

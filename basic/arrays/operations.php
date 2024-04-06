@@ -51,6 +51,10 @@ unset($week[3]);
 unset($week[7]);
 
 // count:
+$fruits = array("Type" => "Citrus", 1 => "Orange", 2 => "Grapefruit", 3 => "Lemon");
+echo "Length of \$fruits is " . count($fruits);
+echo "<hr>";
+
 print_r(count($week));
 echo "<hr>";
 
@@ -104,7 +108,7 @@ function odd($var)
 function even($var)
 {
   // чи є передане число парним
-  return(!($var & 1));
+  return (!($var & 1));
 }
 
 $array1 = ["a" => 1, "b" => 2, "c" => 3, "d" => 4, "e" => 5];
