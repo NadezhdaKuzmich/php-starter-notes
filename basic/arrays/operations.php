@@ -9,7 +9,7 @@ PHP надає багато функцій для роботи з масивам
 
  - count – підрахунок кількості елементів масиву.
  - in_array – перевіряє, чи є у масиві значення.
- - implode – об"єднує елементи масиву в рядок.
+ - implode – об'єднує елементи масиву в рядок.
  - array_keys
  - array_values
 
@@ -26,6 +26,7 @@ PHP надає багато функцій для роботи з масивам
 To add or replace values at any position in an array, access the 
 array position using the key and assign a value:
  - $arrayName[key]=value;
+ 
 If an old key is used to assign a new value, the old value will be 
 replaced. If a new key is used to assign a value, a new key will be 
 created in the array.

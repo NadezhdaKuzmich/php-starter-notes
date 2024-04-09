@@ -1,10 +1,25 @@
 <?php
 
 /*
+Indexed Array:
  - sort - сортує масив.
  - rsort - сортує масив у зворотному порядку.
  - usort - сортує масив за значеннями, використовуючи користувацьку 
 функцію для порівняння елементів. 
+
+Associative Array:
+ - By Value -
+ - asort() can be used to sort associative arrays in ascending order. 
+Since associative arrays are key-value pairs, asort sorts the associative 
+array on values. Keys with each value will be preserved. 
+ - arsort() can be used to sort associative arrays in descending order 
+based on their values. 
+
+ - By Key -
+ - ksort() can be used to sort an associative array, in ascending order, 
+by key. The associated values are preserved during this sort.
+ - krsort() can be used to sort an associative array in descending order, 
+ by key. The associated values are preserved during this sort.
 */
 
 //sort
@@ -45,38 +60,30 @@ usort($a, "cmp");
 var_dump($a);
 echo "<hr>";
 
-// Sorting Associative Arrays:
-
-// - By Value -
 // asort
 $fruits = [1 => "Rasberry", 2 => "Orange", 3 => "Apricot", 4 => "Banana", 5 => "Apple", 6 => "Olive"];
-// asort() can be used to sort associative arrays in ascending order. Since associative arrays are 
-// key-value pairs, asort sorts the associative array on values. Keys with each value will be preserved. 
 asort($fruits);
 print_r($fruits);
 echo "<hr>";
 
 // arsort
 arsort($fruits);
-// arsort() can be used to sort associative arrays in descending order based on their values. 
 print_r($fruits);
 echo "<hr>";
 
-// - By Key -
 // ksort
 $fruits = ["f" => "Rasberry", "d" => "Orange", "a" => "Apricot", "c" => "Banana", "b" => "Apple", "e" => "Olive"];
-// ksort() can be used to sort an associative array, in ascending order, by key. 
-// The associated values are preserved during this sort.
 ksort($fruits);
 print_r($fruits);
 echo "<hr>";
 
-// krsort
-$fruits = ["d" => "Rasberry", "b" => "Orange", "a" => "Apricot", "e" => "Banana", "f" => "Apple", "c" => "Olive"];
-// krsort() can be used to sort an associative array in descending order, by key. 
-// The associated values are preserved during this sort.
-krsort($fruits);
-print_r($fruits);
+$numbers = array(-22, 4, 1, 20, 0, -44);
+ksort($numbers); // no changes
+print_r($numbers);
 echo "<hr>";
 
+// krsort
+$fruits = ["d" => "Rasberry", "b" => "Orange", "a" => "Apricot", "e" => "Banana", "f" => "Apple", "c" => "Olive"];
+krsort($fruits);
+print_r($fruits);
 echo "</pre>";
