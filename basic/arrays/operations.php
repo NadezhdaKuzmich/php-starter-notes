@@ -9,32 +9,38 @@ PHP надає багато функцій для роботи з масивам
 
  - count – підрахунок кількості елементів масиву.
  - in_array – перевіряє, чи є у масиві значення.
- - implode – об'єднує елементи масиву в рядок.
+ - implode – об"єднує елементи масиву в рядок.
  - array_keys
  - array_values
 
  - array_push – додає один або кілька елементів до кінця масиву.
+ - array_unshift - prepends passed elements at the front of an 
+ array. Note that the list of elements is prepended as a whole 
+ so that the prepended elements stay in the same order. All 
+ numerical array keys will be modified to start counting from 0.
  - is_array - визначає, чи є змінна масивом чи ні.
  - array_fill - заповнює масив значеннями.
  - array_filter - фільтрує елементи масиву за допомогою 
  callback-функції. 
- 
- - usort - сортує масив за значеннями, використовуючи користувацьку 
- функцію для порівняння елементів. 
- - sort - сортує масив.
- - rsort - сортує масив у зворотному порядку.
+
+To add or replace values at any position in an array, access the 
+array position using the key and assign a value:
+ - $arrayName[key]=value;
+If an old key is used to assign a new value, the old value will be 
+replaced. If a new key is used to assign a value, a new key will be 
+created in the array.
 */
 
 echo "<pre>";
 
 $week = [
-  1 => 'Monday',
-  2 => 'Tuesday',
-  3 => 'Wednesday',
-  4 => 'Thursday',
-  5 => 'Friday',
-  6 => 'Saturday',
-  7 => 'Sunday'
+  1 => "Monday",
+  2 => "Tuesday",
+  3 => "Wednesday",
+  4 => "Thursday",
+  5 => "Friday",
+  6 => "Saturday",
+  7 => "Sunday"
 ];
 
 // isset:
@@ -50,6 +56,12 @@ unset($week[2]);
 unset($week[3]);
 unset($week[7]);
 
+$fruit = array("first" => "banana", "second" => "apple", "third" => "peaches");
+// unset($fruit) unsets the variable and thus removes the whole array, meaning 
+// none of its elements are accessible anymore.
+// Note: The function unset can also be used to destroy single variables.
+unset($fruit);
+
 // count:
 $fruits = array("Type" => "Citrus", 1 => "Orange", 2 => "Grapefruit", 3 => "Lemon");
 echo "Length of \$fruits is " . count($fruits);
@@ -59,20 +71,30 @@ print_r(count($week));
 echo "<hr>";
 
 // array_push:
-array_push($week, 'new day', 'new day');
+array_push($week, "new day", "new day");
+
+$array = [1, 2, 3];
+array_push($array, 5, 6);
+print_r($array);
+echo "<hr>";
+
+// array_unshift
+$myArray = [1, 2, 3];
+array_unshift($myArray, 4, 5);
+print_r($myArray);
+echo "<hr>";
 
 // in_array:
-var_dump(in_array('Tuesday', $week));
+var_dump(in_array("Tuesday", $week));
 echo "<hr>";
 
 // implode:
-print_r(implode(', ', $week));
+print_r(implode(", ", $week));
 echo "<br>";
 
-$array = ['ім\'я', 'пошта', 'телефон'];
+$array = ["ім\"я", "пошта", "телефон"];
 $comma_separated = implode(",", $array);
-echo $comma_separated;
-echo "<hr>";
+echo $comma_separated . "<hr>";
 
 // array_keys:
 print_r(array_keys($week));
@@ -83,17 +105,17 @@ print_r(array_values($week));
 echo "<hr>";
 
 // is_array
-$yes = array('це', 'масив');
-echo is_array($yes) ? 'Масив' : 'Не масив';
+$yes = ["це", "масив"];
+echo is_array($yes) ? "Масив" : "Не масив";
 echo "<br>";
 
-$no = 'це рядок';
-echo is_array($no) ? 'Масив' : 'Не масив';
+$no = "це рядок";
+echo is_array($no) ? "Масив" : "Не масив";
 echo "<hr>";
 
 //array_fill
-$a = array_fill(5, 6, 'banana');
-$b = array_fill(-2, 4, 'pear');
+$a = array_fill(5, 6, "banana");
+$b = array_fill(-2, 4, "pear");
 print_r($a);
 print_r($b);
 echo "<hr>";
@@ -120,46 +142,19 @@ echo "Парні:<br>";
 print_r(array_filter($array2, "even"));
 echo "<hr>";
 
-//sort
-$fruits = ["lemon", "orange", "banana", "apple"];
-sort($fruits);
-
-foreach ($fruits as $key => $val) {
-  echo "fruits[$key] = $val <br>";
-}
-echo '<hr>';
-
-//rsort
-$fruits = ["lemon", "orange", "banana", "apple"];
-rsort($fruits);
-
-foreach ($fruits as $key => $val) {
-  echo "$key = $val<br>";
-}
-echo '<hr>';
-
-//usort
-function cmp($a, $b)
-{
-  if ($a == $b) {
-    return 0;
-  }
-  return $a < $b ? -1 : 1;
-}
-
-$a = array(3, 2, 5, 6, 1);
-usort($a, "cmp");
-var_dump($a);
-echo '<hr>';
-
 /*
 Динамічний розмір масиву
 Для того, щоб створити динамічний масив, потрібно просто 
 під час присвоєння елемента не вказувати індекс.
 */
-$arr[] = 'a';
-$arr[] = 'b';
-$arr[] = 'c';
+$arr[] = "a";
+$arr[] = "b";
+$arr[] = "c";
+print_r($arr);
+echo "<hr>";
 
+$arr = [1, 3, 5, 7, 9];
+$arr[23] = 71;
+$arr[2] = 22;
 print_r($arr);
 echo "</pre>";
