@@ -1,5 +1,24 @@
 <?php
 
+/*
+Inheritance is one of the major reasons for using object-oriented 
+programming in PHP. Classes can inherit the properties and methods 
+of another class using the keyword extends.
+
+Characteristics
+- A derived class has: -
+- All members defined in the derived class.
+- All ​members declared in the base class.
+
+- A derived class can: -
+- Use all public and protected members defined in the derived class.
+- Use all public and protected members defined in the base class.
+- Override an inherited member
+
+A derived class cannot:
+- Inherit constructors and destructors
+*/
+
 class Car
 {
   public $brand;
