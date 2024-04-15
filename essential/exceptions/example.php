@@ -1,4 +1,5 @@
 <?php
+
 function distance($speed, $time)
 {
   if ($time <= 0) {
