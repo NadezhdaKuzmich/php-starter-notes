@@ -16,6 +16,20 @@ Throvable надає великий API для того, щоб найкращи
 конструкції catch.
 
 Throvable - Executed only in PHP 7, will not match in PHP 5.x.
+
+Components:
+- try: 
+It is the block of code in which exception may arise.
+- catch: 
+It is the block of code that will be executed when a 
+particular exception is thrown.
+- throw: 
+It is used to throw an exception. It is also used to list 
+the exceptions that a function throws, but doesn’t handle 
+itself.
+- finally: 
+This is the block of code that executes at the end once 
+the exception is thrown and/or handled.
 */
 
 // створюємо власне виключення
