@@ -26,7 +26,11 @@ $var і $Var - 2 різні змінні
 якій вони були визначені.
 */
 
-// $aZ_ = 'value';
+// $aZ_ = 'value';          // Valid variable
+// $_valid = 'value';       // Valid variable
+// $2invalid = "value";     // Invalid variable (starts with a number)
+// $_2valid = "value;       // Valid variable
+
 $myFirstVar = 'PHP Variable';
 var_dump($myFirstVar);
 
