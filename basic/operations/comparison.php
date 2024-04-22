@@ -75,7 +75,7 @@ echo '<br>';
 // більше або дорівнює
 echo '13 >= 7 ';
 var_dump(13 >= 7);
-echo '<br>';
+echo '<hr>';
 
 // Spaceship Operator 
 // Integers
@@ -89,4 +89,18 @@ echo (2.5 <=> 1.5) . '<br>'; //prints 1
 // Strings
 echo ("a" <=> "a") . ', '; //prints 0
 echo ("a" <=> "b") . ', '; //prints -1
-echo ("b" <=> "a") . '<br>'; //prints 1
+echo ("b" <=> "a") . '<hr>'; //prints 1
+
+// <>  = not equal
+function compare($a, $b)
+{
+  if ($a <> $b) {
+    return "Not equal";   // 1
+  } else {
+    return "Equal";       // 0
+  }
+}
+
+echo compare(1, 1) . '<br>';
+echo compare(1, 2) . '<br>';
+echo compare(2, 1) . '<br>';
