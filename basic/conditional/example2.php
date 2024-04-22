@@ -1,5 +1,6 @@
 <?php
 
+// example 1
 function checkAge($age)
 {
   if ($age < 18) {
@@ -15,6 +16,7 @@ echo checkAge(17) . '<br>';
 echo checkAge(20) . '<br>';
 echo checkAge(24) . '<hr>';
 
+// example 2
 function goToParty($age)
 {
   if ($age < 10) {

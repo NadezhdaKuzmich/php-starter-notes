@@ -3,6 +3,17 @@
 /*
 Цикл for - ця конструкція передбачає, що кількість ітерацій
 циклу заздалегідь відома або обчислювана до початку циклу.
+
+for (initialization; condition; counter) {
+  code..
+}
+- Initialization:
+Evaluated once at the beginning
+- Condition:
+Option 1: If its true -> execute
+Option 2: If its false -> stop
+- Counter:
+Evaluated at the end of every loop
 */
 
 for ($i = 0; $i < 10; $i++) {
