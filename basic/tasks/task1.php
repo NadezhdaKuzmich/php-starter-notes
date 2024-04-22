@@ -40,3 +40,27 @@ foreach ($countries as $key => $value) {
 }
 
 echo "<hr>";
+
+// task 5
+$cm = 150;
+$cmToInch = $cm * 0.39;
+echo "<b>Task 5:</b><br> $cm centimeters is $cmToInch inches<hr>";
+
+// task 6
+$expenses = [40, 58, 99, 24, 12, 36];
+$totalAmount = 0;
+$amountOfExpenses = 0;
+
+foreach ($expenses as $expense) {
+  $totalAmount += $expense;
+  $amountOfExpenses++;
+}
+
+echo "<b>Task 6:</b><br> My $amountOfExpenses biggest expenses were $totalAmount<hr>";
+
+// task 7
+$weather = ["Rain", "Sunshine", "Clouds", "Hail", "Sleet", "Snow", "Wind"];
+echo "<b>Task 7:</b><br>";
+echo "We've seen all kinds of weather this month.<br> At the beginning of the month, we had
+$weather[5] and $weather[6].<br> Then came $weather[1] with a few $weather[2] and some $weather[0].<br> 
+At least we didn't get any $weather[3] or $weather[4].";
