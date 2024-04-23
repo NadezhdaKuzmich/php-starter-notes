@@ -38,7 +38,8 @@ function chooseCard($x)
     case 4:
       return 'Clubs';
     default:
-      return "<br><small><b>Wrong request:</b> Choose value in-between number 1 till 4.</small>";
+      return "<br><small><b>Sorry, the value is not acceptable!</b> 
+      Choose value in-between number 1 till 4.</small>";
   }
 }
 
@@ -48,3 +49,47 @@ echo chooseCard(4) . "<br>";
 echo chooseCard(1) . "<br>";
 echo chooseCard(3) . "<br>";
 echo chooseCard(5) . "<hr>";
+
+// task 3
+function convertGrade($score)
+{
+  if ($score > 100) {
+    return 'Sorry, the value is not acceptable!';
+  } elseif ($score >= 90) {
+    return 'A';
+  } elseif ($score >= 80) {
+    return 'B';
+  } elseif ($score >= 70) {
+    return 'C';
+  } elseif ($score >= 60) {
+    return 'D';
+  } else {
+    return 'F';
+  }
+}
+
+echo "<b>Task 3:</b><br>";
+echo convertGrade(44) . "<br>";
+echo convertGrade(82) . "<br>";
+echo convertGrade(66) . "<br>";
+echo convertGrade(98) . "<br>";
+echo convertGrade(72) . "<br>";
+echo convertGrade(115) . "<hr>";
+
+// task 4
+function checkMachine($hours, $age, $failures)
+{
+  if ($hours >= 10000 || $age > 7 || $failures >= 25) {
+    return 'Machine needs to be replaced!';
+  } else {
+    return 'Machine is in perfect condition!';
+  }
+}
+
+echo "<b>Task 4:</b><br>";
+echo checkMachine(12000, 6, 20) . "<br>";
+echo checkMachine(8500, 8, 22) . "<br>";
+echo checkMachine(7200, 7, 25) . "<br>";
+echo checkMachine(600, 1, 12) . "<hr>";
+
+// task 5
