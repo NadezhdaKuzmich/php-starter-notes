@@ -93,3 +93,17 @@ echo checkMachine(7200, 7, 25) . "<br>";
 echo checkMachine(600, 1, 12) . "<hr>";
 
 // task 5
+function showLeapYear($year)
+{
+  if ($year % 400 == 0 || $year % 4 == 0) {
+    return "$year is a leap year.";
+  } else {
+    return "$year isn't a leap year.";
+  }
+}
+
+echo "<b>Task 5:</b><br>";
+echo showLeapYear(2000) . "<br>";
+echo showLeapYear(1994) . "<br>";
+echo showLeapYear(2024) . "<br>";
+echo showLeapYear(2053) . "<hr>";
