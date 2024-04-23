@@ -107,3 +107,46 @@ echo showLeapYear(2000) . "<br>";
 echo showLeapYear(1994) . "<br>";
 echo showLeapYear(2024) . "<br>";
 echo showLeapYear(2053) . "<hr>";
+
+// task 6
+function displayMultTable($x, $y)
+{
+  $num = 1;
+  echo "<small><b>Multiplication table $x</b> (in the rage from 1 to $y):</small><br>";
+
+  while ($num <= $y) {
+    $multiplication = $x * $num;
+    echo "$x * $num = $multiplication<br>";
+    $num++;
+  }
+
+  echo "<br>";
+}
+
+echo "<b>Task 6:</b><br>";
+displayMultTable(4, 6);
+displayMultTable(2, 8);
+displayMultTable(5, 5);
+echo "<hr>";
+
+// task 7
+function fibonacci($x)
+{
+  $num1 = 0;
+  $num2 = 1;
+  $counter = 0;
+
+  while ($counter < $x) {
+    echo $num1 . ' ';
+    $num3 = $num1 + $num2;
+    $num1 = $num2;
+    $num2 = $num3;
+    $counter++;
+  }
+
+  echo '<br>';
+}
+
+echo "<b>Task 7:</b><br>";
+fibonacci(8);
+fibonacci(11);
