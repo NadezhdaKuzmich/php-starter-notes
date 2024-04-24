@@ -1,6 +1,13 @@
 <?php
+/*
+- include :
+if the path is wrong - we only get a warning.
+
+- require :
+if the path is wrong - the script will stop.
+*/
 include 'includes/head.php';
-include 'includes/header.php';
+require 'includes/header.php';
 ?>
 
 <h1><?php introduction() ?></h1>
