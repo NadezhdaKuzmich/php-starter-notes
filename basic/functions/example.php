@@ -1,6 +1,6 @@
 <?php
 
-function calculator($num1, $num2, $sign)
+function calculator($num1 = 1, $num2 = 1, $sign = '*')
 {
   switch ($sign) {
     case '+':
@@ -31,10 +31,13 @@ function calculator($num1, $num2, $sign)
   }
 }
 
-echo calculator(2, 2, '+') . '<br>';
-echo calculator(9, 5, '-') . '<br>';
-echo calculator(8, 4, '/') . '<br>';
-echo calculator(3, 2, '*') . '<br>';
-echo calculator(9, 2, '%') . '<br>';
-echo calculator(3, 3, '**') . '<br>';
-echo calculator(7, 1, '#') . '<br>';
+echo calculator() . '<hr>';
+echo calculator(2) . '<hr>';
+echo calculator(4, 2) . '<hr>';
+echo calculator(2, 2, '+') . '<hr>';
+echo calculator(9, 4, '-') . '<hr>';
+echo calculator(8, 4, '/') . '<hr>';
+echo calculator(3, 2, '*') . '<hr>';
+echo calculator(9, 2, '%') . '<hr>';
+echo calculator(3, 3, '**') . '<hr>';
+echo calculator(7, 1, '#') . '<hr>';
