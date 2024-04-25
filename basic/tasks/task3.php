@@ -40,7 +40,55 @@ function divideNumbers($x, $y)
 }
 
 echo "<b>Task 2:</b><br>";
-echo "Division of <i>$num1</i> and <i>$num2</i> is: <b>" . divideNumbers($num1, $num2) . '</b><br>';
-echo "Addition of <i>$num1</i> and <i>$num2</i> is: <b>" . addNumbers($num1, $num2) . '</b><br>';
-echo "Subtraction of <i>$num1</i> and <i>$num2</i> is: <b>" . subtractNumbers($num1, $num2) . '</b><br>';
-echo "Multiplicity of <i>$num1</i> and <i>$num2</i> is: <b>" . multiplyNumbers($num1, $num2) . '</b><hr>';
+echo "Division of $num1 and $num2 is " . divideNumbers($num1, $num2) . '.<br>';
+echo "Addition of $num1 and $num2 is " . addNumbers($num1, $num2) . '.<br>';
+echo "Subtraction of $num1 and $num2 is " . subtractNumbers($num1, $num2) . '.<br>';
+echo "Multiplicity of $num1 and $num2 is " . multiplyNumbers($num1, $num2) . '.<hr>';
+
+// task 3
+function swapNumbers($num1, $num2)
+{
+  $temp = $num1;
+  $num1 = $num2;
+  $num2 = $temp;
+
+  echo "After swapping num 1 = $num1, num 2 = $num2<br>";
+}
+
+echo "<b>Task 3:</b><br>";
+swapNumbers(1, 2);
+swapNumbers(2, 4);
+echo '<hr>';
+
+// task 4
+function evenOrNot($num)
+{
+  echo ($num % 2 == 0 ? "$num is even" : "$num is odd") . '<br>';
+}
+
+echo "<b>Task 4:</b><br>";
+evenOrNot(27);
+evenOrNot(12);
+echo '<hr>';
+
+// task 5
+function isPrime($num)
+{
+  $prime = true;
+
+  for ($i = 2; $i < $num / 2; $i++) {
+    if ($num == 1 || $num % $i == 0) {
+      $prime = false;
+      break;
+    }
+  }
+
+  return $prime ? "$num is prime" : "$num is NOT prime";
+}
+
+echo "<b>Task 5:</b><br>";
+echo isPrime(7) . '<br>';
+echo isPrime(9) . '<br>';
+echo isPrime(11) . '<br>';
+echo isPrime(27) . '<br>';
+echo '<hr>';
