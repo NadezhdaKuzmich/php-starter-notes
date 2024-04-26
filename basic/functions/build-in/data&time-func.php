@@ -40,3 +40,10 @@ echo date('d/m/Y') . '<hr>';
 echo date('H:i:s') . '<br>';
 echo date('h:i:s a') . '<br>';
 echo date('h:i:s A') . '<hr>';
+
+//Set timezone
+echo 'PL: ' . date('H:i:s') . '<br>';
+date_default_timezone_set('Europe/Kyiv');
+echo 'UA: '.date('H:i:s') . '<hr>';
+date_default_timezone_set('Europe/Warsaw');
+
