@@ -41,9 +41,15 @@ echo date('H:i:s') . '<br>';
 echo date('h:i:s a') . '<br>';
 echo date('h:i:s A') . '<hr>';
 
-//Set timezone
+// Set timezone
 echo 'PL: ' . date('H:i:s') . '<br>';
 date_default_timezone_set('Europe/Kyiv');
-echo 'UA: '.date('H:i:s') . '<hr>';
+echo 'UA: ' . date('H:i:s') . '<hr>';
 date_default_timezone_set('Europe/Warsaw');
 
+// String to time
+$time = strtotime("4:00pm April 26 2024");
+echo $time . ' => ';
+// timestamp is the value represented as seconds calculated, 
+// since UNIX Epoch, January 1, 1970, and also called as UNIX timestamp.
+echo date('d F Y, H:i a', $time);
