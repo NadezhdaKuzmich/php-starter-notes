@@ -16,7 +16,7 @@ print_r($numbers);
 // arsort - cортує масив у порядку убування, зберігаючи асоціацію індексів.
 arsort($numbers);
 print_r($numbers);
-echo '<hr>';
+echo '<hr></pre>';
 
 // task 2
 // mktime - повертає тимчасову мітку Unix відповідно до переданих аргументів 
@@ -45,11 +45,11 @@ I'm getting pretty old. I like PHP, because it's a programming language...";
 
 function checkLowerCase($str)
 {
-  return strtolower($str);
+  echo strtolower($str);
 }
 
 echo "<b>Task 4:</b><br>";
-echo checkLowerCase($str);
+checkLowerCase($str);
 echo '<hr>';
 
 // task 5
@@ -71,9 +71,11 @@ echo '<hr>';
 
 // task 6
 $onlyNumbers = [8, 12, 24, 83, 92, 6, 44, 67, 78, 51, 34];
-
-echo "<b>Task 3:</b><br>";
-echo 'The lowest value is <b>' . min($onlyNumbers) . '</b> and the highest value is <b>' . max($onlyNumbers) . '</b>';
+echo "<b>Task 6:</b><br>";
+echo 'The highest value is <b>' . max($onlyNumbers) . '</b> and the lowest value is <b>' . min($onlyNumbers) . '</b>.';
 echo '<hr>';
 
-echo '</pre>';
+// task 7
+$str = "My name is Nadiia. <br>";
+echo "<b>Task 7:</b><br>";
+echo str_repeat($str, 8);
