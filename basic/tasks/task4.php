@@ -41,15 +41,39 @@ echo '<hr>';
 
 // task 4
 $str = "My name is Nadiia. I'm 27 years old and I live in Poland. 
-I'm getting pretty old. I like PHP, because it's a programming language.";
+I'm getting pretty old. I like PHP, because it's a programming language...";
 
 function checkLowerCase($str)
 {
   return strtolower($str);
 }
 
-echo "<b>Task 3:</b><br>";
+echo "<b>Task 4:</b><br>";
 echo checkLowerCase($str);
+echo '<hr>';
+
+// task 5
+function searchText($str)
+{
+  $punctuation = 0;
+  for ($i = 0; $i < strlen($str); $i++) {
+    if ($str[$i] == "." || $str[$i] == ",") {
+      $punctuation++;
+    }
+  }
+
+  echo "The text has $punctuation punctuation.";
+}
+
+echo "<b>Task 5:</b><br>";
+searchText($str);
+echo '<hr>';
+
+// task 6
+$onlyNumbers = [8, 12, 24, 83, 92, 6, 44, 67, 78, 51, 34];
+
+echo "<b>Task 3:</b><br>";
+echo 'The lowest value is <b>' . min($onlyNumbers) . '</b> and the highest value is <b>' . max($onlyNumbers) . '</b>';
 echo '<hr>';
 
 echo '</pre>';
