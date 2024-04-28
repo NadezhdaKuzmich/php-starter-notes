@@ -21,8 +21,8 @@
   (відомі також як рядок запиту). Зверніть увагу, що масив не тільки 
   заповнюється для GET-запитів, а скоріше для всіх запитів із рядком 
   запиту.
-
-  Data will be visible in the URL.
+  
+  - Data will be visible in the URL.
   */
 
   if (isset($_GET['name'])) {

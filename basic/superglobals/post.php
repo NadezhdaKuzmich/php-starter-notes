@@ -21,7 +21,7 @@
   POST у разі використання application/x-www-form-urlencoded або 
   multipart/form-data в заголовку Content-Type запиту HTTP.
 
-  Collect data from HTMl form (invisible).
+  - Collect data from HTMl form (invisible).
   */
 
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
