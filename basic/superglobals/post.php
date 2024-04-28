@@ -31,10 +31,12 @@
     }
   }
 
-  echo '<pre>';
-  print_r($_POST);
-  echo '</pre>';
-  
+  if (count($_POST)) {
+    echo '<pre>';
+    print_r($_POST);
+    echo '</pre>';
+  }
+
   ?>
 </body>
 
