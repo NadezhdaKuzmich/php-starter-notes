@@ -23,19 +23,20 @@
   => enctype="multipart/form-data"
   */
 
-  if (isset($_FILES['file'])) {
-    echo $name = $_FILES['file']['name'] . '<br>';
-    echo $type = $_FILES['file']['type'] . '<br>';
-    echo $tmp_location = $_FILES['file']['tmp_name'] . '<br>';
-    echo $error = $_FILES['file']['error'] . '<hr>';
-  } else {
-    echo 'Choose some file...<hr>';
-  }
+  // if (isset($_FILES['file'])) {
+  //   echo $name = $_FILES['file']['name'] . '<br>';
+  //   echo $type = $_FILES['file']['type'] . '<br>';
+  //   echo $tmp_location = $_FILES['file']['tmp_name'] . '<br>';
+  //   echo $error = $_FILES['file']['error'] . '<hr>';
+  // } else {
+  //   echo 'Choose some file...<hr>';
+  // }
 
   ?>
-  <form action="files.php" method="post" enctype="multipart/form-data">
+  <!-- <form action="files.php" method="post" enctype="multipart/form-data"> -->
+  <form action="upload.php" method="post" enctype="multipart/form-data">
     <input type="file" name="file">
-    <button type="submit">Submit</button>
+    <button type="submit" name="submit">Submit</button>
   </form>
 </body>
 
