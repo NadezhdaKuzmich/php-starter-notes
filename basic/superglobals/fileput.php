@@ -37,9 +37,10 @@
 
   // $txt = "My name is Nadiia.\n";
   // fwrite($myFile, $txt);
-
+  
   if (isset($_POST['submit'])) {
-    $txt = 'My age is ' . $_POST['age'] . ".\n";
+    // $txt = 'My age is ' . $_POST['age'] . ".\n";
+    $txt = $_POST['age'] . "\n";
     fwrite($myFile, $txt);
   }
 
