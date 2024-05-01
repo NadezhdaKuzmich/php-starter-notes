@@ -17,18 +17,23 @@ INSERT INTO users (username, password) VALUES (͟A͟n͟y͟b͟o͟d͟y͟,͟ ͟3͟4
 
 - Select data:
 => * - all columns:
-SELECT * FROM users
+SELECT * FROM users;
 => select column 'username':
-SELECT username FROM users
+SELECT username FROM users;
 => select with condition:
-SELECT * FROM users WHERE username = 'Nadiia'
+SELECT * FROM users WHERE username = 'Nadiia';
 => using OR:
-SELECT * FROM users WHERE username = 'Nadiia' OR id = '4'
+SELECT * FROM users WHERE username = 'Nadiia' OR id = '4';
 => empty result set:
-SELECT * FROM users WHERE username = 'Marina' OR id = '10'
+SELECT * FROM users WHERE username = 'Marina' OR id = '10';
 
 - Update data:
 UPDATE users
 SET username = 'Mike', password = 'newpassword'
-WHERE id = '5'
+WHERE id = '5';
+
+- Delete data:
+DELETE FROM users WHERE id = 3;
+- using OR:
+DELETE FROM users WHERE id = 5 OR username = 'Mary';
 */
