@@ -34,6 +34,16 @@ WHERE id = '5';
 
 - Delete data:
 DELETE FROM users WHERE id = 3;
-- using OR:
+=> using OR:
 DELETE FROM users WHERE id = 5 OR username = 'Mary';
+
+- Ordering data:
+=> using DESC:
+SELECT * FROM users ORDER BY id DESC;
+- or
+SELECT * FROM users ORDER BY username DESC;
+=> using ASC:
+SELECT * FROM users ORDER BY id ASC;
+- or
+SELECT * FROM users ORDER BY username ASC;
 */
