@@ -26,4 +26,9 @@ SELECT * FROM users WHERE username = 'Nadiia'
 SELECT * FROM users WHERE username = 'Nadiia' OR id = '4'
 => empty result set:
 SELECT * FROM users WHERE username = 'Marina' OR id = '10'
+
+- Update data:
+UPDATE users
+SET username = 'Mike', password = 'newpassword'
+WHERE id = '5'
 */
