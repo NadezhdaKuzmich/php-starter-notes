@@ -2,7 +2,7 @@
 require_once 'includes/header.php';
 ?>
 <div class="container">
-  <h1>REGISTER</h1>
+  <h1>Register</h1>
 </div>
 
 <?php

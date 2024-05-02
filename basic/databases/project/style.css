@@ -13,6 +13,12 @@ body {
   margin: 0;
 }
 
+.container {
+  max-width: 1280px;
+  padding: 0 20px;
+  margin: auto;
+}
+
 header {
   height: 80px;
   background-color: #f2f2f2;
@@ -28,16 +34,73 @@ ul {
   gap: 20px;
 }
 
+a {
+  color: #3171d7;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #31add7;
+}
+
 li a {
   font-size: 18px;
   color: #000;
-  text-decoration: none;
+  background: linear-gradient(currentColor, currentColor) 0% 100% no-repeat;
+  background-size: 0% 2px;
+  padding: 0 0 4px;
 }
 
-.container {
-  max-width: 1280px;
-  padding: 0 20px;
+li a:hover {
+  background-size: 100% 2px;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+.form-wrapper {
+  width: 100%;
+  text-align: center;
   margin: auto;
+}
+
+form {
+  display: flex;
+  max-width: 400px;
+  flex-direction: column;
+  margin: auto;
+  gap: 15px;
+}
+
+input {
+  font-size: 16px;
+  color: #2f2f30;
+  border: 2px solid #6694df;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #a2aec1;
+  padding: 8px 12px;
+}
+
+.btn {
+  font-size: 16px;
+  font-weight: bold;
+  color: #f2f2f2;
+  background-color: #3171d7;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #a2aec1;
+  text-transform: uppercase;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  color: #3171d7;
+  background-color: #deebff;
+  border-color: #3171d7;
 }
 
 footer {
@@ -49,7 +112,7 @@ footer {
   color: #2f2f30;
   background-color: #f2f2f2;
   box-shadow: 0 0 10px #000;
-  padding: 20px 0;
+  padding: 22px 0;
   margin: auto;
 }
 

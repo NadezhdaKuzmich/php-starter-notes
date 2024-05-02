@@ -2,7 +2,7 @@
 require_once 'includes/header.php';
 ?>
 <div class="container">
-  <h1>HOME</h1>
+  <h1>Home</h1>
 
   <?php
 //   $sql = 'SELECT * FROM users';
