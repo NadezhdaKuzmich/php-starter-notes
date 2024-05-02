@@ -35,13 +35,13 @@ ul {
 }
 
 a {
-  color: #3171d7;
+  color: #235098;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 a:hover {
-  color: #31add7;
+  color: #3171d7;
 }
 
 li a {

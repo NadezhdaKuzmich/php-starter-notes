@@ -2,7 +2,16 @@
 require_once 'includes/header.php';
 ?>
 <div class="container">
-  <h1>Register</h1>
+  <div class="form-wrapper">
+    <h1>Register</h1>
+    <p>Already have an account? <a href="login.php">Login!</a></p>
+    <form action="" method="post">
+      <input type="text" name="username" placeholder="Username">
+      <input type="password" name="password" placeholder="Password">
+      <input type="password" name="confirmPassword" placeholder="Confirm password">
+      <button class="btn" type="submit">Register</button>
+    </form>
+  </div>
 </div>
 
 <?php
