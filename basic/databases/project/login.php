@@ -6,10 +6,10 @@ require_once 'includes/header.php';
   <div class="form-wrapper">
     <h1>Log in</h1>
     <p>No account? <a href="register.php">Register here!</a></p>
-    <form action="" method="post">
+    <form action="includes/login-inc.php" method="post">
       <input type="text" name="username" placeholder="Username">
       <input type="password" name="password" placeholder="Password">
-      <button class="btn" type="submit">Get in</button>
+      <button class="btn" type="submit" name="submit">Get in</button>
     </form>
   </div>
 </div>

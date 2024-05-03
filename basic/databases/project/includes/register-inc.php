@@ -41,9 +41,18 @@ if (isset($_POST['submit'])) {
           header("Location: ../register.php?error=sqlerror");
           exit();
         } else {
-          mysqli_stmt_bind_param($stmt, "ss", $username, $password);
+          // password_hash створює хеш пароля, використовуючи сильний 
+          // незворотний алгоритм хешування.
+          $hashedPass = password_hash($password, PASSWORD_DEFAULT);
+
+          mysqli_stmt_bind_param($stmt, "ss", $username, $hashedPass);
           mysqli_stmt_execute($stmt);
           mysqli_stmt_store_result($stmt);
+          mysqli_stmt_close($stmt);
+          mysqli_close($conn);
+
+          header("Location: ../register.php?succes=registered");
+          exit();
         }
       }
     }
