@@ -54,7 +54,6 @@ $sql = 'SELECT * FROM users';
 // $sql = 'SELECT * FROM users WHERE id = 1';
 // $sql = 'SELECT * FROM users WHERE id = 3';  // No results found.
 
-
 // mysqli_query виконує запит query до бази даних.
 $result = mysqli_query($conn, $sql);
 

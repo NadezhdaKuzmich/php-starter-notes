@@ -1,6 +1,7 @@
 <?php
 require_once 'includes/header.php';
 ?>
+
 <div class="container">
   <div class="form-wrapper">
     <h1>Register</h1>
