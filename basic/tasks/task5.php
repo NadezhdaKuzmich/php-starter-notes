@@ -98,4 +98,27 @@ echo reset($colors) . "<br>";
 var_dump($colors);
 echo "<hr>";
 
+// task 7
+function printInfo($value, $key)
+{
+  echo "$key : $value" . "\n";
+}
+
+$info = '{
+  "Title": "The Cuckoos Calling",
+  "Author": "Robert Galbraith",
+  "Detail": { 
+    "Publisher": "Little Brown"
+  }
+}';
+
+// приймає закодований у JSON рядок і перетворює його на змінну PHP:
+$decInfo = json_decode($info, true);
+var_dump($decInfo);
+echo "<br>";
+
+// рекурсивно застосовує користувацьку функцію до кожного елемента масиву:
+array_walk_recursive($decInfo, "printInfo");
+echo "<hr>";
+
 echo "</pre>";
