@@ -74,18 +74,18 @@ echo "<hr>";
 // task 5
 $x = [1, 2, 3, 4, 5];
 echo "<pre>";
-var_dump($x);
+print_r($x);
 echo "<br>";
 
 // unset the element with index 3
 unset($x[3]);
-var_dump($x);
+print_r($x);
 echo "<br>";
 
 // array_values повертає масив з усіма елементами масиву array, 
 // також заново індексує масив, що повертається, числовими індексами.
 $x = array_values($x);
-var_dump($x);
+print_r($x);
 echo "<hr>";
 
 // task 6
@@ -95,7 +95,7 @@ $colors = [4 => 'white', 6 => 'green', 11 => 'red'];
 // повертає значення першого елемента масиву або FALSE, якщо масив порожній.
 echo reset($colors) . "<br>";
 
-var_dump($colors);
+print_r($colors);
 echo "<hr>";
 
 // task 7
@@ -114,11 +114,18 @@ $info = '{
 
 // приймає закодований у JSON рядок і перетворює його на змінну PHP:
 $decInfo = json_decode($info, true);
-var_dump($decInfo);
+print_r($decInfo);
 echo "<br>";
 
 // рекурсивно застосовує користувацьку функцію до кожного елемента масиву:
 array_walk_recursive($decInfo, "printInfo");
 echo "<hr>";
+
+// task 8
+// array_combine - cтворює новий масив, використовуючи один масив як ключі, 
+// а інший як відповідні значення.
+// range - cтворює масив, що містить діапазон елементів.
+$result = array_combine(range(20, 25), range(2, 7));
+print_r($result);
 
 echo "</pre>";
