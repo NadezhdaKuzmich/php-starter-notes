@@ -70,3 +70,32 @@ foreach ($ceu as $country => $capital) {
   echo "The capital of $country is $capital" . "<br>";
 }
 echo "<hr>";
+
+// task 5
+$x = [1, 2, 3, 4, 5];
+echo "<pre>";
+var_dump($x);
+echo "<br>";
+
+// unset the element with index 3
+unset($x[3]);
+var_dump($x);
+echo "<br>";
+
+// array_values повертає масив з усіма елементами масиву array, 
+// також заново індексує масив, що повертається, числовими індексами.
+$x = array_values($x);
+var_dump($x);
+echo "<hr>";
+
+// task 6
+$colors = [4 => 'white', 6 => 'green', 11 => 'red'];
+
+// reset переміщує внутрішній покажчик array до його першого елемента і 
+// повертає значення першого елемента масиву або FALSE, якщо масив порожній.
+echo reset($colors) . "<br>";
+
+var_dump($colors);
+echo "<hr>";
+
+echo "</pre>";
