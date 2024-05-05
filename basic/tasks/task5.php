@@ -127,5 +127,53 @@ echo "<hr>";
 // range - cтворює масив, що містить діапазон елементів.
 $result = array_combine(range(20, 25), range(2, 7));
 print_r($result);
+echo "<hr>";
+
+// task 9
+function combineArray($keys, $values)
+{
+  $result = [];
+
+  foreach ($keys as $index => $key) {
+    $result[$key][] = $values[$index];
+  }
+
+  // array_walk - обійде всі елементи масиву незалежно від позиції покажчика.
+  array_walk($result, function (&$value) {
+    // array_pop - витягує і повертає значення останнього елемента масиву, 
+    // зменшуючи розмір array на один елемент.
+    $value = (count($value) == 1) ? array_pop($value) : $value;
+  });
+
+  return $result;
+}
+
+$array1 = ['x', 'y', 'y'];
+$array2 = [10, 20, 30];
+print_r(combineArray($array1, $array2));
+echo "<hr>";
+
+// task 10
+$color1 = ['a' => 'White', 'b' => 'Red', 'c' => ['a' => 'Green', 'b' => 'Blue', 'c' => 'Yellow']];
+$color2 = ['a' => 'White', 'b' => 'Red', 'c' => ['a' => 'White', 'b' => 'Red', 'c' => 'Yellow']];
+// v1
+// array_udiff_assoc - повертає масив, що містить елементи аргументу, яких немає в іншому аргументі:
+print_r(array_diff_assoc($color1['c'], $color2['c']));
+echo "<br>";
+
+// v2
+function compareKey($a, $b)
+{
+  if ($a === $b) {
+    return 0;
+  }
+
+  return $a > $b ? 1 : -1;
+}
+
+// array_diff_uassoc - обчислює розбіжність масивів з додатковою 
+// перевіркою індексу через користувацьку callback-функцію:
+print_r(array_diff_uassoc($color1['c'], $color2['c'], "compareKey"));
+echo "<hr>";
 
 echo "</pre>";
