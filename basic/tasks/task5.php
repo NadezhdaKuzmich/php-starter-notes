@@ -176,4 +176,35 @@ function compareKey($a, $b)
 print_r(array_diff_uassoc($color1['c'], $color2['c'], "compareKey"));
 echo "<hr>";
 
+// task 11
+/*
+array_fill(index, number, value) - заповнює масив значеннями:
+- index => Перший індекс масиву, що повертається.
+- number => Задає кількість елементів, що вставляються.
+- value => Задає значення, що використовується для заповнення масиву.
+*/
+$arr = array_fill(0, 4, array_fill(1, 4, 10));
+print_r($arr);
+echo "<hr>";
+
+// task 12
+$string = "  IANA is the global coordinator of the DNS root. 
+The root is the upper-most part of the DNS hierarchy, 
+and involves delegating administrative responsibility 
+of “top-level domains”, which are the last segment of 
+
+a domain name, such as .com, .uk and .nz. Part of this 
+task includes evaluating requests to change the operators 
+
+of country code domains, as well as day-to-day maintenance
+of the details of the existing operators. ";
+
+// array_filter - повертає масив, що містить значення масиву, відфільтровані 
+// відповідно до результату функції зворотного виклику.
+// array_map - повертає масив, що містить елементи всіх зазначених масивів 
+// після їх обробки функцією зворотного виклику.
+// explode - розбиває рядок у масив за певним роздільником.
+$result = array_filter(array_map('trim', explode("\n", $string)), 'strlen');
+print_r($result);
+
 echo "</pre>";
