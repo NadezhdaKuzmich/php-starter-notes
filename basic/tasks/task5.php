@@ -206,5 +206,4 @@ of the details of the existing operators. ";
 // explode - розбиває рядок у масив за певним роздільником.
 $result = array_filter(array_map('trim', explode("\n", $string)), 'strlen');
 print_r($result);
-
 echo "</pre>";
