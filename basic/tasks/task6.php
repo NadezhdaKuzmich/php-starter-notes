@@ -34,12 +34,12 @@ function filterByValue($myArray, $index, $value)
       $temp[$key] = $myArray[$key][$index];
 
       if ($temp[$key] == $value) {
-        $new_array[$key] = $myArray[$key];
+        $newArray[$key] = $myArray[$key];
       }
     }
   }
 
-  return $new_array;
+  return $newArray;
 }
 
 $colors = [
@@ -53,19 +53,19 @@ print_r($results);
 echo '<hr>';
 
 // task 3
-$first_array = ['c1' => 'Red', 'c2' => 'Green', 'c3' => 'White', 'c4' => 'Black'];
-$second_array = ['c2', 'c4'];
+$firstArray = ['c1' => 'Red', 'c2' => 'Green', 'c3' => 'White', 'c4' => 'Black'];
+$secondArray = ['c2', 'c4'];
 
 // array_flip - повертає масив навпаки, тобто ключі масиву array стають значеннями, 
 // а значення масиву array стають ключами:
 echo "<b>Task 3:</b><br>";
-print_r(array_flip($second_array));
+print_r(array_flip($secondArray));
 echo '<br>';
 
 // array_diff_key($array, $arrays): array
 // Порівнює ключі array з ключами arrays і повертає різницю. Ця функція схожа 
 // з array_diff за винятком того, що порівнюються ключі, а не значення:
-$result = array_diff_key($first_array, array_flip($second_array));
+$result = array_diff_key($firstArray, array_flip($secondArray));
 print_r($result);
 echo '<hr>';
 
@@ -92,12 +92,12 @@ echo current($colors) . '<br>';
 echo '<hr>';
 
 // task 5
-$first_array = ['c1' => 'Red', 'c2' => 'Green', 'c3' => 'White', 'c4' => 'Black'];
-$second_array = ['c2', 'c4'];
+$firstArray = ['c1' => 'Red', 'c2' => 'Green', 'c3' => 'White', 'c4' => 'Black'];
+$secondArray = ['c2', 'c4'];
 
 // array_intersect_key - повертає масив, що містить усі елементи масиву, 
 // які мають ключі, що містяться у всіх інших параметрах.
-$result = array_intersect_key($first_array, array_flip($second_array));
+$result = array_intersect_key($firstArray, array_flip($secondArray));
 
 echo "<b>Task 5:</b><br>";
 print_r($result);
@@ -122,6 +122,50 @@ $b = [2, 3, 4, 5, 6];
 
 echo "<b>Task 6:</b><br>";
 print_r(unionArray($a, $b));
+echo '<hr>';
+
+// task 7
+function firstArrayElem(&$myArray)
+{
+  // Подібно до array, list це не функція, а мовна конструкція. 
+  // list - використовується для того, щоб присвоїти списку змінних 
+  // значення за одну операцію.
+  list($key) = array_keys($myArray);
+  // Зауваження: list працює тільки з масивами, індексами яких є числа 
+  // і нумерація яких починається з 0.
+  $result = [$key => $myArray[$key]];
+
+  // unset - використовується для видалення змінних:
+  unset($myArray[$key]);
+
+  return $result;
+}
+
+$colors = ['c1' => 'Red', 'c2' => 'Green', 'c3' => 'Black'];
+echo "<b>Task 7:</b><br>";
+print_r(firstArrayElem($colors));
+echo '<br>';
+print_r($colors);
+echo '<hr>';
+
+// task 8
+function checkStr($arr)
+{
+  // => array_sum - повертає суму значень масиву. 
+  // Отриманий результат матиме тип integer або float.
+  // => array_map - застосовує callback-функцію до всіх 
+  // елементів зазначених масивів.
+  // => is_string - визначає, чи є змінна рядком.
+  // Повертає TRUE, якщо var є string, інакше FALSE.
+  return array_sum(array_map('is_string', $arr)) == count($arr);
+}
+
+$arr1 = ['PHP', 'JS', 'Python'];
+$arr2 = ['SQL', 200, 'MySQL'];
+
+echo "<b>Task 8:</b><br>";
+var_dump(checkStr($arr1));
+var_dump(checkStr($arr2));
 echo '<hr>';
 
 echo '</pre>';
