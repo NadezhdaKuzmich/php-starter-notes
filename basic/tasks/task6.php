@@ -91,4 +91,37 @@ echo $last . '<br>';
 echo current($colors) . '<br>';
 echo '<hr>';
 
+// task 5
+$first_array = ['c1' => 'Red', 'c2' => 'Green', 'c3' => 'White', 'c4' => 'Black'];
+$second_array = ['c2', 'c4'];
+
+// array_intersect_key - повертає масив, що містить усі елементи масиву, 
+// які мають ключі, що містяться у всіх інших параметрах.
+$result = array_intersect_key($first_array, array_flip($second_array));
+
+echo "<b>Task 5:</b><br>";
+print_r($result);
+echo '<hr>';
+
+// task 6
+function unionArray($x, $y)
+{
+  // array_merge - зливає елементи одного або декількох масивів так, 
+  // що значення одного додаються в кінець попереднього:
+  $aunion = array_merge(
+    array_diff($x, $y),        // Elements in $x but not in $y
+    array_intersect($x, $y),   // Intersection of $x and $y
+    array_diff($y, $x)         // Elements in $y but not in $x
+  );
+
+  return $aunion;
+}
+
+$a = [1, 2, 3, 4];
+$b = [2, 3, 4, 5, 6];
+
+echo "<b>Task 6:</b><br>";
+print_r(unionArray($a, $b));
+echo '<hr>';
+
 echo '</pre>';
