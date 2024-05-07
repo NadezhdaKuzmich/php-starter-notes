@@ -168,4 +168,52 @@ var_dump(checkStr($arr1));
 var_dump(checkStr($arr2));
 echo '<hr>';
 
+// task 9
+$colors1 = [['Red', 80], ['Green', 70], ['white', 60]];
+$colors2 = [['Green', 70], ['Black', 95]];
+
+// array_udiff - обчислює розбіжність масивів, 
+// використовуючи для порівняння callback-функцію:
+$colors = array_udiff(
+  $colors1,
+  $colors2,
+  function ($arr1, $arr2) {
+    // strcmp - порівняння рядків, безпечне для даних у двійковій формі
+    // Повертає від'ємне число, якщо str1 менший за str2; додатне число, 
+    // якщо str1 більший за str2, і 0, якщо рядки рівні.
+    // implode - це вбудована функція, призначена для об'єднання елементів 
+    // масиву в рядок із використанням певного роздільника. 
+    return strcmp(implode("", $arr1), implode("", $arr2));
+  }
+);
+
+echo "<b>Task 9:</b><br>";
+print_r($colors);
+echo '<hr>';
+
+// task 10
+function uniqArray($array, $value)
+{
+  $count = 0;
+
+  foreach ($array as $key => $val) {
+    if ($count > 0 && $val == $value) {
+      unset($array[$key]);
+    }
+
+    if ($val == $value) {
+      $count++;
+    }
+  }
+
+  return array_filter($array);
+}
+
+$numbers = [4, 5, 6, 7, 4, 7, 8];
+echo "<b>Task 10:</b><br>";
+print_r(uniqArray($numbers, 7));
+echo '<br>';
+print_r(uniqArray($numbers, 4));
+echo '<hr>';
+
 echo '</pre>';
