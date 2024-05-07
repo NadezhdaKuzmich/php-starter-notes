@@ -216,4 +216,47 @@ echo '<br>';
 print_r(uniqArray($numbers, 4));
 echo '<hr>';
 
+// task 11
+$list1 = "4, 5, 6, 7";
+$list2 = "4, 5, 7, 8";
+
+// array_unique - бере як параметр масив і повертає новий масив без повторюваних значень:
+$result = implode(",", array_unique(array_merge(explode(",", $list1), explode(",", $list2))));
+echo "<b>Task 11:</b><br>";
+echo $result;
+echo '<hr>';
+
+// task 12
+function notUnique($myArray)
+{
+  $arr = [];
+  // natcasesort - cортує масив, використовуючи алгоритм 
+  // "natural order" без урахування регістру символів.
+  natcasesort($myArray);
+
+  // reset - переміщує внутрішній покажчик array до його 
+  // першого елемента і повертає значення першого елемента 
+  // масиву або FALSE, якщо масив порожній.
+  reset($myArray);
+
+  $oldKey = NULL;
+  $oldValue = NULL;
+
+  foreach ($myArray as $key => $value) {
+    if ($oldValue == $value) {
+      $arr[$oldKey] = $oldValue;
+      $arr[$key] = $value;
+    }
+
+    $oldKey = $key;
+    $oldValue = $value;
+  }
+
+  return $arr;
+}
+
+$test_array = ['xyz@example.com', 'dse@example.com', 'xyz@example.com', 'mno@example.com'];
+echo "<b>Task 12:</b><br>";
+print_r(notUnique($test_array));
+echo '<hr>';
 echo '</pre>';
