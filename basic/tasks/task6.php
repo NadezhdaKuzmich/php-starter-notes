@@ -258,5 +258,4 @@ function notUnique($myArray)
 $test_array = ['xyz@example.com', 'dse@example.com', 'xyz@example.com', 'mno@example.com'];
 echo "<b>Task 12:</b><br>";
 print_r(notUnique($test_array));
-echo '<hr>';
 echo '</pre>';
