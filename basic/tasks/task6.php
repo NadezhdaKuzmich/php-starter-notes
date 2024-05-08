@@ -1,12 +1,12 @@
 <?php
 
 // task 1
-$colors = ['key1' => 'Red', 'key2' => 'Green', 'key3' => 'Black'];
-$givenValue = 'Black';
-echo '<pre>';
+$colors = ["key1" => "Red", "key2" => "Green", "key3" => "Black"];
+$givenValue = "Black";
+echo "<pre>";
 echo "<b>Task 1:</b><br>";
 print_r($colors);
-echo '<br>';
+echo "<br>";
 
 // Змінна $given_value визначена поза контекстом функції і невидима всередині. 
 // Точно така сама поведінка і в анонімних функцій. Передача аргументів все ж 
@@ -22,7 +22,7 @@ $filteredArray = array_filter($colors, function ($element) use ($givenValue) {
 });
 
 print_r($filteredArray);
-echo '<hr>';
+echo "<hr>";
 
 // task 2
 function filterByValue($myArray, $index, $value)
@@ -43,40 +43,40 @@ function filterByValue($myArray, $index, $value)
 }
 
 $colors = [
-  0 => ['key1' => 'Red', 'key2' => 'Green', 'key3' => 'Black'],
-  1 => ['key1' => 'Yellow', 'key2' => 'White', 'key3' => 'Pink']
+  0 => ["key1" => "Red", "key2" => "Green", "key3" => "Black"],
+  1 => ["key1" => "Yellow", "key2" => "White", "key3" => "Pink"]
 ];
 
-$results = filterByValue($colors, 'key2', 'White');
+$results = filterByValue($colors, "key2", "White");
 echo "<b>Task 2:</b><br>";
 print_r($results);
-echo '<hr>';
+echo "<hr>";
 
 // task 3
-$firstArray = ['c1' => 'Red', 'c2' => 'Green', 'c3' => 'White', 'c4' => 'Black'];
-$secondArray = ['c2', 'c4'];
+$firstArray = ["c1" => "Red", "c2" => "Green", "c3" => "White", "c4" => "Black"];
+$secondArray = ["c2", "c4"];
 
 // array_flip - повертає масив навпаки, тобто ключі масиву array стають значеннями, 
 // а значення масиву array стають ключами:
 echo "<b>Task 3:</b><br>";
 print_r(array_flip($secondArray));
-echo '<br>';
+echo "<br>";
 
 // array_diff_key($array, $arrays): array
 // Порівнює ключі array з ключами arrays і повертає різницю. Ця функція схожа 
 // з array_diff за винятком того, що порівнюються ключі, а не значення:
 $result = array_diff_key($firstArray, array_flip($secondArray));
 print_r($result);
-echo '<hr>';
+echo "<hr>";
 
 // task 4
-$colors = ['c1' => 'Red', 'c2' => 'Green', 'c3' => 'White', 'c4' => 'Black'];
+$colors = ["c1" => "Red", "c2" => "Green", "c3" => "White", "c4" => "Black"];
 echo "<b>Task 4:</b><br>";
 // next - поводиться так само, як функція current, з однією відмінністю. 
 // Вона зсуває внутрішній покажчик масиву на одну позицію вперед, перш ніж 
 // повернути значення елемента. Тобто вона повертає наступне значення масиву 
 // і просуває внутрішній покажчик масиву на одну позицію:
-echo next($colors) . '<br>';
+echo next($colors) . "<br>";
 
 $keys = array_keys(array_flip($colors));
 // print_r($keys);
@@ -84,16 +84,16 @@ $keys = array_keys(array_flip($colors));
 // array_pop - витягує і повертає значення останнього елемента масиву, 
 // зменшуючи розмір на один елемент:
 $last = array_pop($keys);
-echo $last . '<br>';
+echo $last . "<br>";
 
 // current - просто повертає значення елемента масиву, на який вказує 
 // внутрішній покажчик. Вона не зсуває покажчик ні в якому напрямку:
-echo current($colors) . '<br>';
-echo '<hr>';
+echo current($colors) . "<br>";
+echo "<hr>";
 
 // task 5
-$firstArray = ['c1' => 'Red', 'c2' => 'Green', 'c3' => 'White', 'c4' => 'Black'];
-$secondArray = ['c2', 'c4'];
+$firstArray = ["c1" => "Red", "c2" => "Green", "c3" => "White", "c4" => "Black"];
+$secondArray = ["c2", "c4"];
 
 // array_intersect_key - повертає масив, що містить усі елементи масиву, 
 // які мають ключі, що містяться у всіх інших параметрах.
@@ -101,7 +101,7 @@ $result = array_intersect_key($firstArray, array_flip($secondArray));
 
 echo "<b>Task 5:</b><br>";
 print_r($result);
-echo '<hr>';
+echo "<hr>";
 
 // task 6
 function unionArray($x, $y)
@@ -122,7 +122,7 @@ $b = [2, 3, 4, 5, 6];
 
 echo "<b>Task 6:</b><br>";
 print_r(unionArray($a, $b));
-echo '<hr>';
+echo "<hr>";
 
 // task 7
 function firstArrayElem(&$myArray)
@@ -141,12 +141,12 @@ function firstArrayElem(&$myArray)
   return $result;
 }
 
-$colors = ['c1' => 'Red', 'c2' => 'Green', 'c3' => 'Black'];
+$colors = ["c1" => "Red", "c2" => "Green", "c3" => "Black"];
 echo "<b>Task 7:</b><br>";
 print_r(firstArrayElem($colors));
-echo '<br>';
+echo "<br>";
 print_r($colors);
-echo '<hr>';
+echo "<hr>";
 
 // task 8
 function checkStr($arr)
@@ -157,20 +157,20 @@ function checkStr($arr)
   // елементів зазначених масивів.
   // => is_string - визначає, чи є змінна рядком.
   // Повертає TRUE, якщо var є string, інакше FALSE.
-  return array_sum(array_map('is_string', $arr)) == count($arr);
+  return array_sum(array_map("is_string", $arr)) == count($arr);
 }
 
-$arr1 = ['PHP', 'JS', 'Python'];
-$arr2 = ['SQL', 200, 'MySQL'];
+$arr1 = ["PHP", "JS", "Python"];
+$arr2 = ["SQL", 200, "MySQL"];
 
 echo "<b>Task 8:</b><br>";
 var_dump(checkStr($arr1));
 var_dump(checkStr($arr2));
-echo '<hr>';
+echo "<hr>";
 
 // task 9
-$colors1 = [['Red', 80], ['Green', 70], ['white', 60]];
-$colors2 = [['Green', 70], ['Black', 95]];
+$colors1 = [["Red", 80], ["Green", 70], ["white", 60]];
+$colors2 = [["Green", 70], ["Black", 95]];
 
 // array_udiff - обчислює розбіжність масивів, 
 // використовуючи для порівняння callback-функцію:
@@ -179,9 +179,9 @@ $colors = array_udiff(
   $colors2,
   function ($arr1, $arr2) {
     // strcmp - порівняння рядків, безпечне для даних у двійковій формі
-    // Повертає від'ємне число, якщо str1 менший за str2; додатне число, 
+    // Повертає від"ємне число, якщо str1 менший за str2; додатне число, 
     // якщо str1 більший за str2, і 0, якщо рядки рівні.
-    // implode - це вбудована функція, призначена для об'єднання елементів 
+    // implode - це вбудована функція, призначена для об"єднання елементів 
     // масиву в рядок із використанням певного роздільника. 
     return strcmp(implode("", $arr1), implode("", $arr2));
   }
@@ -189,7 +189,7 @@ $colors = array_udiff(
 
 echo "<b>Task 9:</b><br>";
 print_r($colors);
-echo '<hr>';
+echo "<hr>";
 
 // task 10
 function uniqArray($array, $value)
@@ -212,9 +212,9 @@ function uniqArray($array, $value)
 $numbers = [4, 5, 6, 7, 4, 7, 8];
 echo "<b>Task 10:</b><br>";
 print_r(uniqArray($numbers, 7));
-echo '<br>';
+echo "<br>";
 print_r(uniqArray($numbers, 4));
-echo '<hr>';
+echo "<hr>";
 
 // task 11
 $list1 = "4, 5, 6, 7";
@@ -224,7 +224,7 @@ $list2 = "4, 5, 7, 8";
 $result = implode(",", array_unique(array_merge(explode(",", $list1), explode(",", $list2))));
 echo "<b>Task 11:</b><br>";
 echo $result;
-echo '<hr>';
+echo "<hr>";
 
 // task 12
 function findNotUnique($myArray)
@@ -255,7 +255,7 @@ function findNotUnique($myArray)
   return $arr;
 }
 
-$testArray = ['xyz@example.com', 'dse@example.com', 'xyz@example.com', 'mno@example.com'];
+$testArray = ["xyz@example.com", "dse@example.com", "xyz@example.com", "mno@example.com"];
 echo "<b>Task 12:</b><br>";
 print_r(findNotUnique($testArray));
-echo '</pre>';
+echo "</pre>";

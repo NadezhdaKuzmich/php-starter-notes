@@ -13,14 +13,14 @@ options, HTTP headers, and the PHP License.
 */
 
 // task 2
-$colors = ['white', 'green', 'red', 'blue', 'black'];
+$colors = ["white", "green", "red", "blue", "black"];
 echo "The memory of that scene for me is like a frame of film 
 forever frozen at that moment:<br> the $colors[2] carpet,
 the $colors[1] lawn, the $colors[0] house, the leaden sky.
 The new president and his first lady.<br> - Richard M. Nixon<hr>";
 
 // task 3
-$colors = ['white', 'green', 'red'];
+$colors = ["white", "green", "red"];
 
 foreach ($colors as $color) {
   echo "$color, ";
@@ -89,7 +89,7 @@ print_r($x);
 echo "<hr>";
 
 // task 6
-$colors = [4 => 'white', 6 => 'green', 11 => 'red'];
+$colors = [4 => "white", 6 => "green", 11 => "red"];
 
 // reset переміщує внутрішній покажчик array до його першого елемента і 
 // повертає значення першого елемента масиву або FALSE, якщо масив порожній.
@@ -148,19 +148,19 @@ function combineArray($keys, $values)
   return $result;
 }
 
-$array1 = ['x', 'y', 'y'];
+$array1 = ["x", "y", "y"];
 $array2 = [10, 20, 30];
 print_r(combineArray($array1, $array2));
 echo "<hr>";
 
 // task 10
-$color1 = ['a' => 'White', 'b' => 'Red', 'c' => ['a' => 'Green', 'b' => 'Blue', 'c' => 'Yellow']];
-$color2 = ['a' => 'White', 'b' => 'Red', 'c' => ['a' => 'White', 'b' => 'Red', 'c' => 'Yellow']];
+$color1 = ["a" => "White", "b" => "Red", "c" => ["a" => "Green", "b" => "Blue", "c" => "Yellow"]];
+$color2 = ["a" => "White", "b" => "Red", "c" => ["a" => "White", "b" => "Red", "c" => "Yellow"]];
 // v1
 // array_diff_assoc - повертає масив, що містить елементи аргументу, яких немає в іншому аргументі.
 // Порівнює значення масиву зі значеннями масивів і повертає різницю. У цій функції, на відміну 
 // від функції array_diff(), ключі масиву також беруть участь у порівнянні:
-print_r(array_diff_assoc($color1['c'], $color2['c']));
+print_r(array_diff_assoc($color1["c"], $color2["c"]));
 echo "<br>";
 
 // v2
@@ -175,7 +175,7 @@ function compareKey($a, $b)
 
 // array_diff_uassoc - обчислює розбіжність масивів з додатковою 
 // перевіркою індексу через користувацьку callback-функцію:
-print_r(array_diff_uassoc($color1['c'], $color2['c'], "compareKey"));
+print_r(array_diff_uassoc($color1["c"], $color2["c"], "compareKey"));
 echo "<hr>";
 
 // task 11
@@ -206,6 +206,6 @@ of the details of the existing operators. ";
 // array_map - повертає масив, що містить елементи всіх зазначених масивів 
 // після їх обробки функцією зворотного виклику.
 // explode - розбиває рядок у масив за певним роздільником.
-$result = array_filter(array_map('trim', explode("\n", $string)), 'strlen');
+$result = array_filter(array_map("trim", explode("\n", $string)), "strlen");
 print_r($result);
 echo "</pre>";
