@@ -227,7 +227,7 @@ echo $result;
 echo '<hr>';
 
 // task 12
-function notUnique($myArray)
+function findNotUnique($myArray)
 {
   $arr = [];
   // natcasesort - cортує масив, використовуючи алгоритм 
@@ -255,7 +255,7 @@ function notUnique($myArray)
   return $arr;
 }
 
-$test_array = ['xyz@example.com', 'dse@example.com', 'xyz@example.com', 'mno@example.com'];
+$testArray = ['xyz@example.com', 'dse@example.com', 'xyz@example.com', 'mno@example.com'];
 echo "<b>Task 12:</b><br>";
-print_r(notUnique($test_array));
+print_r(findNotUnique($testArray));
 echo '</pre>';
