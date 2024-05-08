@@ -68,13 +68,62 @@ echo "<br>";
 // array_map - повертає масив, що містить елементи всіх зазначених 
 // масивів після їх обробки функцією зворотного виклику.
 // strtolower - перетворює рядок у нижній регістр.
-$lower_colors = array_map("strtolower", $colors);
-print_r($lower_colors);
+$lowerColors = array_map("strtolower", $colors);
+print_r($lowerColors);
 echo "<br>";
 
 // strtoupper - перетворює рядок у верхній регістр.
-$upper_colors = array_map("strtoupper", $colors);
-print_r($upper_colors);
+$upperColors = array_map("strtoupper", $colors);
+print_r($upperColors);
+echo "<hr>";
+
+// task 5
+$colors = ["Red ", " Green", "Black ", " White "];
+
+echo "<b>Task 5:</b><br>";
+print_r($colors);
+echo "<br>";
+
+// array_walk - обійде всі елементи масиву незалежно від позиції покажчика. 
+// Застосовує задану користувачем функцію до кожного елемента масиву:
+array_walk($colors, function (&$val) {
+  // trim - повертає рядок з видаленими з початку і кінця рядка пробілами:
+  $val = trim($val); 
+});
+print_r($colors);
+echo "<hr>";
+
+// task 6
+$testArray = [
+    0 => 'example1',
+    1 => 'Example11',
+    2 => 'example10',
+    3 => 'Example6',
+    4 => 'example4',
+    5 => 'EXAMPLE40',
+    6 => 'example10'
+];
+
+// asort - сортує масив таким чином, що зберігаються відносини між ключами 
+// і значеннями. Вона корисна, в основному, під час сортування асоціативних 
+// масивів, коли важливо зберегти відношення ключ => значення:
+asort($testArray, SORT_STRING | SORT_FLAG_CASE | SORT_NATURAL);
+/*
+Необов'язковий другий параметр flags змінює поведінку сортування 
+і може набувати таких значень:
+- SORT_REGULAR - звичайне порівняння елементів.
+- SORT_NUMERIC - числове порівняння елементів.
+- SORT_STRING - строкове порівняння елементів.
+- SORT_LOCALE_STRING - порівняння елементів як рядків на основі 
+поточного мовного стандарту. Прапор використовує мовний стандарт, 
+який можна змінити функцією setlocale.
+- SORT_NATURAL - порівняння елементів як рядка, використовуючи 
+"природний порядок", наприклад natsort.
+- SORT_FLAG_CASE - можна об'єднувати (побітове АБО) з SORT_STRING 
+або SORT_NATURAL для сортування рядків без урахування регістру.
+*/
+echo "<b>Task 6:</b><br>";
+print_r($testArray);
 echo "<hr>";
 
 echo "</pre>";
