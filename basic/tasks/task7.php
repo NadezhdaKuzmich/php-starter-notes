@@ -88,20 +88,20 @@ echo "<br>";
 // Застосовує задану користувачем функцію до кожного елемента масиву:
 array_walk($colors, function (&$val) {
   // trim - повертає рядок з видаленими з початку і кінця рядка пробілами:
-  $val = trim($val); 
+  $val = trim($val);
 });
 print_r($colors);
 echo "<hr>";
 
 // task 6
 $testArray = [
-    0 => 'example1',
-    1 => 'Example11',
-    2 => 'example10',
-    3 => 'Example6',
-    4 => 'example4',
-    5 => 'EXAMPLE40',
-    6 => 'example10'
+  0 => 'example1',
+  1 => 'Example11',
+  2 => 'example10',
+  3 => 'Example6',
+  4 => 'example4',
+  5 => 'EXAMPLE40',
+  6 => 'example10'
 ];
 
 // asort - сортує масив таким чином, що зберігаються відносини між ключами 
@@ -124,6 +124,43 @@ asort($testArray, SORT_STRING | SORT_FLAG_CASE | SORT_NATURAL);
 */
 echo "<b>Task 6:</b><br>";
 print_r($testArray);
+echo "<hr>";
+
+// task 7
+function searchValue($arr, $search)
+{
+  foreach ($arr as $key => $value) {
+    // preg_match - повертає 1, якщо параметр відповідає переданому 
+    // параметру, 0 якщо ні, або FALSE у разі помилки:
+    if (preg_match("/$search/i", $value)) {
+      echo $search . " has found in " . $key . "\n";
+    } else {
+      echo $search . " has not found in " . $key . "\n";
+    }
+  }
+}
+
+$exercises = ["part1" => "PHP array", "part2" => "PHP String", "part3" => "PHP Math"];
+echo "<b>Task 7:</b><br>";
+searchValue($exercises, "Math");
+echo "<hr>";
+
+// task 8
+function getFileExtension($str)
+{
+  // explode - розбиває рядок у масив за певним роздільником:
+  $str = explode(".", $str);
+  
+  // end - зсуває внутрішній покажчик масиву array на останній 
+  // елемент і повертає його значення:
+  $str = strtolower(end($str));
+
+  return $str;
+}
+
+$file = "example.txt";
+echo "<b>Task 8:</b><br>";
+echo getFileExtension($file);
 echo "<hr>";
 
 echo "</pre>";
