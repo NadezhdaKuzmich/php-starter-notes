@@ -150,7 +150,7 @@ function getFileExtension($str)
 {
   // explode - розбиває рядок у масив за певним роздільником:
   $str = explode(".", $str);
-  
+
   // end - зсуває внутрішній покажчик масиву array на останній 
   // елемент і повертає його значення:
   $str = strtolower(end($str));
@@ -161,6 +161,55 @@ function getFileExtension($str)
 $file = "example.txt";
 echo "<b>Task 8:</b><br>";
 echo getFileExtension($file);
+echo "<hr>";
+
+// task 9
+$arr = [
+  'value1' => 3021,
+  'value2' => 2365,
+  'value3' => 5215,
+  'value4' => 5214,
+  'value5' => 2145
+];
+
+// arsort - сортує масив у зворотному порядку таким чином, 
+// що зберігаються відносини між ключами і значеннями. Вона 
+// корисна, здебільшого, під час сортування ассаоціативних 
+// масивів, коли важливо зберегти відношення ключ => значення:
+arsort($arr);
+
+// key - повертає індекс поточної позиції масиву:
+$keyOfMax = key($arr);
+
+echo "<b>Task 9:</b><br>";
+echo "Index of the highest value : $keyOfMax";
+echo "<hr>";
+
+// task 10
+function rangeLetter($length)
+{
+  $letters = range('A', 'Z');
+  $dataRange = [];
+  $position = 0;
+
+
+  foreach ($letters as $letter) {
+    $position++;
+
+    if ($position <= $length) {
+      if ($position > 26) {
+        break;
+      }
+
+      $dataRange[] = $letter;
+    }
+  }
+
+  return $dataRange;
+}
+
+echo "<b>Task 10:</b><br>";
+print_r(rangeLetter(12));
 echo "<hr>";
 
 echo "</pre>";
