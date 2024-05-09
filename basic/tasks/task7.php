@@ -225,4 +225,24 @@ echo "<b>Task 11:</b><br>";
 print_r(rangeString($testString));
 echo "<hr>";
 
+// task 12
+// sort за значенням
+$colors = ["Red", "Orange", "Black", "White"];
+
+// rsort - сортує масив у зворотному порядку:
+rsort($colors);
+
+echo "<b>Task 12:</b><br>";
+print_r($colors);
+echo "<br>";
+
+// sort - сортує масив за зростанням:
+sort($colors);
+print_r($colors);
+echo "<br>";
+
+// shuffle - перемішує елементи масиву у випадковому порядку:
+shuffle($colors);
+print_r($colors);
+echo "<hr>";
 echo "</pre>";
