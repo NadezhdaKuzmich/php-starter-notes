@@ -212,4 +212,17 @@ echo "<b>Task 10:</b><br>";
 print_r(rangeLetter(12));
 echo "<hr>";
 
+// task 11
+function rangeString($str)
+{
+  // preg_match_all - виконує глобальний пошук шаблону в рядку:
+  preg_match_all("/[0-9]{1,2}/", $str, $out);
+  return $out[0];
+}
+
+$testString = '1-2 18-20 9-11';
+echo "<b>Task 11:</b><br>";
+print_r(rangeString($testString));
+echo "<hr>";
+
 echo "</pre>";
