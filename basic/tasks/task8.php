@@ -140,4 +140,38 @@ echo "<br>";
 print_r(sortBySpecKey($info, "country"));
 echo "<hr>";
 
+// task 6
+function sortSubnets($first, $second)
+{
+  $first_arr = explode('.', $first);
+  $second_arr = explode('.', $second);
+
+
+  foreach (range(0, 3) as $i) {
+    if ($first_arr[$i] < $second_arr[$i]) {
+      return -1;
+    } elseif ($first_arr[$i] > $second_arr[$i]) {
+      return 1;
+    }
+  }
+
+  return -1;
+}
+
+$subnetList = [
+  '192.169.12',
+  '192.167.11',
+  '192.169.14',
+  '192.168.13',
+  '192.167.12',
+  '122.169.15',
+  '192.167.16'
+];
+
+usort($subnetList, 'sortSubnets');
+
+echo "<b>Task 6:</b><br>";
+print_r($subnetList);
+echo "<hr>";
+
 echo "</pre>";
