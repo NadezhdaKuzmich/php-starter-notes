@@ -42,4 +42,59 @@ echo "<br>";
 echo "Generated Password 2: " . randPass(2, 4, 4, 1);
 echo "<hr>";
 
+// task 2
+function shuffleAssoc($arr)
+{
+  $keys = array_keys($arr);
+  $newArr = [];
+
+  // Зауваження: 
+  // shuffle - присвоює нові ключі елементам масиву: 
+  // видалить усі наявні ключі, а не просто перевпорядкує їх.
+  shuffle($keys);
+
+  foreach ($keys as $key) {
+    $newArr[$key] = $arr[$key];
+  }
+
+  return $newArr;
+}
+
+$colors = ["color1" => "Red", "color2" => "Green", "color3" => "Yellow"];
+
+echo "<b>Task 2:</b><br>";
+print_r(shuffleAssoc($colors));
+echo "<hr>";
+
+// task 3
+$myArr = [" ", "<", "&"];
+sort($myArr);
+
+echo "<b>Task 3:</b><br>";
+print_r($myArr);
+echo "<hr>";
+
+// task 4
+$colors = [
+  "color1",
+  "cOlor20",
+  "coLor3",
+  "colOr2",
+  "coloR12",
+];
+
+/*
+- SORT_NATURAL - використовується для порівняння елементів 
+як рядків, використовуючи природне впорядкування.
+- SORT_FLAG_CASE - може бути об'єднана з SORT_STRING або 
+SORT_NATURAL для регістронезалежного сортування рядків
+*/
+sort($colors, SORT_NATURAL | SORT_FLAG_CASE);
+
+echo "<b>Task 4:</b><br>";
+foreach ($colors as $key => $val) {
+  echo "Colors[" . $key . "] = " . $val . "<br>";
+}
+echo "<hr>";
+
 echo "</pre>";
