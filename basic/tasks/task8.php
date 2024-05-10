@@ -97,4 +97,47 @@ foreach ($colors as $key => $val) {
 }
 echo "<hr>";
 
+// task 5
+$info = [
+  [
+    'name' => 'Sana',
+    'email' => 'sana@example.com',
+    'phone' => '111-111-1234',
+    'country' => 'USA',
+  ],
+  [
+    'name' => 'Robin',
+    'email' => 'robin@example.com',
+    'phone' => '222-222-1235',
+    'country' => 'UK',
+  ],
+  [
+    'name' => 'Sofia',
+    'email' => 'sofia@example.com',
+    'phone' => '333-333-1236',
+    'country' => 'India',
+  ]
+];
+
+function sortBySpecKey($myArray, $key)
+{
+  // usort - сортує масив за значеннями, використовуючи 
+  // користувацьку функцію для порівняння елементів:
+  usort($myArray, function ($arr1, $arr2) use ($key) {
+    if ($arr1[$key] == $arr2[$key]) {
+      return 0;
+    }
+
+    return $arr1[$key] > $arr2[$key] ? 1 : -1;
+  });
+
+  return $myArray;
+}
+
+echo "<b>Task 5:</b><br>";
+print_r(sortBySpecKey($info, "name"));
+echo "<br>";
+print_r(sortBySpecKey($info, "country"));
+echo "<hr>";
+
 echo "</pre>";
