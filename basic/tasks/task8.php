@@ -210,5 +210,32 @@ echo $color["holes"][5] . "<br>";
 echo $color["color"]["a"];
 echo "<hr>";
 
+// task 9
+function floorDec($num, $precision, $separator)
+{
+  $partNum = explode($separator, $num);
+  /*
+  substr_replace($old_string, $new_string, $start, $lenght) 
+  - замінює вказану частину рядка на іншу:
+  $old_string - Це основний рядок, у якому необхідно зробити заміну.
+  $new_string - Це слово, на яке необхідно зробити заміну.
+  $start - Початок відліку рядка, який необхідно замінити.
+  $lenght - Кількість символів, які необхідно замінити.
+  */
+  $partNum[1] = substr_replace($partNum[1], $separator, $precision, 0);
 
+  if ($partNum[0] >= 0) {
+    $partNum[1] = floor($partNum[1]);
+  } else {
+    $partNum[1] = ceil($partNum[1]);
+  }
+  
+  return implode($separator, $partNum);
+}
+
+echo "<b>Task 9:</b><br>";
+echo floorDec(1.155, 2, ".") . "<br>";
+echo floorDec(100.25781, 4, ".") . "<br>";
+echo floorDec(-2.9636, 3, ".");
+echo "<hr>";
 echo "</pre>";
