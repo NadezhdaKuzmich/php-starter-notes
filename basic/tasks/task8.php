@@ -174,4 +174,41 @@ echo "<b>Task 6:</b><br>";
 print_r($subnetList);
 echo "<hr>";
 
+// task 7
+function compareList($a, $b)
+{
+  global $order;
+
+  foreach ($order as $value) {
+    if ($a == $value) {
+      return 0;
+    }
+
+    if ($b == $value) {
+      return 1;
+    }
+  }
+}
+
+$order = [4, 3, 2, 1];
+$array = [2, 1, 3, 4, 2, 1];
+
+usort($array, "compareList");
+echo "<b>Task 7:</b><br>";
+print_r($array);
+echo "<hr>";
+
+// task 8
+$color = [
+  "color" => ["a" => "Red", "b" => "Green", "c" => "White"],
+  "numbers" => [1, 2, 3, 4, 5, 6],
+  "holes" => ["First", 5 => "Second", "Third"]
+];
+
+echo "<b>Task 8:</b><br>";
+echo $color["holes"][5] . "<br>";
+echo $color["color"]["a"];
+echo "<hr>";
+
+
 echo "</pre>";
