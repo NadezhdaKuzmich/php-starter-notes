@@ -259,4 +259,48 @@ echo "<b>Task 10:</b><br>";
 echo minValues([-1, 0, 1, 12, -100, 1]) . "<br>";
 echo minValues([-1, 10, 120, 12, 0, 1]);
 echo "<hr>";
+
+// task 11
+$ceu = [
+  "Italy" => "Rome",
+  "Luxembourg" => "Luxembourg",
+  "Belgium" => "Brussels",
+  "Denmark" => "Copenhagen",
+  "Finland" => "Helsinki",
+  "France" => "Paris",
+  "Slovakia" => "Bratislava",
+  "Slovenia" => "Ljubljana",
+  "Germany" => "Berlin",
+  "Greece" => "Athens",
+  "Ireland" => "Dublin",
+  "Netherlands" => "Amsterdam",
+  "Portugal" => "Lisbon",
+  "Spain" => "Madrid",
+  "Sweden" => "Stockholm",
+  "United Kingdom" => "London",
+  "Cyprus" => "Nicosia",
+  "Lithuania" => "Vilnius",
+  "Czech Republic" => "Prague",
+  "Estonia" => "Tallin",
+  "Hungary" => "Budapest",
+  "Latvia" => "Riga",
+  "Malta" => "Valetta",
+  "Austria" => "Vienna",
+  "Poland" => "Warsaw"
+];
+
+$max_key = max(array_keys($ceu));
+echo "<b>Task 11:</b><br>";
+echo $max_key;
+echo "<hr>";
+
+// task 12
+$nums = range(10, 20);
+shuffle($nums);
+
+echo "<b>Task 12:</b><br>";
+for ($i = 0; $i < 10; $i++) {
+  echo "| $nums[$i] ";
+}
+echo "|";
 echo "</pre>";
