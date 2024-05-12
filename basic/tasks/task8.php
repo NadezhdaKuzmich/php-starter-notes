@@ -229,7 +229,7 @@ function floorDec($num, $precision, $separator)
   } else {
     $partNum[1] = ceil($partNum[1]);
   }
-  
+
   return implode($separator, $partNum);
 }
 
@@ -237,5 +237,26 @@ echo "<b>Task 9:</b><br>";
 echo floorDec(1.155, 2, ".") . "<br>";
 echo floorDec(100.25781, 4, ".") . "<br>";
 echo floorDec(-2.9636, 3, ".");
+echo "<hr>";
+
+// task 10
+function minValues($values)
+{
+  // - min - повертає значення того параметра, який вважається "найменшим" 
+  // згідно зі стандартними правилами порівняння.
+  // - array_diff - порівнює array з одним або кількома іншими масивами і 
+  // повертає значення, які відсутні у всіх інших масивах.
+  // - array_map - повертає масив, що містить елементи всіх зазначених 
+  // масивів після їх обробки функцією зворотного виклику.
+  // - intval - перетворює змінну до цілого типу та повертає integer-значення 
+  // змінної, яка має бути скалярним типом, не можна використовувати intval з 
+  // масивами та об'єктами.
+
+  return min(array_diff(array_map('intval', $values), [0]));
+}
+
+echo "<b>Task 10:</b><br>";
+echo minValues([-1, 0, 1, 12, -100, 1]) . "<br>";
+echo minValues([-1, 10, 120, 12, 0, 1]);
 echo "<hr>";
 echo "</pre>";
