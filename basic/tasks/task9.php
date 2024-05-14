@@ -96,3 +96,41 @@ for ($i = 0; $i < 10; $i++) {
   }
 }
 echo "<hr>";
+
+// task 9
+$text = "Frontend Developer";
+$search_char = "r";
+$count = 0;
+
+// strlen повертає довжину рядка, переданого як параметр:
+for ($i = 0; $i < strlen($text); $i++) {
+  // substr ( string, start, length) - повертає підрядок рядка 
+  // string завдовжки length, що починається з start індексу.
+  // Якщо start ненегативний, підрядок, що повертається, 
+  // починається в позиції start від початку рядка, від нуля. 
+  // Якщо start від'ємний, підрядок, що повертається, починається 
+  // з start символу з кінця рядка string:
+  if (substr($text, $i, 1) == $search_char) {
+    $count = $count + 1;
+  }
+}
+
+echo "<b>Task 9:</b><br>";
+echo $count;
+echo "<hr>";
+
+// task 10
+echo "<b>Task 10:</b><br>";
+echo '<table align="left" border="1" cellpadding="3" cellspacing="0">';
+
+for ($i = 1; $i < 10; $i++) {
+  echo "<tr>";
+
+  for ($j = 1; $j < 10; $j++) {
+    echo "<td>$i * $j = " . $i * $j . "</td>";
+  }
+
+  echo "</tr>";
+}
+
+echo '</table>';
