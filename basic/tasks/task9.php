@@ -121,7 +121,38 @@ echo "<hr>";
 
 // task 10
 echo "<b>Task 10:</b><br>";
-echo '<table align="left" border="1" cellpadding="3" cellspacing="0">';
+for ($i = 1; $i <= 100; $i++) {
+  if ($i % 3 == 0 && $i % 5 == 0) {
+    echo $i . " - FizzBuzz";
+  } elseif ($i % 3 == 0) {
+    echo $i . " - Fizz";
+  } elseif ($i % 5 == 0) {
+    echo $i . " - Buzz";
+  } else {
+    echo $i;
+  }
+  echo "<br>";
+}
+echo "<hr>";
+
+// task 11
+$n = 4;
+$count = 1;
+
+echo "<b>Task 11:</b><br>";
+for ($i = $n; $i > 0; $i--) {
+  for ($j = $i; $j <= $n; $j++) {
+    echo "$count ";
+    $count++;
+  }
+
+  echo "<br>";
+}
+echo "<hr>";
+
+// task 12
+echo "<b>Task 12:</b><br>";
+echo '<br><table align="left" border="1" cellpadding="3" cellspacing="0">';
 
 for ($i = 1; $i < 10; $i++) {
   echo "<tr>";
@@ -133,4 +164,4 @@ for ($i = 1; $i < 10; $i++) {
   echo "</tr>";
 }
 
-echo '</table>';
+echo '</table><br>';
