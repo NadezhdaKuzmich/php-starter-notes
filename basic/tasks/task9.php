@@ -41,3 +41,37 @@ for ($i = 1; $i <= 30; $i++) {
 echo "<b>Task 4:</b><br>";
 echo "The sum of the numbers 0 to 30 is $sum.";
 echo "<hr>";
+
+// task 5
+echo "<b>Task 5:</b><br>";
+for ($i = 1; $i <= 5; $i++) {
+  for ($j = 1; $j <= $i; $j++) {
+    echo "*";
+
+    if ($j < $i) {
+      echo " ";
+    }
+  }
+
+  echo "<br>";
+}
+echo "<hr>";
+
+// task 6
+$n = 5;
+
+echo "<b>Task 6:</b><br>";
+for ($i = 1; $i <= $n; $i++) {
+  for ($j = 1; $j <= $i; $j++) {
+    echo " * ";
+  }
+  echo "<br>";
+}
+
+for ($i = $n; $i >= 1; $i--) {
+  for ($j = 1; $j <= $i; $j++) {
+    echo " * ";
+  }
+  echo "<br>";
+}
+echo "<hr>";
