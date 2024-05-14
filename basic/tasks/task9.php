@@ -75,3 +75,24 @@ for ($i = $n; $i >= 1; $i--) {
   echo "<br>";
 }
 echo "<hr>";
+
+// task 7
+$num = 6;
+$result = 1;
+
+for ($i = 1; $i < $num; $i++) {
+  $result *= ($i + 1);
+}
+
+echo "<b>Task 7:</b><br>";
+echo "The factorial of  $num = $result";
+echo "<hr>";
+
+// task 8
+echo "<b>Task 8:</b><br>";
+for ($i = 0; $i < 10; $i++) {
+  for ($j = 0; $j < 10; $j++) {
+    echo "$i$j, ";
+  }
+}
+echo "<hr>";
