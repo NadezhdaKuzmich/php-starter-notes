@@ -160,4 +160,30 @@ echo "<b>Task 9:</b><br><br>";
 echo isPrime(3);
 echo isPrime(6);
 echo "<hr>";
+
+// task 10
+// v1
+function reverseStr($str)
+{
+  $length = strlen($str);
+
+  if ($length == 1) {
+    return $str;
+  } else {
+    $length--;
+    return reverseStr(substr($str, 1, $length)) . substr($str, 0, 1);
+  }
+}
+
+echo "<b>Task 10:</b><br><br>";
+echo "<b>v1:</b><br>";
+echo reverseStr('1234') . "<br>";
+echo reverseStr('hello') . "<br>";
+
+// v2
+echo "<br><b>v2:</b><br>";
+echo strrev('1234') . "<br>";
+echo strrev('hello');
+echo "<hr>";
+
 echo "</pre>";
