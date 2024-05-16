@@ -107,4 +107,5 @@ for ($row = 0; $row < 7; $row++) {
 }
 echo "<hr>";
 
+// task 7
 echo "</pre>";
