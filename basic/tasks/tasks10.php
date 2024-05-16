@@ -73,4 +73,38 @@ for ($row = 0; $row < 7; $row++) {
 }
 echo "<hr>";
 
+// task 5
+echo "<b>Task 5:</b><br><br>";
+for ($row = 0; $row < 7; $row++) {
+  for ($column = 0; $column <= 7; $column++) {
+    if (
+      $column == 1 or
+      (($row == 0 or $row == 6) and ($column > 1 and $column < 6)) or
+      ($row == 3 and $column > 1 and $column < 5)
+    ) {
+      echo "*";
+    } else {
+      echo " ";
+    }
+  }
+  echo "<br>";
+}
+echo "<hr>";
+
+// task 6
+echo "<b>Task 6:</b><br><br>";
+for ($row = 0; $row < 7; $row++) {
+  for ($column = 0; $column <= 7; $column++) {
+    if ($column == 1 or 
+    ($row == 0 and $column > 1 and $column < 6) or 
+    ($row == 3 and $column > 1 and $column < 5)) {
+      echo "*";
+    } else {
+      echo " ";
+    }
+  }
+  echo "<br>";
+}
+echo "<hr>";
+
 echo "</pre>";
