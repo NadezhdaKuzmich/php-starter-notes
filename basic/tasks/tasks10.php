@@ -137,7 +137,7 @@ function findFactorial($num)
   }
 }
 
-echo "<b>Task 8:</b><br><br>";
+echo "<b>Task 8:</b><br>";
 echo findFactorial(4) . "<br>";
 echo findFactorial(6) . "<br>";
 echo "<hr>";
@@ -156,7 +156,7 @@ function isPrime($num)
   return $num . ($result ? " is a Prime Number." : " isn't a Prime Number.") . "<br>";
 }
 
-echo "<b>Task 9:</b><br><br>";
+echo "<b>Task 9:</b><br>";
 echo isPrime(3);
 echo isPrime(6);
 echo "<hr>";
@@ -175,7 +175,7 @@ function reverseStr($str)
   }
 }
 
-echo "<b>Task 10:</b><br><br>";
+echo "<b>Task 10:</b><br>";
 echo "<b>v1:</b><br>";
 echo reverseStr('1234') . "<br>";
 echo reverseStr('hello') . "<br>";
@@ -189,10 +189,10 @@ echo "<hr>";
 // task 11
 function sortArr($arr)
 {
-  for ($i = 0; $i < count($arr); ++$i) {
+  for ($i = 0; $i < count($arr); $i++) {
     $min = $i;
 
-    for ($j = $i + 1; $j < count($arr); ++$j) {
+    for ($j = $i + 1; $j < count($arr); $j++) {
       if ($arr[$j] < $arr[$min]) {
         $temp = $arr[$min];
         $arr[$min] = $arr[$j];
@@ -210,4 +210,21 @@ echo "<b>Task 11:</b><br>";
 print_r(sortArr($test));
 echo "<hr>";
 
+// task 12
+function isStrLower($str)
+{
+  for ($i = 0; $i < strlen($str); $i++) {
+    if (
+      ord($str[$i]) >= ord('A') &&
+      ord($str[$i]) <= ord('Z')
+    ) {
+      return false;
+    }
+  }
+  return true;
+}
+
+echo "<b>Task 12:</b><br>";
+var_dump(isStrLower('hello'));
+var_dump(isStrLower('Hello'));
 echo "</pre>";
