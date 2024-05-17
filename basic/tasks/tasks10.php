@@ -186,4 +186,28 @@ echo strrev('1234') . "<br>";
 echo strrev('hello');
 echo "<hr>";
 
+// task 11
+function sortArr($arr)
+{
+  for ($i = 0; $i < count($arr); ++$i) {
+    $min = $i;
+
+    for ($j = $i + 1; $j < count($arr); ++$j) {
+      if ($arr[$j] < $arr[$min]) {
+        $temp = $arr[$min];
+        $arr[$min] = $arr[$j];
+        $arr[$j] = $temp;
+      }
+    }
+  }
+
+  return $arr;
+}
+
+$test = [51, 14, 1, 21, 'hj'];
+
+echo "<b>Task 11:</b><br>";
+print_r(sortArr($test));
+echo "<hr>";
+
 echo "</pre>";
