@@ -16,10 +16,25 @@ $pattern = '/[^\w]fox\s/';
 
 echo "<b>Task 2:</b><br>";
 // preg_match - повертає 1, якщо параметр pattern відповідає переданому 
-// параметру subject, 0 - якщо ні, або FALSE у разі помилки.
+// параметру subject, 0 - якщо ні, або FALSE у разі помилки:
 if (preg_match($pattern, 'The quick brown fox jumps over the lazy dog')) {
-  echo "'fox' is present..." . "<br>";
+  echo "'fox' is present...";
 } else {
-  echo "'fox' is not present..." . "<br>";
+  echo "'fox' is not present...";
 }
+echo "<hr>";
+
+// task 3
+$str1 = 'The quick " " 	 brown fox';
+
+echo "<b>Task 3:</b><br>";
+// preg_replace - виконує пошук і заміну за регулярним виразом:
+echo preg_replace('/\s+/', '', $str1);
+echo "<hr>";
+
+// task 4
+$str1 = "$12,334.00A";
+
+echo "<b>Task 4:</b><br>";
+echo preg_replace("/[^0-9,.]/", "", $str1);
 echo "<hr>";
