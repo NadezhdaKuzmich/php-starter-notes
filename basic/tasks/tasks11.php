@@ -54,3 +54,18 @@ echo "<b>Task 6:</b><br>";
 preg_match('#\[(.*?)\]#', $str, $match);
 print $match[1];
 echo "<hr>";
+
+// task 7
+$str = 'abcde$ddfd @abcd )der]';
+
+echo "<b>Task 7:</b><br>";
+echo 'Old string : ' . $str . '<br>';
+$newstr = preg_replace("/[^A-Za-z0-9 ]/", '_', $str);
+echo 'New string : ' . $newstr;
+echo "<hr>";
+
+// task 8
+echo "<b>Task 8:</b><br>";
+// date - конвертує timestamp у читабельний формат:
+echo "© " . date('Y') . ' PHP Exercises';
+echo "<hr>";
