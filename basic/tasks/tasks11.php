@@ -38,3 +38,19 @@ $str1 = "$12,334.00A";
 echo "<b>Task 4:</b><br>";
 echo preg_replace("/[^0-9,.]/", "", $str1);
 echo "<hr>";
+
+// task 5
+$str = "Twinkle, twinkle, little star,\nHow I wonder what you are.\nUp above the world so high,\nLike a diamond in the sky.";
+
+echo "<b>Task 5:</b><br> <pre>";
+echo $str . "<br>";
+echo "<br>" . preg_replace('/\s+/', ' ', $str);
+echo "</pre> <hr>";
+
+// task 6
+$str = 'The quick brown [fox].';
+
+echo "<b>Task 6:</b><br>";
+preg_match('#\[(.*?)\]#', $str, $match);
+print $match[1];
+echo "<hr>";
