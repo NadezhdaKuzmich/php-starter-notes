@@ -69,3 +69,19 @@ echo "<b>Task 8:</b><br>";
 // date - конвертує timestamp у читабельний формат:
 echo "© " . date('Y') . ' PHP Exercises';
 echo "<hr>";
+
+// task 9
+// mktime - повертає тимчасову мітку Unix відповідно 
+// до переданих аргументів або false , якщо тимчасову 
+// мітку не можна представити у вигляді цілого числа: 
+$targetDays = mktime(0, 0, 0, 07, 05, 2024);
+// time - повертає поточний час у форматі Unix timestamp:
+$today = time();
+
+$diffDays = $targetDays - $today;
+// 86400 сек = 24 години
+$days = (int) ($diffDays / 86400);
+
+echo "<b>Task 9:</b><br>";
+print "Days till next birthday: $days days!";
+echo "<hr>";
