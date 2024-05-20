@@ -85,3 +85,27 @@ $days = (int) ($diffDays / 86400);
 echo "<b>Task 9:</b><br>";
 print "Days till next birthday: $days days!";
 echo "<hr>";
+
+// task 10
+echo "<b>Task 10:</b><br>";
+echo date("Y/m/d") . "<br>";
+echo date("y.m.d") . "<br>";
+echo date("d-m-y") . "<hr>";
+
+// task 11
+$startDate = "2022-02-24";
+$endDate = time();
+
+// - abs - повертає абсолютну величину (модуль числа).
+// - strtotime - перетворює довільну дату у формат timestamp. 
+// Формат timestamp - це кількість секунд, що минула з 1-го 
+// січня 1970 року по заданий момент часу:
+$dateDiff = abs($endDate - strtotime($startDate));
+
+$years = floor($dateDiff / (365 * 24 * 60 * 60));
+$months = floor(($dateDiff - $years * 365 * 24 * 60 * 60) / (30 * 24 * 60 * 60));
+$days = floor(($dateDiff - $years * 365 * 24 * 60 * 60 - $months * 30 * 24 * 60 * 60) / (24 * 60 * 60));
+
+echo "<b>Task 11:</b><br>";
+echo "$years years, $months months, $days days";
+echo "<hr>";
