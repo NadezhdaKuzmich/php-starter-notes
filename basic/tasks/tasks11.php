@@ -109,3 +109,9 @@ $days = floor(($dateDiff - $years * 365 * 24 * 60 * 60 - $months * 30 * 24 * 60 
 echo "<b>Task 11:</b><br>";
 echo "$years years, $months months, $days days";
 echo "<hr>";
+
+// task 12
+$originDate = "2024-05-22";
+$newDate = date("d-m-Y", strtotime($originDate));
+echo "<b>Task 12:</b><br>";
+echo $newDate;
