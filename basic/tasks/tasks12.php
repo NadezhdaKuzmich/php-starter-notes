@@ -30,3 +30,28 @@ echo "<b>Task 4:</b><br>";
 // j - день місяця без ведучого нуля від 1 до 31.
 echo date('l \t\h\e jS');
 echo "<hr>";
+
+// task 5
+echo "<b>Task 5:</b><br>";
+// checkdate - перевіряє коректність дати за григоріанським календарем:
+var_dump(checkdate(2, 30, 2024));
+echo "<br>";
+var_dump(checkdate(2, 29, 2024));
+echo "<hr>";
+
+// task 6
+// DateTime - вбудований клас, призначений для читання, запису, порівняння 
+// та обчислення дати або часу, надає хороший об'єктно-орієнтований інтерфейс 
+// для вирішення більшості завдань. Він здатний навіть обробляти тимчасові зони:
+$fromDate = new DateTime('2022-02-24 04:12:51');
+// $date->diff - повертає різницю між двома DateTime об'єктами:
+$diffDate = $fromDate->diff(new DateTime('2024-05-21 11:10:00'));
+
+echo "<b>Task 6:</b><br>";
+echo 'Total days: ' . $diffDate->days . " => ";
+echo $diffDate->y . ' years, ';
+echo $diffDate->m . ' months, ';
+echo $diffDate->d . ' days, ';
+echo $diffDate->h . ' hours, ';
+echo $diffDate->i . ' minutes, ';
+echo $diffDate->s . ' seconds';
