@@ -2,6 +2,7 @@
 
 // task 1
 $timestamp = strtotime('12-05-2024');
+echo '<pre>';
 echo "<b>Task 1:</b><br>";
 echo $timestamp . "<hr>";
 
@@ -18,7 +19,7 @@ $date = "2022-02-22";
 
 echo "<b>Task 3:</b><br>";
 // t - кількість днів у зазначеному місяці: від 28 до 31.
-echo '<i>First day:</i> ' . date("Y-m-01", strtotime($date)) . ' - <i>Last day:</i> ' . date("Y-m-t", strtotime($date));
+echo 'First day: ' . date("Y-m-01", strtotime($date)) . ' - Last day: ' . date("Y-m-t", strtotime($date));
 echo "<hr>";
 
 // task 4
@@ -122,3 +123,22 @@ if (($dayOfWeek == "Saturday") || ($dayOfWeek == "Sunday")) {
   echo $dayOfWeek . ' is not weekend.';
 }
 echo "<hr>";
+
+// task 11
+$date = '2024-01-01';
+echo "<b>Task 11:</b><br>";
+echo 'Original date : ' . $date . '<br>';
+
+$days = 40;
+// strtotime(час, зараз):
+// time - обов'язковий параметр. Задає рядок дати/часу.
+// now - необов'язково. Вказує мітку часу, яка використовується 
+// як основа для обчислення відносних дат: 
+// "-/+ 40 days", strtotime($date))
+$beforeDate = strtotime("-" . $days . " days", strtotime($date));
+$afterDate = strtotime("+" . $days . " days", strtotime($date));
+
+echo 'Before 40 days : ' . date("Y-m-d", $beforeDate) . '<br>';
+echo 'After  40 days : ' . date("Y-m-d", $afterDate) . '<br>';
+echo '<hr>';
+echo '</pre>';
