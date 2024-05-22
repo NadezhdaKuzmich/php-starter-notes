@@ -55,3 +55,42 @@ echo $diffDate->d . ' days, ';
 echo $diffDate->h . ' hours, ';
 echo $diffDate->i . ' minutes, ';
 echo $diffDate->s . ' seconds';
+echo "<hr>";
+
+// task 7
+$monthNum = 7;
+
+// mktime - повертає тимчасову мітку Unix відповідно до 
+// переданих аргументів або false, якщо тимчасову мітку 
+// не можна представити у вигляді цілого числа PHP.
+// F - повне найменування місяця, від January до December:
+$monthName = date("F", mktime(0, 0, 0, $monthNum, 10));
+
+echo "<b>Task 7:</b><br>";
+echo $monthName;
+echo "<hr>";
+
+// task 8
+$dt = new DateTime();
+/*
+- DateTime::sub - віднімає дні, місяці, роки, години, 
+хвилини і секунди з об'єкта DateTime.
+- DateTime::format - повертає дату, відформатовану згідно 
+з переданим форматом.
+
+- DateInterval -  представляє інтервали дат. Інтервал дат 
+зберігає або певний фіксований час (у роках, місяцях, 
+днях, годинах тощо), або відносний рядок часу у форматі, 
+який підтримують конструктор DateTimeImmutable і DateTime:
+P - Period - Початок періоду часу
+Y - Year - Рік
+M - Month - Місяць
+D - Day - День
+T - Time - Початок подання об'єкта часу
+H - Hour - Години
+M - Minute - Хвилини
+S - Secunde - Секунди
+Єдиний обов'язковий покажчик - P, усі інші опціональні.
+*/
+$dt->sub(new DateInterval('P1D'));
+echo $dt->format('F j, Y');
