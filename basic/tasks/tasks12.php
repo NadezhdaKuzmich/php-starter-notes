@@ -93,4 +93,6 @@ S - Secunde - Секунди
 Єдиний обов'язковий покажчик - P, усі інші опціональні.
 */
 $dt->sub(new DateInterval('P1D'));
+echo "<b>Task 8:</b><br>";
 echo $dt->format('F j, Y');
+echo "<hr>";
