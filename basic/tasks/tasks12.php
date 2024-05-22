@@ -96,3 +96,29 @@ $dt->sub(new DateInterval('P1D'));
 echo "<b>Task 8:</b><br>";
 echo $dt->format('F j, Y');
 echo "<hr>";
+
+// task 9
+// date_default_timezone_set - встановлює часовий пояс за 
+// замовчуванням для всіх функцій дати/часу в скрипті:
+date_default_timezone_set('America/Los_Angeles');
+echo "<b>Task 9:</b><br>";
+$date = date('m/d/Y h:i:s a', time());
+echo $date . "<br>";
+
+date_default_timezone_set('Europe/Warsaw');
+$date = date('m/d/Y h:i:s a', time());
+echo $date . "<hr>";
+
+// task 10
+$date = '2024-07-05';
+$timeStamp = strtotime($date);
+// l - день тижня, повна назва текстом:
+$dayOfWeek = date("l", $timeStamp);
+
+echo "<b>Task 10:</b><br>";
+if (($dayOfWeek == "Saturday") || ($dayOfWeek == "Sunday")) {
+  echo $dayOfWeek . ' is weekend.';
+} else {
+  echo $dayOfWeek . ' is not weekend.';
+}
+echo "<hr>";
