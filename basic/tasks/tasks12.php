@@ -146,12 +146,13 @@ echo '<hr>';
 function getStartAndEnd($week, $year)
 {
   $time = strtotime("1 January $year", time());
+
   // w - день тижня (0 - неділя, 1 - понеділок тощо).
   $day = date('w', $time);
-
+  $time += ((7 * ($week - 1)) + 1 - $day) * 24 * 3600;
+  
   // n - номер місяця. Без першого нуля, якщо менше 10
   // j - номер дня в місяці. Без першого нуля, якщо менше 10
-  $time += ((7 * ($week - 1)) + 1 - $day) * 24 * 3600;
   $dates[0] = date('Y-n-j', $time);
   $time += 6 * 24 * 3600;
   $dates[1] = date('Y-n-j', $time);
