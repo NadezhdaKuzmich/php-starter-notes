@@ -141,4 +141,26 @@ $afterDate = strtotime("+" . $days . " days", strtotime($date));
 echo 'Before 40 days : ' . date("Y-m-d", $beforeDate) . '<br>';
 echo 'After  40 days : ' . date("Y-m-d", $afterDate) . '<br>';
 echo '<hr>';
+
+// task 12
+function getStartAndEnd($week, $year)
+{
+  $time = strtotime("1 January $year", time());
+  // w - день тижня (0 - неділя, 1 - понеділок тощо).
+  $day = date('w', $time);
+
+  // n - номер місяця. Без першого нуля, якщо менше 10
+  // j - номер дня в місяці. Без першого нуля, якщо менше 10
+  $time += ((7 * ($week - 1)) + 1 - $day) * 24 * 3600;
+  $dates[0] = date('Y-n-j', $time);
+  $time += 6 * 24 * 3600;
+  $dates[1] = date('Y-n-j', $time);
+  return $dates;
+}
+
+$result = getStartAndEnd(6, 2024);
+
+echo "<b>Task 12:</b><br>";
+echo 'Starting date of the week: ' . $result[0] . "<br>";
+echo 'End date the week: ' . $result[1];
 echo '</pre>';
