@@ -30,3 +30,23 @@ $dt2 = '12/31/2024';
 echo "<b>Task 2:</b><br>";
 echo 'Weeks between ' . $dt1 . ' and ' . $dt2 . ' is ' . getWeeksBetween($dt1, $dt2);
 echo "<hr>";
+
+// task 3
+echo "<b>Task 3:</b><br>";
+echo date('m', strtotime('-1 month')) . '<br>';
+echo date('m', strtotime('+1 month'));
+echo "<hr>";
+
+// task 4
+function convertSec($seconds)
+{
+  $dt1 = new DateTime("@0");  // starting seconds
+  $dt2 = new DateTime("@$seconds");  // ending seconds
+
+  $diff = $dt1->diff($dt2);  // the time difference
+  return $diff->format('%a days, %h hours, %i minutes and %s seconds');
+}
+
+echo "<b>Task 4:</b><br>";
+echo convertSec(200000);
+echo "<hr>";
