@@ -50,3 +50,23 @@ function convertSec($seconds)
 echo "<b>Task 4:</b><br>";
 echo convertSec(200000);
 echo "<hr>";
+
+// task 5
+$months = [];
+for ($i = 1; $i <= 6; $i++) {
+  $date = date('Y-m-01', strtotime("-$i months"));
+  array_push($months, $date);
+}
+
+echo "<b>Task 5:</b><br>";
+echo "<pre>";
+print_r($months);
+echo "</pre><hr>";
+
+// task 6
+echo "<b>Task 6:</b><br>";
+echo date("M - Y") . "<br>";
+echo date("M - Y", strtotime("-1 Month")) . "<br>";
+echo date("M - Y", strtotime("-2 Months")) . "<br>";
+echo date("M - Y", strtotime("-3 Months"));
+echo "<hr>";
