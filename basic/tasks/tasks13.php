@@ -70,3 +70,17 @@ echo date("M - Y", strtotime("-1 Month")) . "<br>";
 echo date("M - Y", strtotime("-2 Months")) . "<br>";
 echo date("M - Y", strtotime("-3 Months"));
 echo "<hr>";
+
+// task 7
+$dt = strtotime("2024-12-21");
+
+echo "<b>Task 7:</b><br>";
+echo date("Y-m-d", strtotime("+1 month", $dt)) . "<hr>";
+
+// task 8
+$month_num = 9;
+$dateObj = DateTime::createFromFormat('!m', $month_num);
+$month_name = $dateObj->format('F');
+
+echo "<b>Task 8:</b><br>";
+echo $month_name . "<hr>";
