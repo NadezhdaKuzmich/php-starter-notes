@@ -84,3 +84,17 @@ $month_name = $dateObj->format('F');
 
 echo "<b>Task 8:</b><br>";
 echo $month_name . "<hr>";
+
+// task 9
+echo "<b>Task 9:</b><br>";
+// t - кількість днів у місяці:
+echo 'Number of days for the month of ' . date('M') . ' is: ' . date('t');
+echo "<hr>";
+
+// task 10
+echo "<b>Task 10:</b><br>";
+ini_set('date.timezone', 'America/New_York');
+echo  date('g:i A') . ' - time in New York <br>';
+
+ini_set('date.timezone', 'Europe/Warsaw');
+echo  date('g:i A') . ' - time in Krakow <hr>';
