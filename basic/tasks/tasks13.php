@@ -98,3 +98,20 @@ echo  date('g:i A') . ' - time in New York <br>';
 
 ini_set('date.timezone', 'Europe/Warsaw');
 echo  date('g:i A') . ' - time in Krakow <hr>';
+
+// task 11
+echo "<b>Task 11:</b><br>";
+echo strtoupper("the quick brown fox jumps over the lazy dog.") . '<br>';
+echo strtolower("THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG") . '<br>';
+
+// ucfirst - перетворює перший символ рядка у верхній регістр:
+echo ucfirst("the quick brown fox jumps over the lazy dog.") . '<br>';
+// ucwords - перетворює перший символ кожного слова в рядку у верхній регістр:
+echo ucwords("the quick brown fox jumps over the lazy dog.") . '<hr>';
+
+// task 12
+$str1 = '082307';
+
+echo "<b>Task 12:</b><br>";
+// chunk_split - використовується для розбиття рядка на фрагмент:
+echo substr(chunk_split($str1, 2, ':'), 0, -1);
