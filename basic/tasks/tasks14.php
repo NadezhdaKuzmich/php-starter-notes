@@ -96,3 +96,30 @@ echo "<b>Task 8:</b><br>";
 // - не обмежувати кількість замін.
 echo preg_replace('/the/', 'That', $str, 1);
 echo "<hr>";
+
+// task 9
+$str1 = 'football';
+$str2 = 'footboll';
+
+// strspn - повертає довжину початкового сегмента рядка string, 
+// який містить тільки символи зі значення characters:
+// $strPos = strspn($str1 ^ $str2, "\0");
+$strPos = strspn($str1, $str2);
+
+echo "<b>Task 9:</b><br>";
+printf(
+  'First difference between two strings at position %d: "%s" vs "%s"',
+  $strPos,
+  $str1[$strPos],
+  $str2[$strPos]
+);
+echo "<hr>";
+
+// task 10
+$str = "Twinkle, twinkle, little star,\nHow I wonder what you are.\nUp above the world so high,\nLike a diamond in the sky.";
+
+echo "<b>Task 10:</b><br>";
+$arr = explode("\n", $str);
+echo "<pre>";
+print_r($arr);
+echo "</pre><hr>";
