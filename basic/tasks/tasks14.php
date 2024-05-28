@@ -39,7 +39,7 @@ echo $file_name;
 echo "<hr>";
 
 // task 4
-$mailid  = 'learn-php@example.com';
+$mailid = 'learn-php@example.com';
 
 echo "<b>Task 4:</b><br>";
 // strstr - знаходить перше входження підрядка в рядок і повертає частину рядка 
@@ -51,3 +51,20 @@ echo "<b>Task 4:</b><br>";
 $user = strstr($mailid, '@', true);
 echo $user;
 echo "<hr>";
+
+// task 5
+$str1 = 'learn-php@example.com';
+
+echo "<b>Task 5:</b><br>";
+echo substr($str1, -3);
+echo "<hr>";
+
+// task 6
+$value1 = 65.45;
+$value2 = 104.35;
+
+// printf(«як форматувати», парметр1, параметр2, ...) - виводить результат на екран.
+// $result = sprintf(«...», ..., ...) - теж саме, тільки рядок не виводитися, а 
+// поміщається в $result.
+echo sprintf("%.1f", $value1 + $value2);
+
