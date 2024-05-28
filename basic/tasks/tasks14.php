@@ -32,6 +32,7 @@ $path = 'www.example.com/public_html/index.php';
 
 echo "<b>Task 3:</b><br>";
 // substr - вирізає і повертає підрядок із рядка. Сам рядок при цьому не змінюється.
+// substr(string $string, int $offset, ?int $length = null): string
 // strstr і strchr - здійснюють пошук першого входження одного рядка в інший.
 // strrchr - знаходить останнє входження (появу) символу в рядку:
 $file_name = substr(strrchr($path, "/"), 1);
@@ -68,4 +69,30 @@ echo "<b>Task 6:</b><br>";
 // $result = sprintf(«...», ..., ...) - теж саме, тільки рядок не виводитися, а 
 // поміщається в $result.
 echo sprintf("%.1f", $value1 + $value2);
+echo "<hr>";
+
+// task 7
+function generatePassword($amountOfChars)
+{
+  $data = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcefghijklmnopqrstuvwxyz';
+
+  // str_shuffle - перемішує символи в рядку. Вибирається одна можлива 
+  // перестановка з усіх можливих:
+  return substr(str_shuffle($data), 0, $amountOfChars);
+}
+
+echo "<b>Task 7:</b><br>";
+echo generatePassword(8);
+echo "<hr>";
+
+// task 8
+$str = 'the quick brown fox jumps over the lazy dog.';
+
+echo "<b>Task 8:</b><br>";
+// preg_replace - виконує пошук і заміну за регулярним виразом.
+// preg_replace (pattern, replacement, str [, int limit])
+// limit - максимальна кількість замін кожного шаблону для 
+// кожного рядка str. Значення за замовчуванням дорівнює -1 
+// - не обмежувати кількість замін.
+echo preg_replace('/the/', 'That', $str, 1);
 echo "<hr>";
