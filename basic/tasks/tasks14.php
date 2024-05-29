@@ -123,3 +123,27 @@ $arr = explode("\n", $str);
 echo "<pre>";
 print_r($arr);
 echo "</pre><hr>";
+
+// task 11
+$path = 'www.example.com/public_html/index.php';
+
+// basename( string path [, string suffix] ) - поверне ім'я файлу, 
+// чий шлях було передано як параметр:
+$file = basename($path);
+$fileName = basename($path, ".php");
+
+echo "<b>Task 11:</b><br>";
+echo $file . '<br>';
+echo $fileName;
+echo "<hr>";
+
+// task 12
+$subStr = 'learn-php@';
+$str = 'learn-php@example.com';
+
+if (substr($str, 0, strlen($subStr)) == $subStr) {
+  $str = substr($str, strlen($subStr));
+}
+
+echo "<b>Task 12:</b><br>";
+echo $str;
