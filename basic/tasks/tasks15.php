@@ -57,3 +57,17 @@ $newStr = ltrim($str, '0');
 echo "<b>Task 4:</b><br>";
 echo $newStr;
 echo "<hr>";
+
+// task 5
+$str = 'The quick brown fox jumps over the lazy dog';
+
+echo "<b>Task 5:</b><br>";
+echo '<pre>' . str_replace("fox", " ", $str) . '</pre>';
+echo "<hr>";
+
+// task 6
+$str = 'The quick brown fox jumps over the lazy dog///';
+
+echo "<b>Task 6:</b><br>";
+echo rtrim($str, '/');
+echo "<hr>";
