@@ -38,3 +38,22 @@ $newStr = substr_replace($str, $strToInsert . ' ', $insertPos, 0);
 echo "<b>Task 2:</b><br>";
 echo $newStr;
 echo "<hr>";
+
+// task 3
+$str = ' The quick brown fox ';
+$arr = explode(' ', trim($str));
+
+echo "<b>Task 3:</b><br>";
+echo $arr[0];
+echo "<hr>";
+
+// task 4
+$str = '000547023.24';
+
+// ltrim ( str, [charlist] ) - повертає рядок str з видаленими з 
+// початку рядка пробілами, якщо другий параметр не передано.
+$newStr = ltrim($str, '0');
+
+echo "<b>Task 4:</b><br>";
+echo $newStr;
+echo "<hr>";
