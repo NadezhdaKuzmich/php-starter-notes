@@ -88,3 +88,23 @@ echo "<b>Task 8:</b><br>";
 // рядок, а другим - кількість символів в елементі масиву:
 echo str_replace(str_split('\\/:*?"<>|+-'), ' ', $str);
 echo "<hr>";
+
+// task 9
+$str = 'The quick brown fox jumps over the lazy dog';
+
+echo "<b>Task 9:</b><br>";
+// array_slice - повертає послідовність елементів масиву, визначену 
+// параметрами. Вибирає зріз масиву:
+echo implode(' ', array_slice(explode(' ', $str), 0, 5));
+echo "<hr>";
+
+// task 10
+$str = "2,543.12";
+$numStr = str_replace(',', '', $str);
+
+echo "<b>Task 10:</b><br>";
+// is_numeric - перевіряє, чи є змінна числом або рядком, що містить число:
+if (is_numeric($numStr)) {
+  echo $numStr;
+}
+echo "<hr>";
