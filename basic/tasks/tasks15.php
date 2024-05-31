@@ -71,3 +71,20 @@ $str = 'The quick brown fox jumps over the lazy dog///';
 echo "<b>Task 6:</b><br>";
 echo rtrim($str, '/');
 echo "<hr>";
+
+// task 7
+$url = 'http://www.example.com/5478631';
+
+echo "<b>Task 7:</b><br>";
+// strrpos - повертає позицію останнього входження підрядка в рядку:
+echo substr($url, strrpos($url, '/') + 1);
+echo "<hr>";
+
+// task 8
+$str = '\"\1+2/3*2:2-3/4*3';
+
+echo "<b>Task 8:</b><br>";
+// str_split - розбиває рядок у масив. Першим параметром вона приймає 
+// рядок, а другим - кількість символів в елементі масиву:
+echo str_replace(str_split('\\/:*?"<>|+-'), ' ', $str);
+echo "<hr>";
