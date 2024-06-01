@@ -108,3 +108,23 @@ if (is_numeric($numStr)) {
   echo $numStr;
 }
 echo "<hr>";
+
+// task 11
+echo "<b>Task 11:</b><br>";
+for ($i = ord('a'); $i <= ord('z'); $i++) {
+  echo chr($i);
+}
+
+echo "<hr>";
+
+// task 12
+$marks1 = [360, 310, 310, 330, 313, 375, 456, 111, 256];
+$marks2 = [350, 340, 356, 330, 321];
+$marks3 = [630, 340, 570, 635, 434, 255, 298];
+
+$maxMarks = max(max($marks1), max($marks2), max($marks3));
+$minMarks = min(min($marks1), min($marks2), min($marks3));
+
+echo "<b>Task 12:</b><br>";
+echo "Maximum marks : $maxMarks <br>";
+echo "Minimum marks : $minMarks";
