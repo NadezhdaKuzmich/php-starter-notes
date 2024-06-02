@@ -16,3 +16,17 @@ $x = rand(10e12, 10e16);
 echo "<b>Task 2:</b><br>";
 // base_convert - перетворює числа між довільними системами числення:
 echo base_convert($x, 10, 2) . '<hr>';
+
+// task 3
+$date = "2024-05-12";
+$newDate = date("d-m-Y", strtotime($date));
+
+echo "<b>Task 3:</b><br>";
+echo $newDate . '<hr>';
+
+// task 4
+$dates = ['2024-02-01', '2024-02-02', '2024-02-03'];
+
+echo "<b>Task 4:</b><br>";
+echo "Latest Date: " . max($dates) . '<br>';
+echo "Earliest Date: " . min($dates) . '<hr>';
