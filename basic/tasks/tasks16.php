@@ -30,3 +30,22 @@ $dates = ['2024-02-01', '2024-02-02', '2024-02-03'];
 echo "<b>Task 4:</b><br>";
 echo "Latest Date: " . max($dates) . '<br>';
 echo "Earliest Date: " . min($dates) . '<hr>';
+
+// task 5
+$d = 'A00';
+
+echo "<b>Task 5:</b><br>";
+for ($i = 0; $i < 5; $i++) {
+  echo ++$d . '<br>';
+}
+
+echo "<hr>";
+
+// task 6
+echo "<b>Task 6:</b><br>";
+echo date('h:i:s') . '<br>';
+
+// Sleep for 5 seconds
+// sleep(5);
+// echo date('h:i:s');
+echo "<hr>";
