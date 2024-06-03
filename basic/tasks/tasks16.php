@@ -49,3 +49,43 @@ echo date('h:i:s') . '<br>';
 // sleep(5);
 // echo date('h:i:s');
 echo "<hr>";
+
+// task 7
+echo "<b>Task 7:</b><br>";
+
+try {
+  $numerator = 100;
+  $denominator = 0;
+
+  if ($denominator === 0) {
+    throw new Exception("Division by zero is not allowed.");
+  }
+
+  $result = $numerator / $denominator;
+  echo "Result: " . $result;
+} catch (Exception $e) {
+  echo "An error occurred: " . $e->getMessage();
+}
+
+echo "<hr>";
+
+// task 8
+function divideNumbers($numerator, $denominator)
+{
+  if ($denominator === 0) {
+    throw new Exception("Division by zero is not allowed.");
+  }
+
+  return $numerator / $denominator;
+}
+
+echo "<b>Task 8:</b><br>";
+
+try {
+  $result = divideNumbers(200, 0);
+  echo "Result: " . $result;
+} catch (Exception $e) {
+  echo "An error occurred: " . $e->getMessage();
+}
+
+echo "<hr>";
