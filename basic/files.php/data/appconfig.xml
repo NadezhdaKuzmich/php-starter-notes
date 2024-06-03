@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <database>
+    <db_username>username</db_username>
+    <db_password>password</db_password>
+    <db_host>localhost</db_host>
+    <db_port>1433</db_port>
+  </database>
+
+  <debug>
+    <debug_on>0</debug_on>
+  </debug>
+
+  <directory>
+    <root>c:\</root>
+  </directory>
+</application>

@@ -1,6 +1,13 @@
 <?php
 
 /*
+Before a file can be read it must be opened, fopen(<filename>, <mode>). 
+In order to control the read process get the file’s size, filesize(). Read the 
+files contents, fread(<file handle>, <bytes to read>), and close an open file, 
+fclose(<file handle>). It is not required to programmatically close an open file; 
+however, it is best practice. The fgets(<file handle>) function reads a single 
+line from the file. Use fwrite(<file handle>, <data to write>) to write to the file.
+
 Список можливих режимів для fopen використовуючи mode:
 - 'r'  - Відкриває файл тільки для читання; поміщає покажчик на початок файлу.
 - 'r+' - Відкриває файл для читання і запису; поміщає покажчик на початок файлу.
