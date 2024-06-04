@@ -44,7 +44,6 @@ echo "<hr>";
 // task 6
 echo "<b>Task 6:</b><br>";
 echo date('h:i:s') . '<br>';
-
 // Sleep for 5 seconds
 // sleep(5);
 // echo date('h:i:s');
@@ -52,7 +51,6 @@ echo "<hr>";
 
 // task 7
 echo "<b>Task 7:</b><br>";
-
 try {
   $numerator = 100;
   $denominator = 0;
@@ -66,7 +64,6 @@ try {
 } catch (Exception $e) {
   echo "An error occurred: " . $e->getMessage();
 }
-
 echo "<hr>";
 
 // task 8
@@ -80,12 +77,54 @@ function divideNumbers($numerator, $denominator)
 }
 
 echo "<b>Task 8:</b><br>";
-
 try {
   $result = divideNumbers(200, 0);
   echo "Result: " . $result;
 } catch (Exception $e) {
   echo "An error occurred: " . $e->getMessage();
 }
+echo "<hr>";
 
+// task 9
+echo "<b>Task 9:</b><br>";
+try {
+  $file = "test.txt";
+
+  // file_exists - перевіряє, чи існує вказаний файл або каталог:
+  if (!file_exists($file)) {
+    throw new RuntimeException("File does not exist.");
+  }
+
+  $handle = fopen($file, "r");
+  if (!$handle) {
+    throw new Exception("Error opening file.");
+  }
+
+  fclose($handle);
+} catch (RuntimeException $e) {
+  echo "RuntimeException: " . $e->getMessage();
+} catch (Exception $e) {
+  echo "Exception: " . $e->getMessage();
+} finally {
+  echo "<br> Script execution completed.";
+}
+echo "<hr>";
+
+// task 10
+function validateString($inputString)
+{
+  // empty - перевіряє чи порожня змінна:
+  if (empty($inputString)) {
+    throw new Exception("String should not be empty!");
+  }
+}
+
+echo "<b>Task 10:</b><br>";
+try {
+  $string = "";
+  validateString($string);
+  echo "Valid string: " . $string;
+} catch (Exception $e) {
+  echo "An error occurred: " . $e->getMessage();
+}
 echo "<hr>";
