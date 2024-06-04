@@ -128,3 +128,41 @@ try {
   echo "An error occurred: " . $e->getMessage();
 }
 echo "<hr>";
+
+// task 11
+echo "<b>Task 11:</b><br>";
+try {
+  $number = "abc";
+
+  // is_numeric - перевіряє, чи є змінна числом або рядком, що містить число:
+  if (!is_numeric($number)) {
+    throw new InvalidArgumentException("Invalid number.");
+  }
+
+  $result = 100 / $number;
+  echo "Result: " . $result;
+} catch (InvalidArgumentException $e) {
+  echo "InvalidArgumentException: " . $e->getMessage();
+} catch (DivisionByZeroError $e) {
+  echo "DivisionByZeroError: " . $e->getMessage();
+} catch (Throwable $e) {
+  echo "An error occurred: " . $e->getMessage();
+}
+echo "<hr>";
+
+// task 12
+echo "<b>Task 12:</b><br>";
+try {
+  $number = 0;
+
+  if ($number === 0) {
+    throw new Exception("Number cannot be zero.");
+  }
+
+  $result = 200 / $number;
+  echo "Result: " . $result;
+} catch (Exception $e) {
+  echo "An error occurred: " . $e->getMessage();
+} finally {
+  echo "This will always be executed.";
+}
