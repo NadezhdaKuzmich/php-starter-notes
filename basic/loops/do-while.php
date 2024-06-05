@@ -3,6 +3,13 @@
 /*
 Цикл - різновид керуючої конструкції у високорівневих мовах програмування, 
 призначений для організації багаторазового виконання набору інструкцій.
+Loops are the primary method of iteration in any programming language.
+
+The four types of loops we have available to us are:
+1. For Loops
+2. While Loops
+3. Do While Loops
+4. Foreach Loops
 
 Ітерація в програмуванні - організація обробки даних, за якої дії 
 повторюються багаторазово, не призводячи при цьому до викликів самих себе.
@@ -19,6 +26,10 @@ input from the user until the user has entered a positive number. In this
 case, we will use a do-while as we have to run loop at-least once because 
 we want input from user at-least once. This loop will continue running 
 until the user enters a positive number.
+
+do {
+  code to be executed;
+} while (condition);
 */
 
 $i = 0;
@@ -48,5 +59,4 @@ $number = 5;
 do {
   echo "Value of number is: $number <br>";
   $number++;
-}
-while ($number <= 9);
+} while ($number <= 9);
