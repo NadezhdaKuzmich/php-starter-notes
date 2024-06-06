@@ -132,3 +132,39 @@ $destinationFile = "data/new-data/test.txt";
 echo "<b>Task 6:</b><br>";
 copyFile($sourceFile, $destinationFile);
 echo "<hr>";
+
+// task 7
+$filename = "data/new-data/test.txt";
+
+echo "<b>Task 7:</b><br>";
+try {
+  if (file_exists($filename)) {
+    // unlink - використовується для видалення файлу:
+    if (unlink($filename)) {
+      echo "File deleted successfully.";
+    } else {
+      throw new Exception("Error deleting the file.");
+    }
+  } else {
+    throw new Exception("File does not exist.");
+  }
+} catch (Exception $e) {
+  echo "An error occurred: " . $e->getMessage();
+}
+echo "<hr>";
+
+// task 8
+$filename = "data/test.txt";
+
+echo "<b>Task 8:</b><br>";
+try {
+  // is_writable - визначає, чи доступний файл для запису:
+  if (is_writable($filename)) {
+    echo "The file is writable.";
+  } else {
+    echo "The file is not writable.";
+  }
+} catch (Exception $e) {
+  echo "An error occurred: " . $e->getMessage();
+}
+echo "<hr>";
