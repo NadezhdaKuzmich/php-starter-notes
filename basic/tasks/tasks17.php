@@ -83,3 +83,52 @@ $filename = "data/example.txt";
 $content = "PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used open source general-purpose scripting language that is especially suited for web development and can be embedded into HTML.";
 writeToFile($filename, $content);
 echo "<hr>";
+
+// task 5
+$oldFilename = "data/example.txt";
+$newFilename = "data/new_example.txt";
+
+echo "<b>Task 5:</b><br>";
+try {
+  if (file_exists($oldFilename)) {
+    // rename - перейменовує файл або директорію:
+    if (rename($oldFilename, $newFilename)) {
+      echo "File renamed successfully.";
+    } else {
+      throw new Exception("Error renaming the file.");
+    }
+  } else {
+    throw new Exception("File does not exist.");
+  }
+} catch (Exception $e) {
+  echo "An error occurred: " . $e->getMessage();
+}
+echo "<hr>";
+
+// task 6
+function copyFile($sourceFile, $destinationFile)
+{
+  try {
+    if (!file_exists($sourceFile)) {
+      throw new Exception("Source file does not exist.");
+    }
+
+    // copy - копіює файл. Якщо копіювання виконується вдало, 
+    // повертає значення True. Якщо копіювання не виконалося, 
+    // поверне значення False:
+    if (!copy($sourceFile, $destinationFile)) {
+      throw new Exception("Error copying the file.");
+    }
+
+    echo "File copied successfully.";
+  } catch (Exception $e) {
+    echo "An error occurred: " . $e->getMessage();
+  }
+}
+
+$sourceFile = "data/test.txt";
+$destinationFile = "data/new-data/test.txt";
+
+echo "<b>Task 5:</b><br>";
+copyFile($sourceFile, $destinationFile);
+echo "<hr>";
