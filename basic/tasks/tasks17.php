@@ -129,6 +129,6 @@ function copyFile($sourceFile, $destinationFile)
 $sourceFile = "data/test.txt";
 $destinationFile = "data/new-data/test.txt";
 
-echo "<b>Task 5:</b><br>";
+echo "<b>Task 6:</b><br>";
 copyFile($sourceFile, $destinationFile);
 echo "<hr>";
