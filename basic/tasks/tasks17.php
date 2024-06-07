@@ -168,3 +168,49 @@ try {
   echo "An error occurred: " . $e->getMessage();
 }
 echo "<hr>";
+
+// task 9
+$filename = "data/test.txt";
+$content = "This is the new content.";
+
+echo "<b>Task 9:</b><br>";
+try {
+  $fileHandle = fopen($filename, 'a');
+
+  if ($fileHandle === false) {
+    throw new Exception("Error opening the file for appending.");
+  }
+
+  fwrite($fileHandle, $content);
+  fclose($fileHandle);
+  echo "Content appended to the file successfully.";
+} catch (Exception $e) {
+  echo "An error occurred: " . $e->getMessage();
+}
+echo "<hr>";
+
+// task 10
+$filename = "data/test.txt";
+
+// pathinfo - повертає інформацію про шлях path у вигляді асоціативного 
+// масиву або рядка, залежно від значення параметра flags:
+$fileExtension = pathinfo($filename, PATHINFO_EXTENSION);
+
+echo "<b>Task 10:</b><br>";
+switch ($fileExtension) {
+  case "txt":
+    echo "Text file detected.";
+    break;
+  case "jpg":
+  case "jpeg":
+  case "png":
+    echo "Image file detected.";
+    break;
+  case "pdf":
+    echo "PDF file detected.";
+    break;
+  default:
+    echo "File type not supported.";
+    break;
+}
+echo "<hr>";
