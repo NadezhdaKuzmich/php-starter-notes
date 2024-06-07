@@ -73,6 +73,12 @@ for ($i = 1; $i <= $rows; $i++) {
 }
 echo "<hr>";
 
+$fact = 6;
+for ($i = $fact - 1; $i > 0; $i--) {
+  $fact *= $i;
+}
+print 'The factorial of 6 is ' . $fact . '<hr>';
+
 $week = [
   1 => "Понеділок",
   "Вівторок",
