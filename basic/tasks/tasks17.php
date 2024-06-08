@@ -214,3 +214,39 @@ switch ($fileExtension) {
     break;
 }
 echo "<hr>";
+
+// task 11
+$filename = "data/test.txt";
+$searchWord = "PHP";
+
+echo "<b>Task 11:</b><br>";
+try {
+  $fileHandle = fopen($filename, 'r');
+  if ($fileHandle === false) {
+    throw new Exception("Error opening the file.");
+  }
+
+  $lineNumber = 1;
+  $found = false;
+  echo "Specific word: " . $searchWord;
+  // fgets - зчитує і повертає рядок із файлу:
+  while (($line = fgets($fileHandle)) !== false) {
+    // stripos - повертає позицію першого входження 
+    // підрядка без урахування регістру:
+    if (stripos($line, $searchWord) !== false) {
+      echo "<br>Was found on line " . $lineNumber . ": " . $line;
+      $found = true;
+    }
+
+    $lineNumber++;
+  }
+
+  if (!$found) {
+    echo "Word not found in the file.";
+  }
+
+  fclose($fileHandle);
+} catch (Exception $e) {
+  echo "An error occurred: " . $e->getMessage();
+}
+echo "<hr>";
