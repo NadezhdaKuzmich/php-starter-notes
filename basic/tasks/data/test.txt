@@ -4,4 +4,4 @@ can be embedded into HTML. The best way we learn anything is by practice and exe
 questions. We have started this section for those (beginner to intermediate) who are 
 familiar with PHP. Hope, these exercises help you to improve your PHP coding skills. 
 Currently, following sections are available, we are working hard to add more exercises. 
-Happy Coding!This is the new content.This is the new content.This is the new content.This is the new content.
+Happy Coding!This is the new content.

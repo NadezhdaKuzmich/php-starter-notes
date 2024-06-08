@@ -250,3 +250,31 @@ try {
   echo "An error occurred: " . $e->getMessage();
 }
 echo "<hr>";
+
+// task 12
+$filename = "data/books.xml";
+$desiredAuthor = "Ralls, Kim";
+
+echo "<b>Task 12:</b><br>";
+echo "Search for the author: " . $desiredAuthor;
+try {
+  // simplexml_load_string - використовується 
+  // для читання XML-даних із рядка:
+  $xml = simplexml_load_file($filename);
+
+  foreach ($xml->book as $book) {
+    $author = $book->author;
+
+    if ($author == $desiredAuthor) {
+      $title = $book->title;
+      $price = $book->price;
+      $genre = $book->genre;
+
+      echo "</br>Title: " . $title . "\n";
+      echo "</br>Genre: " . $genre . "\n";
+      echo "</br>Price: " . $price . "\n";
+    }
+  }
+} catch (Exception $e) {
+  echo "An error occurred: " . $e->getMessage();
+}
