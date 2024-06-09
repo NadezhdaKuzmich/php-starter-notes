@@ -38,3 +38,19 @@ foreach ($data["people"] as $person) {
   echo "------------------------</br>";
 }
 echo "<hr>";
+
+// task 2
+$json =
+  '{
+  "uglify-js": "1.3.4",
+  "jshint": "0.9.1",
+  "recess": "1.1.8",
+  "connect": "2.1.3",
+  "hogan.js": "2.0.0"
+  }';
+
+echo "<b>Task 2:</b><br>" . "<pre>";
+var_dump(json_decode($json));
+echo "<br>";
+var_dump(json_decode($json, true));
+echo "</pre>" . "<hr>";
