@@ -54,3 +54,10 @@ var_dump(json_decode($json));
 echo "<br>";
 var_dump(json_decode($json, true));
 echo "</pre>" . "<hr>";
+
+// task 3
+$json = '{"number": 123456789012345678901234567890}';
+
+echo "<b>Task 3:</b><br>" . "<pre>";
+var_dump(json_decode($json));
+echo "</pre>" . "<hr>";
