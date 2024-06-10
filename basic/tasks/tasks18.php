@@ -61,3 +61,20 @@ $json = '{"number": 123456789012345678901234567890}';
 echo "<b>Task 3:</b><br>" . "<pre>";
 var_dump(json_decode($json));
 echo "</pre>" . "<hr>";
+
+// task 4
+$array = [
+  "uglify-js" => "1.3.4",
+  "jshint" => "0.9.1",
+  "recess" => "1.1.8",
+  "connect" => "2.1.3",
+  "hogan.js" => "2.0.0"
+];
+$myarray = ['red', 'green', 'white'];
+
+echo "<b>Task 4:</b><br>";
+// json_encode - повертає JSON-представлення даних:
+var_dump(json_encode($array));
+echo "<br>";
+var_dump(json_encode($myarray));
+echo "<hr>";
