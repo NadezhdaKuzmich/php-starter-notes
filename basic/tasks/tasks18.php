@@ -99,3 +99,19 @@ trinary_Test(32);
 trinary_Test(21);
 trinary_Test(12);
 echo "<hr>";
+
+// task 6
+echo "<b>Task 6:</b><br>";
+// get_current_user - повертає ім'я власника поточного PHP-скрипта:
+echo 'Current script owner: ' . get_current_user() . "<hr>";
+
+// task 7
+echo "<b>Task 7:</b><br>";
+$full_url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+echo $full_url . "<hr>";
+
+// task 8
+echo "<b>Task 8:</b><br>";
+// getenv - отримує значення змінної оточення:
+$rd = getenv('DOCUMENT_ROOT');
+echo $rd . "<hr>";
