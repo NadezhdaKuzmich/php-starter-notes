@@ -78,3 +78,24 @@ var_dump(json_encode($array));
 echo "<br>";
 var_dump(json_encode($myarray));
 echo "<hr>";
+
+// task 5
+function trinary_Test($num)
+{
+  $result = $num > 30
+    ? "greater than 30"
+    : ($num > 20
+      ? "greater than 20"
+      : ($num > 10
+        ? "greater than 10"
+        : "Input a number at least greater than 10!"));
+
+  echo $num . " : " . $result . "<br>";
+}
+
+echo "<b>Task 5:</b><br>";
+trinary_Test(4);
+trinary_Test(32);
+trinary_Test(21);
+trinary_Test(12);
+echo "<hr>";
