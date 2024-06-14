@@ -115,3 +115,15 @@ echo "<b>Task 8:</b><br>";
 // getenv - отримує значення змінної оточення:
 $rd = getenv('DOCUMENT_ROOT');
 echo $rd . "<hr>";
+
+// task 9
+echo "<b>Task 9:</b><br>";
+// get_extension_funcs - повертає масив з імен функцій модуля:
+$json_extension_funcs = get_extension_funcs("JSON");
+echo "<pre>";
+print_r($json_extension_funcs);
+echo "<br>";
+
+$xml_extension_funcs = get_extension_funcs("XML");
+print_r($xml_extension_funcs);
+echo "</pre><hr>";
