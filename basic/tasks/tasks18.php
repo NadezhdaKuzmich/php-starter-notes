@@ -136,3 +136,23 @@ $last_modified_time = getlastmod();
 echo "<b>Task 10:</b><br>";
 echo "Last modified: " . date("F d Y H:i:s.", $last_modified_time);
 echo "<hr>";
+
+// task 11
+echo "<b>Task 11:</b><br>";
+// sys_get_temp_dir - повертає шлях до тимчасової папки на сервері.
+// tempnam - створює тимчасовий файл з унікальним іменем у певній 
+// директорії. Якщо вказаного каталогу не існує, tempnam може створити 
+// файл у тимчасовому каталозі системи:
+$temp_file = tempnam(sys_get_temp_dir(), 'Tux');
+echo $temp_file;
+echo "<hr>";
+
+// task 12
+echo "<b>Task 12:</b><br>";
+// phpcredits(CREDITS_ALL - CREDITS_FULLPAGE) показує інформацію про те, 
+// хто брав участь у розробці PHP, але без зайвих прикрас і форматування.
+// Якби використовувалася просто phpcredits(CREDITS_ALL), інформація була 
+// б подана як красиво оформлена веб-сторінка. 
+// А з CREDITS_ALL - CREDITS_FULLPAGE виводиться та сама інформація, але в 
+// простому, неоформленому вигляді.
+phpcredits(CREDITS_ALL - CREDITS_FULLPAGE);
