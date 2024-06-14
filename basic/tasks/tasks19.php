@@ -39,3 +39,22 @@ echo "<b>Task 3:</b><br><pre>";
 $nums = [1, 1, 2, 2, 3, 4, 5, 5];
 print_r(removeDuplicates($nums));
 echo "</pre><hr>";
+
+// task 4
+function isContainsStr($str1, $str2)
+{
+  $str1Len = strlen($str1);
+  $str2Len = strlen($str2);
+  $start = $str1Len - $str2Len - 1;
+
+  if (substr($str1, $str1Len - $str2Len, $str1Len) == $str2) {
+    return "true";
+  } else {
+    return "false";
+  }
+}
+
+echo "<b>Task 4:</b><br><pre>";
+echo isContainsStr("Python", "on") . "<br>";
+echo isContainsStr("JavaScript", "php") . "<br>";
+echo "<hr>";
