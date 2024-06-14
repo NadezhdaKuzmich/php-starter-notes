@@ -127,3 +127,12 @@ echo "<br>";
 $xml_extension_funcs = get_extension_funcs("XML");
 print_r($xml_extension_funcs);
 echo "</pre><hr>";
+
+// task 10
+$last_modified_time = getlastmod();
+// getlastmod - повертає час останньої модифікації поточної сторінки. 
+// Значення є міткою часу Unix, що підходить для функції date. 
+// Функція поверне false у разі виникнення помилки:
+echo "<b>Task 10:</b><br>";
+echo "Last modified: " . date("F d Y H:i:s.", $last_modified_time);
+echo "<hr>";
