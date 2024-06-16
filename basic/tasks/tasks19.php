@@ -58,3 +58,22 @@ echo "<b>Task 4:</b><br>";
 echo isContainsStr("Python", "on") . "<br>";
 echo isContainsStr("JavaScript", "php") . "<br>";
 echo "<hr>";
+
+// task 5
+function validEmail($email)
+{
+  $result = trim($email);
+  // filter_var - використовується для фільтрації змінних за допомогою 
+  // різних фільтрів. 
+  // FILTER_VALIDATE_EMAIL - це фільтр, який перевіряє, чи відповідає 
+  // рядок формату дійсної адреси електронної пошти:
+  if (filter_var($result, FILTER_VALIDATE_EMAIL)) {
+    return "true";
+  } else {
+    echo "false";
+  }
+}
+
+echo "<b>Task 5:</b><br>";
+echo validEmail("abc@example.com") . "<br>";
+echo validEmail("abc#example.com") . "<hr>";
