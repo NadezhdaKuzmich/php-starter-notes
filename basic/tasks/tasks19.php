@@ -77,3 +77,16 @@ function validEmail($email)
 echo "<b>Task 5:</b><br>";
 echo validEmail("abc@example.com") . "<br>";
 echo validEmail("abc#example.com") . "<hr>";
+
+// task 6
+$myfile = fopen("data/some-text.txt", "w") or die("Unable to open file!");
+$txt = "PHP Exercises\n";
+fwrite($myfile, $txt);
+$txt = "from\n";
+fwrite($myfile, $txt);
+$txt = "Internet\n";
+fwrite($myfile, $txt);
+fclose($myfile);
+
+echo "<b>Task 6:</b><br>";
+echo "Size of the file: " . filesize("data/some-text.txt") . "<hr>";
