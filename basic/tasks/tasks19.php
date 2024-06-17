@@ -104,3 +104,19 @@ echo withoutMod(27, 9) . "<br>";
 echo withoutMod(19, 4) . "<br>";
 echo withoutMod(81, 3) . "<br>";
 echo "<hr>";
+
+// task 8
+echo "<b>Task 8:</b><br>" . "<pre>";
+for ($i = 1; $i < 7; $i++) {
+  for ($j = 1; $j < 7; $j++) {
+    if ($j == 1) {
+      // str_pad($string, $length, $pad_string = " ", $pad_type = STR_PAD_RIGHT) 
+      // - повертає рядок, доповнений зліва, справа або з обох боків до заданої довжини:
+      echo str_pad($i * $j, 2, " ", STR_PAD_LEFT);
+    } else {
+      echo str_pad($i * $j, 4, " ", STR_PAD_LEFT);
+    }
+  }
+  echo "<br>";
+}
+echo "<hr>" . "</pre>";
