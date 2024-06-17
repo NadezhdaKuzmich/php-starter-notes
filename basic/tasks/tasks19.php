@@ -90,3 +90,17 @@ fclose($myfile);
 
 echo "<b>Task 6:</b><br>";
 echo "Size of the file: " . filesize("data/some-text.txt") . "<hr>";
+
+// task 7
+function withoutMod($m, $n)
+{
+  $divides = (int) ($m / $n);
+  return $m - $n * $divides;
+}
+
+echo "<b>Task 7:</b><br>";
+echo withoutMod(13, 2) . "<br>";
+echo withoutMod(27, 9) . "<br>";
+echo withoutMod(19, 4) . "<br>";
+echo withoutMod(81, 3) . "<br>";
+echo "<hr>";
