@@ -120,3 +120,18 @@ for ($i = 1; $i < 7; $i++) {
   echo "<br>";
 }
 echo "<hr>" . "</pre>";
+
+// task 9
+function findNonRepeat($word)
+{
+  for ($i = 0; $i <= strlen($word); $i++) {
+    // substr_count - повертає число входжень підрядка:
+    if (substr_count($word, substr($word, $i, 1)) == 1) {
+      return substr($word, $i, 1);
+    }
+  }
+}
+
+echo "<b>Task 9:</b><br>";
+echo findNonRepeat("Green") . "<br>";
+echo findNonRepeat("abcdea") . "<hr>";
