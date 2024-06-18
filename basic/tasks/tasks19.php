@@ -135,3 +135,21 @@ function findNonRepeat($word)
 echo "<b>Task 9:</b><br>";
 echo findNonRepeat("Green") . "<br>";
 echo findNonRepeat("abcdea") . "<hr>";
+
+// task 10
+function multiplyTwoLists($str1, $str1)
+{
+  $arr1 = explode(' ', trim($str1));
+  $arr2 = explode(' ', trim($str1));
+  $output = [];
+
+  foreach ($arr1 as $key => $value) {
+    $output[$key] = $arr1[$key] * $arr2[$key];
+  }
+
+  return implode(' ', $output);
+}
+
+echo "<b>Task 10:</b><br>";
+echo multiplyTwoLists("10 12 3", "1 3 3") . "<br>";
+echo multiplyTwoLists("4 8 5", "2 3 9") . "<hr>";
