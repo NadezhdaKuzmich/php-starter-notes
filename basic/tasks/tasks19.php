@@ -137,10 +137,10 @@ echo findNonRepeat("Green") . "<br>";
 echo findNonRepeat("abcdea") . "<hr>";
 
 // task 10
-function multiplyTwoLists($str1, $str1)
+function multiplyTwoLists($str1, $str2)
 {
   $arr1 = explode(' ', trim($str1));
-  $arr2 = explode(' ', trim($str1));
+  $arr2 = explode(' ', trim($str2));
   $output = [];
 
   foreach ($arr1 as $key => $value) {
