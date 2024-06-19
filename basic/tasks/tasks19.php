@@ -153,3 +153,25 @@ function multiplyTwoLists($str1, $str2)
 echo "<b>Task 10:</b><br>";
 echo multiplyTwoLists("10 12 3", "1 3 3") . "<br>";
 echo multiplyTwoLists("4 8 5", "2 3 9") . "<hr>";
+
+// task 11
+function findPairs($nums, $pairSum)
+{
+  $pairsOfNums = "";
+  echo $pairSum . " - the sum of pairs of numbers: <br>";
+
+  for ($i = 0; $i < count($nums); $i++) {
+    for ($j = $i + 1; $j < count($nums); $j++) {
+      if ($nums[$i] + $nums[$j] == (int) $pairSum) {
+        $pairsOfNums .= $nums[$i] . ", " . $nums[$j] . ";<br>";
+      }
+    }
+  }
+
+  return $pairsOfNums;
+}
+
+$nums = [0, 1, 2, 3, 4, 5, 6];
+echo "<b>Task 11:</b><br>";
+echo findPairs($nums, 7) . "<br>";
+echo findPairs($nums, 5) . "<hr>";
