@@ -163,7 +163,7 @@ function findPairs($nums, $pairSum)
   for ($i = 0; $i < count($nums); $i++) {
     for ($j = $i + 1; $j < count($nums); $j++) {
       if ($nums[$i] + $nums[$j] == (int) $pairSum) {
-        $pairsOfNums .= $nums[$i] . ", " . $nums[$j] . ";<br>";
+        $pairsOfNums .= $nums[$i] . ", " . $nums[$j] . "; <br>";
       }
     }
   }
@@ -175,3 +175,19 @@ $nums = [0, 1, 2, 3, 4, 5, 6];
 echo "<b>Task 11:</b><br>";
 echo findPairs($nums, 7) . "<br>";
 echo findPairs($nums, 5) . "<hr>";
+
+// task 12
+function sumOfDigits($nums)
+{
+  $sum = 0;
+
+  for ($i = 0; $i < strlen($nums); $i++) {
+    $sum += $nums[$i];
+  }
+
+  return $sum;
+}
+
+echo "<b>Task 12:</b><br>";
+echo sumOfDigits("12345") . "<br>";
+echo sumOfDigits("9999");
