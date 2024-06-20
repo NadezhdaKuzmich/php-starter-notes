@@ -72,12 +72,13 @@ print_r(groupBy(['one', 'two', 'three', 'four'], 'strlen'));
 echo "</pre>" . "<hr>";
 
 // task 5
-function multiplier(&$num)
+function squared(&$num)
 {
   return $num *= $num;
 }
 
 $number = 9;
-multiplier($number);
+squared($number);
 echo "<b>Task 5:</b><br>";
 echo $number . "<hr>";
+
