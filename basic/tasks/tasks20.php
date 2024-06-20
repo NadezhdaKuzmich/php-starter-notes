@@ -9,7 +9,6 @@ function dropFromLeft($items, $n = 1)
 echo "<b>Task 1:</b><br>" . "<pre>";
 print_r(dropFromLeft([1, 2, 3]));
 echo "<br>";
-
 print_r(dropFromLeft([1, 2, 3, 4], 2));
 echo "</pre>" . "<hr>";
 
@@ -46,3 +45,28 @@ echo findLastIndex([1, 2, 3, 4], function ($n) {
   return ($n % 2) === 0;
 });
 echo "<hr>";
+
+// task 4
+function groupBy($items, $func)
+{
+  $group = [];
+
+  foreach ($items as $item) {
+    // is_string - визначає, чи є змінна рядком.
+    // is_callable - визначає, чи може вміст змінної бути викликаний як функція.
+    // function_exists - перевіряє, чи є функція у списку певних функцій, як 
+    // вбудованих (внутрішніх), так і користувацьких:
+    if ((!is_string($func) && is_callable($func)) || function_exists($func)) {
+      // call_user_func - викликає callback-функцію, передану першим параметром, 
+      // і передає інші параметри як аргументи:
+      $key = call_user_func($func, $item);
+      $group[$key][] = $item;
+    }
+  }
+
+  return $group;
+}
+
+echo "<b>Task 4:</b><br>" . "<pre>";
+print_r(groupBy(['one', 'two', 'three', 'four'], 'strlen'));
+echo "</pre>" . "<hr>";
