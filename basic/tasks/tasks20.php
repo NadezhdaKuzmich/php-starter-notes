@@ -70,3 +70,14 @@ function groupBy($items, $func)
 echo "<b>Task 4:</b><br>" . "<pre>";
 print_r(groupBy(['one', 'two', 'three', 'four'], 'strlen'));
 echo "</pre>" . "<hr>";
+
+// task 5
+function multiplier(&$num)
+{
+  return $num *= $num;
+}
+
+$number = 9;
+multiplier($number);
+echo "<b>Task 5:</b><br>";
+echo $number . "<hr>";
