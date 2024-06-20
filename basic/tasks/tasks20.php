@@ -29,3 +29,20 @@ echo findLast([1, 2, 3, 4], function ($n) {
   return ($n % 2) === 0;
 });
 echo "<hr>";
+
+// task 3
+function findLastIndex($items, $func)
+{
+  $keys = array_keys(array_filter($items, $func));
+  return array_pop($keys);
+}
+
+echo "<b>Task 3:</b><br>";
+echo findLastIndex([1, 2, 3, 4], function ($n) {
+  return ($n % 2) === 1;
+});
+echo "<br>";
+echo findLastIndex([1, 2, 3, 4], function ($n) {
+  return ($n % 2) === 0;
+});
+echo "<hr>";
