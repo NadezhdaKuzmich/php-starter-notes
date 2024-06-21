@@ -122,3 +122,17 @@ var_dump(hasDuplicates([1, 2, 3, 4, 5, 5]));
 echo "<br>";
 var_dump(hasDuplicates([1, 2, 3, 4, 5]));
 echo "<hr>";
+
+// task 9
+function last($items)
+{
+  // endv - зсуває внутрішній покажчик масиву array на 
+  // останній елемент і повертає його значення:
+  return end($items);
+}
+
+echo "<b>Task 9:</b><br>";
+print_r(last([1, 2, 3]));
+echo "<br>";
+print_r(last([3, -4, 5, 1, 2]));
+echo "<hr>";
