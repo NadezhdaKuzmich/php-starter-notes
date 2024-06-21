@@ -136,3 +136,5 @@ print_r(last([1, 2, 3]));
 echo "<br>";
 print_r(last([3, -4, 5, 1, 2]));
 echo "<hr>";
+
+// task 87
