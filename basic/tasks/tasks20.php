@@ -82,3 +82,28 @@ squared($number);
 echo "<b>Task 5:</b><br>";
 echo $number . "<hr>";
 
+// task 6
+function sayHello()
+{
+  echo 'Hello world!';
+}
+
+// dynamic function call:
+$newFuncVarName = 'sayHello';
+echo "<b>Task 6:</b><br>";
+$newFuncVarName();
+echo "<hr>";
+
+// task 7
+function printFromScope()
+{
+  global $outsideVar;
+  echo $outsideVar;
+}
+
+$outsideVar = "This is a global variable.";
+echo "<b>Task 7:</b><br>";
+printFromScope();
+echo "<hr>";
+
+// task 84
