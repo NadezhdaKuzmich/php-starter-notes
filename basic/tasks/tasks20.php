@@ -106,4 +106,19 @@ echo "<b>Task 7:</b><br>";
 printFromScope();
 echo "<hr>";
 
-// task 84
+// task 8
+function hasDuplicates($items)
+{
+  // array_unique - бере як параметр масив і повертає 
+  // новий масив без повторюваних значень:
+  if (count($items) > count(array_unique($items)))
+    return true;
+  else
+    return false;
+}
+
+echo "<b>Task 8:</b><br>";
+var_dump(hasDuplicates([1, 2, 3, 4, 5, 5]));
+echo "<br>";
+var_dump(hasDuplicates([1, 2, 3, 4, 5]));
+echo "<hr>";
