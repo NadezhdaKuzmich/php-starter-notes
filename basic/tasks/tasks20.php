@@ -137,4 +137,17 @@ echo "<br>";
 print_r(last([3, -4, 5, 1, 2]));
 echo "<hr>";
 
-// task 87
+// task 10
+function pluck($items, $key)
+{
+  return array_map(function ($item) use ($key) {
+    return $item[$key];
+  }, $items);
+}
+
+echo "<b>Task 10:</b><br>" . "<pre>";
+print_r(pluck([
+  ['product_id' => 'p100', 'name' => 'Computer'],
+  ['product_id' => 'p200', 'name' => 'Laptop'],
+], 'name'));
+echo "</pre>" . "<hr>";
