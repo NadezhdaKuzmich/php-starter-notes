@@ -164,3 +164,15 @@ $items = ['a', 'b', 'c', 'a', 'b', 'c'];
 echo "<b>Task 11:</b><br>" . "<pre>";
 print_r(pull($items, 'a', 'c'));
 echo "</pre>" . "<hr>";
+
+// task 12
+function reject($items, $func)
+{
+  return array_values(array_diff($items, array_filter($items, $func)));
+}
+
+echo "<b>Task 12:</b><br>" . "<pre>";
+print_r(reject(['Green', 'Red', 'Black', 'White'], function ($item) {
+  return strlen($item) > 4;
+}));
+echo "</pre>";
