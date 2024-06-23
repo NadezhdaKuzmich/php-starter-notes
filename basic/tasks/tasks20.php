@@ -151,3 +151,16 @@ print_r(pluck([
   ['product_id' => 'p200', 'name' => 'Laptop'],
 ], 'name'));
 echo "</pre>" . "<hr>";
+
+// task 11
+function pull(&$items, ...$params)
+{
+  $items = array_values(array_diff($items, $params));
+
+  return $items;
+}
+
+$items = ['a', 'b', 'c', 'a', 'b', 'c'];
+echo "<b>Task 11:</b><br>" . "<pre>";
+print_r(pull($items, 'a', 'c'));
+echo "</pre>" . "<hr>";
