@@ -76,7 +76,7 @@ function approximatelyEqual($number1, $number2, $epsilon = 0.001)
   // аргумент у вигляді числа float, функція також повертає число float, 
   // інакше - ціле число оскільки у float часто більший діапазон значень, 
   // ніж у int:
-  return abs($number1 - $number2) < $epsilon ? true : false;
+  return abs($number1 - $number2) < $epsilon;
 }
 
 echo "<b>Task 5:</b><br>";
@@ -99,3 +99,5 @@ var_dump(startsWith('Hi, this is me', 'Hi'));
 echo "<br>";
 var_dump(startsWith('Hello, this is me', 'Hi'));
 echo "<hr>";
+
+// task 7
