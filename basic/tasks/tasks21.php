@@ -84,3 +84,18 @@ var_dump(approximatelyEqual(10.0, 10.00001));
 echo "<br>";
 var_dump(approximatelyEqual(10.0, 10.01));
 echo "<hr>";
+
+// task 6
+function startsWith($str, $substr)
+{
+  // strpos - повертає позицію першого входження підрядка в інший рядок. 
+  // Першим параметром функція приймає рядок, у якому здійснюється пошук, 
+  // другим параметром - підрядок, який слід шукати.
+  return strpos($str, $substr) === 0;
+}
+
+echo "<b>Task 6:</b><br>";
+var_dump(startsWith('Hi, this is me', 'Hi'));
+echo "<br>";
+var_dump(startsWith('Hello, this is me', 'Hi'));
+echo "<hr>";
