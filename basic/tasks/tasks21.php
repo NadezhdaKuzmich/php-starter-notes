@@ -68,3 +68,19 @@ print_r(
   )
 );
 echo "</pre>" . "<hr>";
+
+// task 5
+function approximatelyEqual($number1, $number2, $epsilon = 0.001)
+{
+  // abs - повертає абсолютну величину числа. Якщо в параметр передано 
+  // аргумент у вигляді числа float, функція також повертає число float, 
+  // інакше - ціле число оскільки у float часто більший діапазон значень, 
+  // ніж у int:
+  return abs($number1 - $number2) < $epsilon ? true : false;
+}
+
+echo "<b>Task 5:</b><br>";
+var_dump(approximatelyEqual(10.0, 10.00001));
+echo "<br>";
+var_dump(approximatelyEqual(10.0, 10.01));
+echo "<hr>";
