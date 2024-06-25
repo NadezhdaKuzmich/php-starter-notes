@@ -101,3 +101,20 @@ var_dump(startsWith('Hello, this is me', 'Hi'));
 echo "<hr>";
 
 // task 7
+function countVowels($string)
+{
+  // preg_match_all - шукає в рядку всі збіги з шаблоном і поміщає результат 
+  // у масив matches у порядку, визначеному комбінацією прапорів flags. Після 
+  // знаходження першої відповідності наступні пошуки будуть здійснюватися не 
+  // з початку рядка, а від кінця останнього знайденого входження. Повертає 
+  // кількість знайдених входжень шаблону, яка може бути і нулем або FALSE, 
+  // якщо під час виконання виникли будь-які помилки:
+  $count = preg_match_all('/[aeiou]/i', $string, $matches);
+  print_r($matches);
+  
+  return $count;
+}
+
+echo "<b>Task 7:</b><br>" . "<pre>";
+echo '<br>Count of vowels: ' . countVowels('sampleInput');
+echo "</pre>" . "<hr>";
