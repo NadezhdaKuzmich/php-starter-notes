@@ -111,10 +111,12 @@ function countVowels($string)
   // якщо під час виконання виникли будь-які помилки:
   $count = preg_match_all('/[aeiou]/i', $string, $matches);
   print_r($matches);
-  
+
   return $count;
 }
 
 echo "<b>Task 7:</b><br>" . "<pre>";
 echo '<br>Count of vowels: ' . countVowels('sampleInput');
 echo "</pre>" . "<hr>";
+
+// task 97
