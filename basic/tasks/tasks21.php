@@ -153,3 +153,29 @@ echo variadicFunc([1, 2]);
 echo "<br>";
 echo variadicFunc([1, 2, 3, 4]);
 echo "<hr>";
+
+// task 10
+function test($s)
+{
+  if (strlen($s) >= 2 && substr($s, 0, 2) == "if") {
+    return $s;
+  }
+
+  return "if " . $s;
+}
+
+echo "<b>Task 10:</b><br>";
+echo test("if else") . "<br>";
+echo test("else") . "<br>";
+echo test("if") . "<hr>";
+
+// task 11
+function returnSubstr($s, $count)
+{
+  return substr($s, 0, $count) . substr($s, $count + 1, strlen($s) - $count);
+}
+
+echo "<b>Task 11:</b><br>";
+echo returnSubstr("Python", 1) . "<br>";
+echo returnSubstr("Python", 0) . "<br>";
+echo returnSubstr("Python", 4) . "<hr>";
