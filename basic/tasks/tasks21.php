@@ -135,3 +135,21 @@ echo decapitalize($str);
 echo "<br>";
 echo decapitalize($str, true);
 echo "<hr>";
+
+// task 9
+function variadicFunc($operands)
+{
+  $sum = 0;
+
+  foreach ($operands as $operand) {
+    $sum += $operand;
+  }
+
+  return $sum;
+}
+
+echo "<b>Task 9:</b><br>";
+echo variadicFunc([1, 2]);
+echo "<br>";
+echo variadicFunc([1, 2, 3, 4]);
+echo "<hr>";
