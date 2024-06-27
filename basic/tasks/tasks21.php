@@ -179,3 +179,16 @@ echo "<b>Task 11:</b><br>";
 echo returnSubstr("Python", 1) . "<br>";
 echo returnSubstr("Python", 0) . "<br>";
 echo returnSubstr("Python", 4) . "<hr>";
+
+// task 12
+function changeLastChar($str)
+{
+  return strlen($str) > 1
+    ? substr($str, strlen($str) - 1) . substr($str, 1, strlen($str) - 2) . substr($str, 0, 1)
+    : $str;
+}
+
+echo "<b>Task 12:</b><br>";
+echo changeLastChar("abcd") . "<br>";
+echo changeLastChar("a") . "<br>";
+echo changeLastChar("xy");
