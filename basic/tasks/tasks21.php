@@ -119,4 +119,19 @@ echo "<b>Task 7:</b><br>" . "<pre>";
 echo '<br>Count of vowels: ' . countVowels('sampleInput');
 echo "</pre>" . "<hr>";
 
-// task 97
+// task 8
+function decapitalize($string, $upperRest = false)
+{
+  // lcfirst - перетворює перший символ рядка в нижній регістр:
+  return lcfirst($upperRest ? strtoupper($string) : $string);
+}
+
+$str = 'Python';
+
+echo "<b>Task 8:</b><br>";
+echo $str;
+echo "<br>";
+echo decapitalize($str);
+echo "<br>";
+echo decapitalize($str, true);
+echo "<hr>";
