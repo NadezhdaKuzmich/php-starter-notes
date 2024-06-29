@@ -22,3 +22,15 @@ echo "<b>Task 2:</b><br>";
 echo changeStr("Red") . "<br>";
 echo changeStr("Green") . "<br>";
 echo changeStr("1") . "<hr>";
+
+// task 3
+function findMax($x, $y, $z)
+{
+  return max($x, $y, $z);
+}
+
+echo "<b>Task 3:</b><br>";
+echo findMax(1, 2, 3) . "<br>";
+echo findMax(1, 3, 2) . "<br>";
+echo findMax(1, 1, 1) . "<br>";
+echo findMax(1, 2, 2) . "<hr>";
