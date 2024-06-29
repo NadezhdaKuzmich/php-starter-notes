@@ -34,3 +34,19 @@ echo findMax(1, 2, 3) . "<br>";
 echo findMax(1, 3, 2) . "<br>";
 echo findMax(1, 1, 1) . "<br>";
 echo findMax(1, 2, 2) . "<hr>";
+
+// task 4
+function checkSameLastDigit($x, $y)
+{
+  return abs($x % 10) == abs($y % 10);
+}
+
+echo "<b>Task 4:</b><br>";
+var_dump(checkSameLastDigit(123, 456));
+echo "<br>";
+var_dump(checkSameLastDigit(12, 512));
+echo "<br>";
+var_dump(checkSameLastDigit(7, 87));
+echo "<br>";
+var_dump(checkSameLastDigit(12, 45));
+echo "<hr>";
