@@ -50,3 +50,17 @@ var_dump(checkSameLastDigit(7, 87));
 echo "<br>";
 var_dump(checkSameLastDigit(12, 45));
 echo "<hr>";
+
+// task 5
+function toUpperLastChars($s)
+{
+  return strlen($s) < 3
+    ? strtoupper($s)
+    : substr($s, 0, strlen($s) - 3) . strtoupper(substr($s, strlen($s) - 3));
+}
+
+echo "<b>Task 5:</b><br>";
+echo toUpperLastChars("Python") . "<br>";
+echo toUpperLastChars("Javascript") . "<br>";
+echo toUpperLastChars("js") . "<br>";
+echo toUpperLastChars("Php") . "<hr>";
