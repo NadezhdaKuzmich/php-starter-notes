@@ -64,3 +64,16 @@ echo toUpperLastChars("Python") . "<br>";
 echo toUpperLastChars("Javascript") . "<br>";
 echo toUpperLastChars("js") . "<br>";
 echo toUpperLastChars("Php") . "<hr>";
+
+// task 6
+function repeatStr($str, $count = 1)
+{
+  return str_repeat($str, $count);
+}
+
+$str = 'JS';
+
+echo "<b>Task 6:</b><br>";
+echo repeatStr($str) . "<br>";
+echo repeatStr($str, 2) . "<br>";
+echo repeatStr($str, 3) . "<hr>";
