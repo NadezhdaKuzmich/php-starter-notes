@@ -77,3 +77,17 @@ echo "<b>Task 6:</b><br>";
 echo repeatStr($str) . "<br>";
 echo repeatStr($str, 2) . "<br>";
 echo repeatStr($str, 3) . "<hr>";
+
+// task 7
+function repeatSubStr($str, $count)
+{
+  $firstChars = strlen($str) < 3 ? strlen($str) : 3;
+  $subStr = substr($str, 0, $firstChars);
+
+  return str_repeat($subStr, $count);
+}
+
+echo "<b>Task 7:</b><br>";
+echo repeatSubStr("Python", 2) . "<br>";
+echo repeatSubStr("Python", 3) . "<br>";
+echo repeatSubStr("JS", 3) . "<hr>";
