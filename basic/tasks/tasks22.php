@@ -91,3 +91,22 @@ echo "<b>Task 7:</b><br>";
 echo repeatSubStr("Python", 2) . "<br>";
 echo repeatSubStr("Python", 3) . "<br>";
 echo repeatSubStr("JS", 3) . "<hr>";
+
+// task 8
+function findSubStr($str, $subStr)
+{
+  $countOfPresence = 0;
+
+  for ($i = 0; $i < (strlen($str) - 1); $i++) {
+    if (substr($str, $i, 2) == $subStr) {
+      $countOfPresence++;
+    }
+  }
+
+  return $countOfPresence;
+}
+
+echo "<b>Task 8:</b><br>";
+echo findSubStr("bbaaccaag", "bb") . "<br>";
+echo findSubStr("jjkiaaasew", "aa") . "<br>";
+echo findSubStr("JSakkkoikk", "kk") . "<hr>";
