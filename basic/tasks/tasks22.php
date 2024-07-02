@@ -110,3 +110,20 @@ echo "<b>Task 8:</b><br>";
 echo findSubStr("bbaaccaag", "bb") . "<br>";
 echo findSubStr("jjkiaaasew", "aa") . "<br>";
 echo findSubStr("JSakkkoikk", "kk") . "<hr>";
+
+// task 9
+function getOddChars($s)
+{
+  $result = "";
+
+  for ($i = 0; $i < strlen($s); $i += 2) {
+    $result .= substr($s, $i, 1);
+  }
+
+  return $result;
+}
+
+echo "<b>Task 9:</b><br>";
+echo getOddChars("Python") . "<br>";
+echo getOddChars("PHP") . "<br>";
+echo getOddChars("JS") . "<hr>";
