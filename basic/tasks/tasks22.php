@@ -127,3 +127,16 @@ echo "<b>Task 9:</b><br>";
 echo getOddChars("Python") . "<br>";
 echo getOddChars("PHP") . "<br>";
 echo getOddChars("JS") . "<hr>";
+
+// task 10
+function isInArray($nums, $num)
+{
+  return in_array($num, $nums) ? true : false;
+}
+
+echo "<b>Task 10:</b><br>";
+var_dump(isInArray([1, 2, 9, 3], 3));
+echo "<br>";
+var_dump(isInArray([1, 2, 2, 3], 2));
+echo "<br>";
+var_dump(isInArray([1, 2, 2, 3], 4));
