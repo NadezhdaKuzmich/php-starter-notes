@@ -143,11 +143,21 @@ var_dump(isInArray([1, 2, 2, 3], 4));
 echo "<hr>";
 
 // task 11
-function modifyStr($s1, $s2)
+function modifyStr($str1, $str2)
 {
-  return $s1 . str_repeat($s2, 2) . $s1;
+  return $str1 . str_repeat($str2, 2) . $str1;
 }
 
 echo "<b>Task 11:</b><br>";
 echo modifyStr("Hi", "Hello") . "<br>";
 echo modifyStr("whats", "app") . "<hr>";
+
+// task 12
+function prepareStr($str1, $word)
+{
+  return substr($str1, 0, 2) . $word . substr($str1, 2);
+}
+
+echo "<b>Task 12:</b><br>";
+echo prepareStr("[[]]", "Hello") . "<br>";
+echo prepareStr("(())", "Hi");
