@@ -140,3 +140,14 @@ echo "<br>";
 var_dump(isInArray([1, 2, 2, 3], 2));
 echo "<br>";
 var_dump(isInArray([1, 2, 2, 3], 4));
+echo "<hr>";
+
+// task 11
+function modifyStr($s1, $s2)
+{
+  return $s1 . str_repeat($s2, 2) . $s1;
+}
+
+echo "<b>Task 11:</b><br>";
+echo modifyStr("Hi", "Hello") . "<br>";
+echo modifyStr("whats", "app") . "<hr>";
