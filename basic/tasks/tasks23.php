@@ -19,10 +19,27 @@ function calculateSum($nums)
   foreach ($nums as $num) {
     $result += $num;
   }
-  
+
   return $result;
 }
 
 echo "<b>Task 2:</b><br>";
 echo calculateSum([10, 20, 30, 40, 50]) . "<br>";
 echo calculateSum([10, 20, -30, -40, 50]) . "<hr>";
+
+// task 3
+function sliceArr($arr, $num)
+{
+  $newArr = [];
+
+  for ($i = 0; $i < $num; $i++) {
+    $newArr[$i] = $arr[$i];
+  }
+
+  return $newArr;
+}
+
+echo "<b>Task 3:</b><br>";
+$result = sliceArr(["a", "b", "bb", "c", "ccc"], 3);
+echo implode(" ", $result);
+echo "<hr>";
