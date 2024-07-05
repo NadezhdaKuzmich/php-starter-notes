@@ -43,3 +43,21 @@ echo "<b>Task 3:</b><br>";
 $result = sliceArr(["a", "b", "bb", "c", "ccc"], 3);
 echo implode(" ", $result);
 echo "<hr>";
+
+// task 4
+function checkLength($arr, $len)
+{
+  $count = 0;
+
+  for ($i = 0; $i < sizeof($arr); $i++) {
+    if (strlen($arr[$i]) == $len)
+      $count++;
+  }
+
+  return $count;
+}
+
+echo "<b>Task 4:</b><br>";
+echo checkLength(["a", "b", "bb", "c", "ccc"], 1) . "<br>";
+echo checkLength(["aa", "b", "bb", "cc", "ff"], 2);
+echo "<hr>";
