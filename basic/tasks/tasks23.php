@@ -61,3 +61,24 @@ echo "<b>Task 4:</b><br>";
 echo checkLength(["a", "b", "bb", "c", "ccc"], 1) . "<br>";
 echo checkLength(["aa", "b", "bb", "cc", "ff"], 2);
 echo "<hr>";
+
+// task 5
+function nextElementEqualOrGreater($arr)
+{
+  for ($i = 0; $i < sizeof($arr) - 1; $i++) {
+    if ($arr[$i + 1] < $arr[$i])
+      return false;
+  }
+
+  return true;
+}
+
+echo "<b>Task 5:</b><br>";
+var_dump(nextElementEqualOrGreater([5, 5, 1, 5, 5]));
+echo "<br>";
+var_dump(nextElementEqualOrGreater([1, 2, 3, 4]));
+echo "<br>";
+var_dump(nextElementEqualOrGreater([3, 3, 5, 5, 5, 5]));
+echo "<br>";
+var_dump(nextElementEqualOrGreater([1, 5, 5, 7, 8, 10]));
+echo "<hr>";
