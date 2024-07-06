@@ -99,3 +99,13 @@ function calculateResult($nums)
 echo "<b>Task 6:</b><br>";
 echo "Sum of values in the array of integers except the number 17: " . calculateResult([1, 5, 7, 9, 10, 17]);
 echo "<hr>";
+
+// task 7
+function findDifference($nums)
+{
+  return max($nums) - min($nums);
+}
+
+echo "<b>Task 7:</b><br>";
+echo "Difference between the largest and smallest values: " . findDifference([1, 5, 7, 9, 10, 12]);
+echo "<hr>";
