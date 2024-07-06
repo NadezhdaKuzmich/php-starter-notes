@@ -82,3 +82,20 @@ var_dump(nextElementEqualOrGreater([3, 3, 5, 5, 5, 5]));
 echo "<br>";
 var_dump(nextElementEqualOrGreater([1, 5, 5, 7, 8, 10]));
 echo "<hr>";
+
+// task 6
+function calculateResult($nums)
+{
+  $sum = 0;
+
+  for ($i = 0; $i < sizeof($nums); $i++) {
+    if ($nums[$i] != 17)
+      $sum += $nums[$i];
+  }
+
+  return $sum;
+}
+
+echo "<b>Task 6:</b><br>";
+echo "Sum of values in the array of integers except the number 17: " . calculateResult([1, 5, 7, 9, 10, 17]);
+echo "<hr>";
