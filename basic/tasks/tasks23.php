@@ -126,3 +126,14 @@ function countEven($nums)
 echo "<b>Task 8:</b><br>";
 echo "Number of even elements: " . countEven([1, 5, 7, 9, 10, 12]);
 echo "<hr>";
+
+// task 9
+function combineArrays($arr1, $arr2)
+{
+  return array_merge($arr1, $arr2);
+}
+
+echo "<b>Task 9:</b><br>";
+$result = combineArrays([10, 20, 30], [40, 50, 60]);
+echo "New array: " . implode(', ', $result);
+echo "<hr>";
