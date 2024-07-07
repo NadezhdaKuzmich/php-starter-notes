@@ -109,3 +109,20 @@ function findDifference($nums)
 echo "<b>Task 7:</b><br>";
 echo "Difference between the largest and smallest values: " . findDifference([1, 5, 7, 9, 10, 12]);
 echo "<hr>";
+
+// task 8
+function countEven($nums)
+{
+  $evens = 0;
+
+  for ($i = 0; $i < sizeof($nums); $i++) {
+    if ($nums[$i] % 2 == 0)
+      $evens++;
+  }
+
+  return $evens;
+}
+
+echo "<b>Task 8:</b><br>";
+echo "Number of even elements: " . countEven([1, 5, 7, 9, 10, 12]);
+echo "<hr>";
