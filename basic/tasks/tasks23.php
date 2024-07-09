@@ -166,3 +166,15 @@ echo "<pre>";
 print_r($result);
 echo "</pre>";
 echo "<hr>";
+
+// task 11
+function returnFirstAndLast($arr)
+{
+  return [$arr[0], $arr[count($arr) - 1]];
+}
+
+echo "<b>Task 11:</b><br>";
+$arr = [10, 20, -30, -40, 30];
+echo "Original array: . . " . implode(', ', $arr) . "<br>";
+echo "New array: . . . . . " . implode(', ', returnFirstAndLast($arr));
+echo "<hr>";
