@@ -175,6 +175,8 @@ function returnFirstAndLast($arr)
 
 echo "<b>Task 11:</b><br>";
 $arr = [10, 20, -30, -40, 30];
-echo "Original array: . . " . implode(', ', $arr) . "<br>";
-echo "New array: . . . . . " . implode(', ', returnFirstAndLast($arr));
+echo "<pre>Original array: " . implode(', ', $arr) . "<br>";
+echo "New array:      " . implode(', ', returnFirstAndLast($arr)) . "</pre>";
 echo "<hr>";
+
+// task 12
