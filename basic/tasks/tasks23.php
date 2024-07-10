@@ -180,3 +180,13 @@ echo "New array:      " . implode(', ', returnFirstAndLast($arr)) . "</pre>";
 echo "<hr>";
 
 // task 12
+function giveAllMaxValues($arr)
+{
+  return array_fill(0, count($arr), max($arr));
+}
+
+echo "<b>Task 12:</b><br>";
+$arr = [10, 20, -30, -40];
+$result = giveAllMaxValues($arr);
+echo "<pre>Original array: " . implode(', ', $arr) . "<br>";
+echo "New array:      " . implode(', ', $result) . "</pre>";
