@@ -19,7 +19,7 @@ function calculateSum($arr)
   foreach ($arr as $item) {
     $result += $item;
   }
-  
+
   return $result;
 }
 
@@ -39,4 +39,20 @@ echo "<br>";
 var_dump(compareFirstAndLastElement([10, 20, 40, 10]));
 echo "<br>";
 var_dump(compareFirstAndLastElement([12, 24, 35, 55]));
+echo "<hr>";
+
+// task 4
+function checkFirstOrLast($arr, $givenVal)
+{
+  return $arr[0] == $givenVal || $arr[count($arr) - 1] == $givenVal;
+}
+
+echo "<b>Task 4:</b><br>";
+var_dump(checkFirstOrLast([5, 20, 40, 10], 10));
+echo "<br>";
+var_dump(checkFirstOrLast([10, 20, 40, 10], 20));
+echo "<br>";
+var_dump(checkFirstOrLast([30, 20, 40, 30], 30));
+echo "<br>";
+var_dump(checkFirstOrLast([12, 24, 35, 55], 40));
 echo "<hr>";
