@@ -26,3 +26,17 @@ function calculateSum($arr)
 echo "<b>Task 2:</b><br>";
 echo calculateSum([10, 20, 30, 40, 50]) . "<br>";
 echo calculateSum([10, 20, -30, -40, 50]) . "<hr>";
+
+// task 3
+function compareFirstAndLastElement($arr)
+{
+  return count($arr) > 0 && $arr[0] == $arr[count($arr) - 1];
+}
+
+echo "<b>Task 3:</b><br>";
+var_dump(compareFirstAndLastElement([10, 20, 40, 50]));
+echo "<br>";
+var_dump(compareFirstAndLastElement([10, 20, 40, 10]));
+echo "<br>";
+var_dump(compareFirstAndLastElement([12, 24, 35, 55]));
+echo "<hr>";
