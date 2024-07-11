@@ -46,4 +46,11 @@ while (($char = fgetc($file)) !== false) {
 }
 
 fclose($file);
-echo "<hr>";
+
+/* fwrite */
+$file = fopen('data/test2.txt', 'w');
+
+fwrite($file, "Hello World!\n");
+fwrite($file, "New line...\n");
+
+fclose($file);
