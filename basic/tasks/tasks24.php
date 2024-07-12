@@ -67,3 +67,15 @@ setcookie($cookieName, $cookieValue, $expirationTime);
 
 echo "<b>Task 5:</b><br>";
 echo "Cookie named '$cookieName' has been set with the value '$cookieValue'.<hr>";
+
+// task 6
+$cookieName = "username";
+
+echo "<b>Task 6:</b><br>";
+if (isset($_COOKIE[$cookieName])) {
+  $cookieValue = $_COOKIE[$cookieName];
+  echo "Value of cookie 'username': $cookieValue";
+} else {
+  echo "Cookie 'username' not found.";
+}
+echo "<hr>";
