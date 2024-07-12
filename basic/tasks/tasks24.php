@@ -56,3 +56,14 @@ var_dump(checkFirstOrLast([30, 20, 40, 30], 30));
 echo "<br>";
 var_dump(checkFirstOrLast([12, 24, 35, 55], 40));
 echo "<hr>";
+
+// task 5
+$cookieName = "username";
+$cookieValue = "Nadiia Kuzmich";
+$expirationTime = time() + 3600;
+// setcookie - defines a cookie to be sent along with the rest of 
+// the HTTP headers. A cookie is often used to identify a user:
+setcookie($cookieName, $cookieValue, $expirationTime);
+
+echo "<b>Task 5:</b><br>";
+echo "Cookie named '$cookieName' has been set with the value '$cookieValue'.<hr>";
