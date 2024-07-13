@@ -94,3 +94,15 @@ $_SESSION["userid"] = 10020;
 
 echo "<b>Task 8:</b><br>";
 echo "Session variable 'userid' has been set with the value 10020.<hr>";
+
+// task 9
+// session_start(); -  because a session is already active
+
+echo "<b>Task 9:</b><br>";
+if (isset($_SESSION["userid"])) {
+  $userid = $_SESSION["userid"];
+  echo "Value of session variable 'userid': $userid";
+} else {
+  echo "Session variable 'userid' not found.";
+}
+echo "<hr>";
