@@ -86,3 +86,11 @@ echo "<hr>";
 
 echo "<b>Task 7:</b><br>";
 echo "Cookie named 'username' has been deleted.<hr>";
+
+// task 8
+// session_start - creates a session or resumes the current one:
+session_start();
+$_SESSION["userid"] = 10020;
+
+echo "<b>Task 8:</b><br>";
+echo "Session variable 'userid' has been set with the value 10020.<hr>";
