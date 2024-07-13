@@ -79,3 +79,10 @@ if (isset($_COOKIE[$cookieName])) {
   echo "Cookie 'username' not found.";
 }
 echo "<hr>";
+
+// task 7
+// $cookieName = "username";
+// setcookie($cookieName, "", time() - 3600);
+
+echo "<b>Task 7:</b><br>";
+echo "Cookie named 'username' has been deleted.<hr>";
