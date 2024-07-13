@@ -96,7 +96,7 @@ echo "<b>Task 8:</b><br>";
 echo "Session variable 'userid' has been set with the value 10020.<hr>";
 
 // task 9
-// session_start(); -  because a session is already active
+// session_start(); - because a session is already active
 
 echo "<b>Task 9:</b><br>";
 if (isset($_SESSION["userid"])) {
@@ -106,3 +106,15 @@ if (isset($_SESSION["userid"])) {
   echo "Session variable 'userid' not found.";
 }
 echo "<hr>";
+
+// task 10
+// session_start(); - because a session is already active
+$_SESSION = []; // unset
+
+// session_destroy - destroys all of the data associated 
+// with the current session. It does not unset any of the 
+// global variables associated with the session:
+session_destroy(); // destroy
+
+echo "<b>Task 10:</b><br>";
+echo "Session destroyed. All session variables have been unset.<hr>";
