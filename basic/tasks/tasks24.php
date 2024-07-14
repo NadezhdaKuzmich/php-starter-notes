@@ -130,3 +130,13 @@ setcookie($cookieName, $cookieValue, $expirationTime, "/", "", $secureOnly, true
 
 echo "<b>Task 11:</b><br>";
 echo "Secure cookie named 'my_Cookie' has been set.<hr>";
+
+// task 12
+$cookieName = "visited";
+
+echo "<b>Task 12:</b><br>";
+if (isset($_COOKIE[$cookieName])) {
+  echo "Welcome back! You have visited before.";
+} else {
+  echo "Welcome! This is your first visit.";
+}
