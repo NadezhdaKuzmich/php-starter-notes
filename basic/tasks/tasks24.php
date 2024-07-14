@@ -118,3 +118,15 @@ session_destroy(); // destroy
 
 echo "<b>Task 10:</b><br>";
 echo "Session destroyed. All session variables have been unset.<hr>";
+
+// task 11
+$cookieName = "my_Cookie";
+$cookieValue = "Example_cookie_value";
+$expirationTime = time() + 3600;
+$secureOnly = true;
+
+// setcookie(name, value, expire, path, domain, secure, httponly);
+setcookie($cookieName, $cookieValue, $expirationTime, "/", "", $secureOnly, true);
+
+echo "<b>Task 11:</b><br>";
+echo "Secure cookie named 'my_Cookie' has been set.<hr>";
