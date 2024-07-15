@@ -26,6 +26,11 @@ if (file_exists($targetFile)) {
   $uploadStatus = 0;
 }
 
+if ($_FILES['uploadingFile']['size'] > 200000) {
+  echo 'File is too large, please choose a smaller image.<br>';
+  $uploadStatus = 0;
+}
+
 if ($uploadStatus === 0) {
   echo 'File was not uploaded, please try again.';
 } else {
