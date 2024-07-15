@@ -5,7 +5,7 @@ $targetFile = $targetDir . basename($_FILES['uploadingFile']['name']);
 
 $uploadStatus = 1;
 
-$imageFiletype = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
+$imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
 
 if (isset($_POST['submit'])) {
   $check = getimagesize($_FILES['uploadingFile']['tmp_name']);
@@ -28,6 +28,11 @@ if (file_exists($targetFile)) {
 
 if ($_FILES['uploadingFile']['size'] > 200000) {
   echo 'File is too large, please choose a smaller image.<br>';
+  $uploadStatus = 0;
+}
+
+if ($imageFileType !== 'jpg' && $imageFileType !== 'jpeg' && $imageFileType !== 'png') {
+  echo 'Not a valid image type, must be jpg, jpeg or png. Please try again.<br>';
   $uploadStatus = 0;
 }
 
