@@ -25,3 +25,23 @@ if (isset($_SESSION["preferences"])) {
   echo "No user preferences found.";
 }
 echo "<hr>";
+
+// task 3
+$maxSessions = 3;
+
+echo "<b>Task 3:</b><br>";
+if (!isset($_SESSION['session_count'])) {
+  $_SESSION['session_count'] = 1;
+} else {
+  $_SESSION['session_count']++;
+
+  if ($_SESSION['session_count'] > $maxSessions) {
+    session_unset();
+    session_destroy();
+    echo "Maximum session limit exceeded. Please log in again.<br>";
+  }
+}
+echo isset($_SESSION['session_count'])
+  ? "Session active. Session count: " . $_SESSION['session_count']
+  : 'Session destroy.';
+echo "<hr>";
