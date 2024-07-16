@@ -16,6 +16,15 @@
 <body>
 
   <?php
+
+  /* 
+  GET stores data in the URL, which is typically limited to about two thousand 
+  characters depending on the browser used, whereas POST hides the data, making 
+  it more secure. POST is best for sensitive or vital data such as usernames and 
+  passwords, whereas GET is best for bookmarking data and URLs that are not vital 
+  or sensitive.
+  */
+
   $data = [
     'email' => '',
     'username' => '',

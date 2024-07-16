@@ -1,5 +1,10 @@
 <?php
 
+/*
+The fgets function is used to read in a single line while 
+the fgetc function is used to read a single character.
+*/
+
 try {
   $filename = 'data/template.txt';
   $file = fopen($filename, 'r');
