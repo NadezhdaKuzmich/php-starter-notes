@@ -45,3 +45,12 @@ echo isset($_SESSION['session_count'])
   ? "Session active. Session count: " . $_SESSION['session_count']
   : 'Session destroy.';
 echo "<hr>";
+
+// task 4
+if (!isset($_SESSION['session_count'])) {
+  session_start();
+}
+session_regenerate_id(true);
+
+echo "<b>Task 4:</b><br>";
+echo "Session ID has been regenerated.<hr>";
