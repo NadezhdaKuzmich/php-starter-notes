@@ -66,3 +66,14 @@ if (isset($_SESSION['last_access_time'])) {
   echo "Session started. First access.";
 }
 echo "<hr>";
+
+// task 6
+$cookieName = "myCookie";
+$value = "Cookie Value";
+
+setcookie($cookieName, $value, time() + 3600, "/");
+$_SESSION[$cookieName] = $value;
+
+echo "<b>Task 6:</b><br>";
+echo "Cookie value: " . $_COOKIE[$cookieName] . "<br>";
+echo "Session variable value: " . $_SESSION[$cookieName] . "<hr>";
