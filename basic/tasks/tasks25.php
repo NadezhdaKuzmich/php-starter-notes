@@ -77,3 +77,31 @@ $_SESSION[$cookieName] = $value;
 echo "<b>Task 6:</b><br>";
 echo "Cookie value: " . $_COOKIE[$cookieName] . "<br>";
 echo "Session variable value: " . $_SESSION[$cookieName] . "<hr>";
+
+// task 7
+class Rectangle
+{
+  private $length;
+  private $width;
+
+  public function __construct($length, $width)
+  {
+    $this->length = $length;
+    $this->width = $width;
+  }
+
+  public function getArea()
+  {
+    return $this->length * $this->width;
+  }
+
+  public function getPerimeter()
+  {
+    return 2 * ($this->length + $this->width);
+  }
+}
+
+echo "<b>Task 7:</b><br>";
+$rectangle = new Rectangle(12, 9);
+echo "Area: " . $rectangle->getArea() . "<br>";
+echo "Perimeter: " . $rectangle->getPerimeter() . "<hr>";
