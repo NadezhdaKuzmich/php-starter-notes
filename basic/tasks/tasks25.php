@@ -131,3 +131,40 @@ echo "<b>Task 8:</b><br>";
 $circle = new Circle(7);
 echo "Area: " . $circle->getArea() . "<br>";
 echo "Circumference: " . $circle->getCircumference() . "<hr>";
+
+// task 9
+interface Resizable
+{
+  public function resize($percentage);
+}
+
+class Square implements Resizable
+{
+  private $side;
+
+  public function __construct($side)
+  {
+    $this->side = $side;
+  }
+
+  public function resize($percentage)
+  {
+    $this->side = $this->side * ($percentage / 100);
+  }
+
+  public function getArea()
+  {
+    return pow($this->side, 2);
+  }
+
+  public function getSide()
+  {
+    return $this->side;
+  }
+}
+
+echo "<b>Task 9:</b><br>";
+$square = new Square(10);
+echo "Initial Side Length: " . $square->getSide() . "<br>";
+echo "Resized Side Length: " . $square->getSide() . "<br>";
+echo "Area: " . $square->getArea() . "<hr>";
