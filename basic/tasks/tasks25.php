@@ -105,3 +105,29 @@ echo "<b>Task 7:</b><br>";
 $rectangle = new Rectangle(12, 9);
 echo "Area: " . $rectangle->getArea() . "<br>";
 echo "Perimeter: " . $rectangle->getPerimeter() . "<hr>";
+
+// task 8
+class Circle
+{
+  private $radius;
+
+  public function __construct($radius)
+  {
+    $this->radius = $radius;
+  }
+
+  public function getArea()
+  {
+    return pi() * pow($this->radius, 2);
+  }
+
+  public function getCircumference()
+  {
+    return 2 * pi() * $this->radius;
+  }
+}
+
+echo "<b>Task 8:</b><br>";
+$circle = new Circle(7);
+echo "Area: " . $circle->getArea() . "<br>";
+echo "Circumference: " . $circle->getCircumference() . "<hr>";
