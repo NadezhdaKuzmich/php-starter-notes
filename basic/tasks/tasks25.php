@@ -168,3 +168,30 @@ $square = new Square(10);
 echo "Initial Side Length: " . $square->getSide() . "<br>";
 echo "Resized Side Length: " . $square->getSide() . "<br>";
 echo "Area: " . $square->getArea() . "<hr>";
+
+// task 10
+class Vehicle
+{
+  private $brand;
+  private $model;
+  private $year;
+
+  public function __construct($brand, $model, $year)
+  {
+    $this->brand = $brand;
+    $this->model = $model;
+    $this->year = $year;
+  }
+
+  public function displayDetails()
+  {
+    echo "Brand: $this->brand <br>";
+    echo "Model: $this->model <br>";
+    echo "Year: $this->year <br>";
+  }
+}
+
+echo "<b>Task 10:</b><br>";
+$car = new Vehicle("Ford", "F-150", 2020);
+$car->displayDetails();
+echo "<hr>";
