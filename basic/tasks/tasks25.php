@@ -195,3 +195,26 @@ echo "<b>Task 10:</b><br>";
 $car = new Vehicle("Ford", "F-150", 2020);
 $car->displayDetails();
 echo "<hr>";
+
+// task 11
+class StudentU
+{
+  public $name;
+  public $age;
+  public $grade;
+
+  public function displayInfo()
+  {
+    echo "Name: $this->name <br>";
+    echo "Age: $this->age <br>";
+    echo "Grade: $this->grade <br>";
+  }
+}
+
+echo "<b>Task 11:</b><br>";
+$student = new StudentU();
+$student->name = "Gwladus Andrea";
+$student->age = 16;
+$student->grade = 10;
+$student->displayInfo();
+echo "<hr>";
