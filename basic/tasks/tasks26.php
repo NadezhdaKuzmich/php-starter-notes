@@ -75,3 +75,39 @@ $cart->addItem("Product 3", 10);
 $total = $cart->getTotal();
 echo "Total cost: $$total";
 echo "<hr>";
+
+// task 3
+class Calculator
+{
+  private $result;
+
+  public function __construct()
+  {
+    $this->result = 0;
+  }
+
+  public function getResult()
+  {
+    return $this->result;
+  }
+
+  public function add($number)
+  {
+    $this->result += $number;
+  }
+
+  public function subtract($number)
+  {
+    $this->result -= $number;
+  }
+}
+
+echo "<b>Task 3:</b><br>";
+$calculator = new Calculator();
+$calculator->add(4);
+$calculator->add(5);
+$calculator->subtract(3);
+
+$result = $calculator->getResult();
+echo "Result: $result";
+echo "<hr>";
