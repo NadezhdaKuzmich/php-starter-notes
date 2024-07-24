@@ -176,3 +176,25 @@ $result3 = Math::multiply(8, 2);
 echo "Addition: $result1 <br>";
 echo "Subtraction: $result2 <br>";
 echo "Multiplication: $result3 <hr>";
+
+// task 6
+class Person
+{
+  private $name;
+  private $age;
+
+  public function __construct($name, $age)
+  {
+    $this->name = $name;
+    $this->age = $age;
+  }
+
+  public function __toString()
+  {
+    return "Name: $this->name <br> Age: $this->age <br>";
+  }
+}
+
+echo "<b>Task 6:</b><br>";
+$person = new Person("Nadiia Kuzmich", 28);
+echo "$person <hr>";
