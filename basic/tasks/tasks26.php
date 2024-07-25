@@ -198,3 +198,14 @@ class Person
 echo "<b>Task 6:</b><br>";
 $person = new Person("Nadiia Kuzmich", 28);
 echo "$person <hr>";
+
+// task 7
+$num = 3;
+$factorial = 1;
+
+for ($x = $num; $x >= 1; $x--) {
+  $factorial *= $x;
+}
+
+echo "<b>Task 7:</b><br>";
+echo "The factorial of $num is $factorial<hr>";
