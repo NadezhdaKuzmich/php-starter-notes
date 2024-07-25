@@ -203,9 +203,28 @@ echo "$person <hr>";
 $num = 3;
 $factorial = 1;
 
-for ($x = $num; $x >= 1; $x--) {
-  $factorial *= $x;
+for ($i = $num; $i >= 1; $i--) {
+  $factorial *= $i;
 }
 
 echo "<b>Task 7:</b><br>";
 echo "The factorial of $num is $factorial<hr>";
+
+// task 8
+echo "<b>Task 8:</b><br>";
+echo '<br><table width="282" cellspacing="0" cellpadding="0" border="1">';
+
+for ($row = 1; $row <= 8; $row++) {
+  echo '<tr>';
+  for ($column = 1; $column <= 8; $column++) {
+    $total = $row + $column;
+    if ($total % 2 == 0) {
+      echo '<td height="35" width="35" bgcolor="#FFFFFF"></td>';
+    } else {
+      echo '<td height="35" width="35" bgcolor="#000000"></td>';
+    }
+  }
+  echo '</tr>';
+}
+
+echo '</table><hr>';
