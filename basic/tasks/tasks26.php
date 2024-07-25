@@ -228,3 +228,12 @@ for ($row = 1; $row <= 8; $row++) {
 }
 
 echo '</table><hr>';
+
+// task 9
+$str = "Tutorials Class";
+
+echo "<b>Task 9:</b><br>";
+echo "$str <br>";
+echo strrev($str) . "<br>";
+echo strlen($str) . "<br>";
+echo "<hr>";
