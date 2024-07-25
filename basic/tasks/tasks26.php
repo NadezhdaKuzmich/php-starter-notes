@@ -234,6 +234,10 @@ $str = "Tutorials Class";
 
 echo "<b>Task 9:</b><br>";
 echo "$str <br>";
+echo strtoupper($str) . "<br>";
+echo strtolower($str) . "<br>";
+echo str_repeat($str, 3) . "<br>";
+echo str_replace('Tutorials', 'PHP', $str) . "<br>";
 echo strrev($str) . "<br>";
 echo strlen($str) . "<br>";
 echo "<hr>";
