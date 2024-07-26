@@ -265,3 +265,13 @@ foreach (array_keys($months, $deleteItem) as $key) {
 echo "<b>Task 11:</b><br><pre>";
 print_r($months);
 echo "</pre><hr>";
+
+// task 12
+$months = ['jan', 'feb', 'march', 'april', 'may'];
+$deleteItem = 'may';
+
+$finalMonths = array_diff($months, [$deleteItem]);
+
+echo "<b>Task 12:</b><br><pre>";
+print_r($finalMonths);
+echo "</pre>";
