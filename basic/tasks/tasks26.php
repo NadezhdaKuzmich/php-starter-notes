@@ -241,3 +241,15 @@ echo str_replace('Tutorials', 'PHP', $str) . "<br>";
 echo strrev($str) . "<br>";
 echo strlen($str) . "<br>";
 echo "<hr>";
+
+// task 10
+$months = ['jan', 'feb', 'march', 'april', 'may'];
+$deleteItem = 'march';
+
+if (($key = array_search($deleteItem, $months)) !== false) {
+  unset($months[$key]);
+}
+
+echo "<b>Task 10:</b><br><pre>";
+print_r($months);
+echo "</pre><hr>";
