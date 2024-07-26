@@ -253,3 +253,15 @@ if (($key = array_search($deleteItem, $months)) !== false) {
 echo "<b>Task 10:</b><br><pre>";
 print_r($months);
 echo "</pre><hr>";
+
+// task 11
+$months = ['jan', 'feb', 'march', 'april', 'may'];
+$deleteItem = 'april';
+
+foreach (array_keys($months, $deleteItem) as $key) {
+  unset($months[$key]);
+}
+
+echo "<b>Task 11:</b><br><pre>";
+print_r($months);
+echo "</pre><hr>";
