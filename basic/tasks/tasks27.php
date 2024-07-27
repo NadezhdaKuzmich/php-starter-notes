@@ -11,3 +11,13 @@ if (array_intersect($array2, $array1) === $array2) {
   echo "Not a subset";
 }
 echo "<hr>";
+
+// task 2
+function factorial($number)
+{
+  return $number < 2 ? 1 : $number * factorial($number - 1);
+}
+
+echo "<b>Task 2:</b><br>";
+echo factorial(4);
+echo "<hr>";
