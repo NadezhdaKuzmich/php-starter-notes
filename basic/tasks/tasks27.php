@@ -21,3 +21,18 @@ function factorial($number)
 echo "<b>Task 2:</b><br>";
 echo factorial(4);
 echo "<hr>";
+
+// task 3
+function checkVote()
+{
+  $name = "Nadiia";
+  $age = 28;
+
+  echo $age >= 18
+    ? "$name, you are eligible for vote."
+    : "$name, you are not eligible for vote.";
+}
+
+echo "<b>Task 3:</b><br>";
+checkVote();
+echo "<hr>";
