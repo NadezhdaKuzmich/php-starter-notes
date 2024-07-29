@@ -38,12 +38,22 @@ checkVote();
 echo "<hr>";
 
 // task 4
-function rect_area($length = 2, $width = 4)
+function rectArea($length = 2, $width = 4)
 {
   $area = $length * $width;
   echo "Area Of Rectangle with length: $length & width: $width is $area.";
 }
 
 echo "<b>Task 4:</b><br>";
-rect_area();
+rectArea();
+echo "<hr>";
+
+// task 5
+echo "<b>Task 5:</b><br>";
+for ($row = 1; $row <= 8; $row++) {
+  for ($star = 1; $star <= $row; $star++) {
+    echo "*";
+  }
+  echo "<br>";
+}
 echo "<hr>";
