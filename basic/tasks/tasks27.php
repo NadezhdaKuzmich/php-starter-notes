@@ -57,3 +57,19 @@ for ($row = 1; $row <= 8; $row++) {
   echo "<br>";
 }
 echo "<hr>";
+
+// task 6
+class Pupil
+{
+  public $name = 'Vadym';
+
+  public function displayInfo()
+  {
+    echo "My name is $this->name.";
+  }
+}
+
+echo "<b>Task 6:</b><br>";
+$p1 = new Pupil();
+$p1->displayInfo();
+echo "<hr>";
