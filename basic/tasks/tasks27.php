@@ -82,3 +82,14 @@ echo date("l, F jS, Y") . "<br>";
 echo date("g:i:s a") . "<br>";
 echo date("d/m/Y") . "<br>";
 echo date("Y/m/d g:i a") . "<hr>";
+
+// task 8
+$current = time();
+echo "<b>Task 8:</b><br>";
+echo "Current Timestamp: $current <br>";
+echo 'Current Date: ' . date("Y-m-d", $current) . '<br><br>';
+
+// One month calculation using: 30 days * 24 hours * 60 mins * 60 secs
+$next_month = time() + 30 * 24 * 60 * 60;
+echo "Next Month Timestamp: $next_month <br>";
+echo 'Next Month: ' . date('Y-m-d', $next_month) . '<hr>';
