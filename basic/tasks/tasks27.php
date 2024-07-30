@@ -73,3 +73,12 @@ echo "<b>Task 6:</b><br>";
 $p1 = new Pupil();
 $p1->displayInfo();
 echo "<hr>";
+
+// task 7
+echo "<b>Task 7:</b><br>";
+echo date("Y-m-d") . "<br>";
+echo date("F j, Y, g:i A") . "<br>";
+echo date("l, F jS, Y") . "<br>";
+echo date("g:i:s a") . "<br>";
+echo date("d/m/Y") . "<br>";
+echo date("Y/m/d g:i a") . "<hr>";
