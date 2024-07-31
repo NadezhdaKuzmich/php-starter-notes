@@ -98,3 +98,12 @@ echo 'Next Month: ' . date('Y-m-d', $next_month) . '<hr>';
 echo "<b>Task 9:</b><br>";
 setcookie("login", "user", time() + 86400 * 30, "/"); // 86400 = 1 day
 echo "Cookie '" . $_COOKIE["login"] . "' is set! <hr>";
+
+// task 10
+echo "<b>Task 10:</b><br>";
+session_start();
+
+$_SESSION["favcolor"] = "green";
+$_SESSION["favanimal"] = "cat";
+
+echo 'Session variables are set: ' . $_SESSION["favcolor"] . ', ' . $_SESSION["favanimal"];
