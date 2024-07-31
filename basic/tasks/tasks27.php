@@ -93,3 +93,8 @@ echo 'Current Date: ' . date("Y-m-d", $current) . '<br><br>';
 $next_month = time() + 30 * 24 * 60 * 60;
 echo "Next Month Timestamp: $next_month <br>";
 echo 'Next Month: ' . date('Y-m-d', $next_month) . '<hr>';
+
+// task 9
+echo "<b>Task 9:</b><br>";
+setcookie("login", "user", time() + 86400 * 30, "/"); // 86400 = 1 day
+echo "Cookie '" . $_COOKIE["login"] . "' is set! <hr>";
