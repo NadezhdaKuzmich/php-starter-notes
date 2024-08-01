@@ -106,4 +106,12 @@ session_start();
 $_SESSION["favcolor"] = "green";
 $_SESSION["favanimal"] = "cat";
 
-echo 'Session variables are set: ' . $_SESSION["favcolor"] . ', ' . $_SESSION["favanimal"];
+echo 'Session variables are set: ' . $_SESSION["favcolor"] . ', ' . $_SESSION["favanimal"] . '<hr>';
+
+// task 11
+$array1 = ["a" => "Red", "b" => "Blue", "c" => "Pink"];
+$array2 = ["d" => "Green", "a" => "Brown", "e" => "Saphoron"];
+
+echo "<b>Task 11:</b><br><pre>";
+print_r(array_merge($array1, $array2));
+echo "</pre><hr>";
