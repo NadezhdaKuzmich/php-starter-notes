@@ -109,9 +109,19 @@ $_SESSION["favanimal"] = "cat";
 echo 'Session variables are set: ' . $_SESSION["favcolor"] . ', ' . $_SESSION["favanimal"] . '<hr>';
 
 // task 11
-$array1 = ["a" => "Red", "b" => "Blue", "c" => "Pink"];
-$array2 = ["d" => "Green", "a" => "Brown", "e" => "Saphoron"];
+$arr1 = ["a" => "Red", "b" => "Blue", "c" => "Pink"];
+$arr2 = ["d" => "Green", "a" => "Brown", "e" => "Saphoron"];
 
 echo "<b>Task 11:</b><br><pre>";
-print_r(array_merge($array1, $array2));
+print_r(array_merge($arr1, $arr2));
 echo "</pre><hr>";
+
+// task 12
+$arr = ['a', 'b', 'c', 'd', 'e'];
+
+echo "<b>Task 12:</b><br><pre>";
+// array_chunk(array, size, preserve_key) - splits an array into chunks of new arrays:
+print_r(array_chunk($arr, 2));
+echo "<br>";
+print_r(array_chunk($arr, 3, true));
+echo "</pre>";
