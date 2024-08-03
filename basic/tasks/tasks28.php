@@ -27,3 +27,13 @@ echo "<b>Task 1:</b><br>";
 $today = getdate();
 echo getDayOfTheWeek($today['wday']);
 echo "<hr>";
+
+// task 2
+$colors = ["a" => "green", "red", "b" => "green", "blue", "red"];
+$result = array_unique($colors);
+
+echo "<b>Task 2:</b><br><pre>";
+print_r($colors);
+echo "<br>";
+print_r($result);
+echo "</pre><hr>";
