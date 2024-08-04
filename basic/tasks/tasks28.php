@@ -44,6 +44,26 @@ $cars = ["Swift", "Honda City", "Elentra"];
 echo "<b>Task 3:</b><br><pre>";
 print_r($cars);
 echo "<br>";
+
 sort($cars);
 print_r($cars);
+echo "<br>";
+
+rsort($cars);
+print_r($cars);
+echo "</pre><hr>";
+
+// task 4
+$ages = ["John" => "25", "Smith" => "43", "Joe" => "37"];
+
+echo "<b>Task 4:</b><br><pre>";
+print_r($ages);
+echo "<br>";
+
+asort($ages);
+print_r($ages);
+echo "<br>";
+
+ksort($ages);
+print_r($ages);
 echo "</pre><hr>";
