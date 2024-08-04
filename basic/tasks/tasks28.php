@@ -37,3 +37,13 @@ print_r($colors);
 echo "<br>";
 print_r($result);
 echo "</pre><hr>";
+
+// task 3
+$cars = ["Swift", "Honda City", "Elentra"];
+
+echo "<b>Task 3:</b><br><pre>";
+print_r($cars);
+echo "<br>";
+sort($cars);
+print_r($cars);
+echo "</pre><hr>";
