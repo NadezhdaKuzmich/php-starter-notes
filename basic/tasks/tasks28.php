@@ -74,4 +74,11 @@ echo "<br>";
 
 krsort($ages);
 print_r($ages);
+echo "<br>";
+
+print_r(array_change_key_case($ages, CASE_UPPER));
+echo "<br>";
+
+natcasesort($ages);
+print_r($ages);
 echo "</pre><hr>";
