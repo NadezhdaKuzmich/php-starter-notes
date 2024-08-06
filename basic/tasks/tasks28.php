@@ -89,3 +89,18 @@ $x = true and false;
 echo "<b>Task 5:</b><br>";
 var_dump($x); // true
 echo "<hr>";
+
+// task 6
+$x = 5;
+
+echo "<b>Task 6:</b><br>";
+echo $x;
+echo "<br>";
+echo $x++ + $x++;
+echo "<br>";
+echo $x;
+echo "<br>";
+echo $x-- - $x--;
+echo "<br>";
+echo $x;
+echo "<hr>";
