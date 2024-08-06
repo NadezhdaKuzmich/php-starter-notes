@@ -82,3 +82,10 @@ echo "<br>";
 natcasesort($ages);
 print_r($ages);
 echo "</pre><hr>";
+
+// task 5
+$x = true and false;
+
+echo "<b>Task 5:</b><br>";
+var_dump($x); // true
+echo "<hr>";
