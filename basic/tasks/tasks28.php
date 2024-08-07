@@ -104,3 +104,17 @@ echo $x-- - $x--;
 echo "<br>";
 echo $x;
 echo "<hr>";
+
+// task 7
+$arr = [
+  '0' => 'z1',
+  '1' => 'Z10',
+  '2' => 'z12',
+  '3' => 'Z2',
+  '4' => 'z3'
+];
+
+echo "<b>Task 7:</b><br><pre>";
+asort($arr, SORT_STRING | SORT_FLAG_CASE | SORT_NATURAL);
+print_r($arr);
+echo "</pre><hr>";
