@@ -118,3 +118,15 @@ echo "<b>Task 7:</b><br><pre>";
 asort($arr, SORT_STRING | SORT_FLAG_CASE | SORT_NATURAL);
 print_r($arr);
 echo "</pre><hr>";
+
+// task 8
+$str1 = 'yabadabadoo';
+$str2 = 'yaba';
+
+echo "<b>Task 8:</b><br>";
+if (strpos($str1, $str2) !== false) {
+  echo "'$str1' contains '$str2'";
+} else {
+  echo "'$str1' does not contain '$str2'";
+}
+echo "<hr>";
