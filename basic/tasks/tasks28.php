@@ -142,3 +142,16 @@ for ($i = 0; $i < 5; $i++) {
   echo "<br>";
 }
 echo "<hr>";
+
+// task 10
+$num = 1;
+
+echo "<b>Task 10:</b><br>";
+for ($i = 0; $i < 4; $i++) {
+  for ($j = 0; $j <= $i; $j++) {
+    echo "$num ";
+    $num++;
+  }
+  echo "<br>";
+}
+echo "<hr>";
