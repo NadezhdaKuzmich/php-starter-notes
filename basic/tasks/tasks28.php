@@ -130,3 +130,15 @@ if (strpos($str1, $str2) !== false) {
   echo "'$str1' does not contain '$str2'";
 }
 echo "<hr>";
+
+// task 9
+$alpha = range('A', 'Z');
+
+echo "<b>Task 9:</b><br>";
+for ($i = 0; $i < 5; $i++) {
+  for ($j = 5; $j > $i; $j--) {
+    echo $alpha[$i];
+  }
+  echo "<br>";
+}
+echo "<hr>";
