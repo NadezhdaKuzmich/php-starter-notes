@@ -155,3 +155,12 @@ for ($i = 0; $i < 4; $i++) {
   echo "<br>";
 }
 echo "<hr>";
+
+// task 11
+$x = "abc";
+$$x = 200;
+
+echo "<b>Task 11:</b><br>";
+echo "$x <br>";
+echo $$x . "<br>";
+echo "$abc <hr>";
