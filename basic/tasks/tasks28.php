@@ -164,3 +164,15 @@ echo "<b>Task 11:</b><br>";
 echo "$x <br>";
 echo $$x . "<br>";
 echo "$abc <hr>";
+
+// task 12
+$name = "Cat";
+${$name} = "Dog";
+${${$name} } = "Monkey";
+
+echo "<b>Task 12:</b><br>";
+echo "$name <br>";
+echo ${$name} . "<br>";
+echo "$Cat <br>";
+echo ${${$name} } . "<br>";
+echo "$Dog <br>";
