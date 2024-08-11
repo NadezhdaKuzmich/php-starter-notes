@@ -23,3 +23,26 @@ foreach ($seasons as $season) {
     : '.';
 }
 echo "<hr>";
+
+// task 3
+echo "<b>Task 3:</b><pre>";
+for ($i = 1; $i <= 5; $i++) {
+  for ($k = 5; $k >= $i; $k--) {
+    echo " ";
+  }
+  for ($j = 1; $j <= $i; $j++) {
+    echo "* ";
+  }
+  echo "<br>";
+}
+
+for ($i = 4; $i >= 1; $i--) {
+  for ($k = 5; $k >= $i; $k--) {
+    echo " ";
+  }
+  for ($j = 1; $j <= $i; $j++) {
+    echo "* ";
+  }
+  echo "<br>";
+}
+echo "</pre><hr>";
