@@ -8,10 +8,11 @@
 </head>
 
 <body>
+  <h1>Calculate the area of rectangle</h1>
   <form method="post">
     Width: <input type="number" name="width">
     Length: <input type="number" name="length">
-    <input type="submit" name="submit" value="Calculate">
+    <input type="submit" name="submit" value="Calculate"><br><br>
   </form>
 
   <?php
@@ -19,7 +20,7 @@
     $width = $_POST['width'];
     $length = $_POST['length'];
     $area = $width * $length;
-    echo "The area of a rectangle with $width x $length is $area";
+    echo "<b>The area of a rectangle with $width x $length is $area</b>";
   }
   ?>
 </body>
