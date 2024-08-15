@@ -73,3 +73,26 @@ for ($i = 2; $i <= 5; $i++) {
   }
 }
 echo "<hr>";
+
+// task 5
+$ch = 'U';
+
+echo "<b>Task 5:</b><br>";
+switch ($ch) {
+  case 'a':
+  case 'e':
+  case 'i':
+  case 'o':
+  case 'u':
+  case 'A':
+  case 'E':
+  case 'I':
+  case 'O':
+  case 'U':
+    echo "Given character is vowel";
+    break;
+  default:
+    echo "Given character is consonant";
+    break;
+}
+echo "<hr>";
