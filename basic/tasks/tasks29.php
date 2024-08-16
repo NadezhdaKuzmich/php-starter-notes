@@ -138,3 +138,15 @@ switch ($car) {
     break;
 }
 echo "<hr>";
+
+// task 7
+$number = ["One", "Two", "Three", "Stop", "Four"];
+
+echo "<b>Task 7:</b><br>";
+foreach ($number as $element) {
+  if ($element == "Stop") {
+    break;
+  }
+  echo "$element </br>";
+}
+echo "<hr>";
