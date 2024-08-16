@@ -147,6 +147,22 @@ foreach ($number as $element) {
   if ($element == "Stop") {
     break;
   }
-  echo "$element </br>";
+  echo "$element <br>";
+}
+echo "<hr>";
+
+// task 8
+echo "<b>Task 8:</b><br>";
+echo "Even numbers between 1 to 20: <br>";
+$i = 1;
+
+while ($i <= 20) {
+  $i++;
+
+  if ($i % 2 == 1) {
+    continue;
+  }
+
+  echo "$i <br>";
 }
 echo "<hr>";
