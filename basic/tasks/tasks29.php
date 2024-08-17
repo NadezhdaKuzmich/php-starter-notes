@@ -166,3 +166,19 @@ while ($i <= 20) {
   echo "$i <br>";
 }
 echo "<hr>";
+
+// task 9
+$arr = [
+  [1, "sonoo", 400000],
+  [2, "john", 500000],
+  [3, "rahul", 300000]
+];
+
+echo "<b>Task 9:</b><br>";
+for ($row = 0; $row < 3; $row++) {
+  for ($col = 0; $col < 3; $col++) {
+    echo $arr[$row][$col] . "  ";
+  }
+  echo "<br/>";
+}
+echo "<hr>";
