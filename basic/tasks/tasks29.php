@@ -169,9 +169,9 @@ echo "<hr>";
 
 // task 9
 $arr = [
-  [1, "sonoo", 400000],
+  [1, "mike", 400000],
   [2, "john", 500000],
-  [3, "rahul", 300000]
+  [3, "jack", 300000]
 ];
 
 echo "<b>Task 9:</b><br>";
@@ -182,3 +182,10 @@ for ($row = 0; $row < 3; $row++) {
   echo "<br/>";
 }
 echo "<hr>";
+
+// task 10
+$salary = ["Mike" => "550000", "John" => "250000", "Jack" => "200000"];
+
+echo "<b>Task 10:</b><pre>";
+print_r(array_change_key_case($salary, CASE_UPPER));
+echo "</pre><hr>";
