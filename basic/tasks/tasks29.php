@@ -179,7 +179,7 @@ for ($row = 0; $row < 3; $row++) {
   for ($col = 0; $col < 3; $col++) {
     echo $arr[$row][$col] . "  ";
   }
-  echo "<br/>";
+  echo "<br>";
 }
 echo "<hr>";
 
@@ -189,3 +189,10 @@ $salary = ["Mike" => "550000", "John" => "250000", "Jack" => "200000"];
 echo "<b>Task 10:</b><pre>";
 print_r(array_change_key_case($salary, CASE_UPPER));
 echo "</pre><hr>";
+
+// task 11
+$salary = ["Mike" => "550000", "John" => "250000", "Jack" => "200000"];
+
+echo "<b>Task 11:</b><br>";
+$key = array_search("250000", $salary);
+echo "$key <hr>";
