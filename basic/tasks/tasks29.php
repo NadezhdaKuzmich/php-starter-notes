@@ -196,3 +196,9 @@ $salary = ["Mike" => "550000", "John" => "250000", "Jack" => "200000"];
 echo "<b>Task 11:</b><br>";
 $key = array_search("250000", $salary);
 echo "$key <hr>";
+
+// task 12
+$str = "Hello World!";
+echo "<b>Task 12:</b><br>";
+echo "$str <br>";
+echo chop($str, "World!");
