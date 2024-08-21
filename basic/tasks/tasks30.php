@@ -33,3 +33,10 @@ $arr = ['Welcome', 'to', 'PHP'];
 echo "<b>Task 4:</b><br>";
 echo implode(" + ", $arr);
 echo "<hr>";
+
+// task 5
+$arr = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
+
+echo "<b>Task 5:</b><br>";
+echo join('<br>', $arr);
+echo "<hr>";
