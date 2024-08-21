@@ -18,7 +18,7 @@ foreach ($strArray as $key => $value) {
 }
 echo "<hr>";
 
-// task 4
+// task 3
 $str = "Hello, we are here to help you.";
 
 echo "<b>Task 3:</b><pre>";
@@ -26,3 +26,10 @@ print_r(explode(" ", $str, 0));
 print_r(explode(" ", $str, 4));
 print_r(explode(" ", $str, -3));
 echo "</pre><hr>";
+
+// task 4
+$arr = ['Welcome', 'to', 'PHP'];
+
+echo "<b>Task 4:</b><br>";
+echo implode(" + ", $arr);
+echo "<hr>";
