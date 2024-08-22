@@ -40,3 +40,8 @@ $arr = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
 echo "<b>Task 5:</b><br>";
 echo join('<br>', $arr);
 echo "<hr>";
+
+// task 6
+echo "<b>Task 6:</b><br>";
+echo levenshtein("Hello World", " World");
+echo "<hr>";
