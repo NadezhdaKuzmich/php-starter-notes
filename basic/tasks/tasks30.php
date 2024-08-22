@@ -45,3 +45,8 @@ echo "<hr>";
 echo "<b>Task 6:</b><br>";
 echo levenshtein("Hello World", " World");
 echo "<hr>";
+
+// task 7
+echo "<b>Task 7:</b><br>";
+echo similar_text("Hello PHP", "Hello Javatpoint");
+echo "<hr>";
