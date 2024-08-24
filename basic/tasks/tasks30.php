@@ -50,3 +50,11 @@ echo "<hr>";
 echo "<b>Task 7:</b><br>";
 echo similar_text("Hello PHP", "Hello Javatpoint");
 echo "<hr>";
+
+// task 8
+$str1 = "Hello PHP";
+$str2 = "PHP";
+
+echo "<b>Task 8:</b><br>";
+echo strchr($str1, $str2);
+echo "<hr>";
