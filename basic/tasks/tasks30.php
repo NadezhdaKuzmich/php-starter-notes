@@ -65,3 +65,10 @@ $str = ucfirst($str);
 
 echo "<b>Task 9:</b><br>";
 echo "$str <hr>";
+
+// task 10
+$str = "Hello world";
+$str = lcfirst($str);
+
+echo "<b>Task 10:</b><br>";
+echo "$str <hr>";
