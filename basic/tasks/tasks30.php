@@ -58,3 +58,10 @@ $str2 = "PHP";
 echo "<b>Task 8:</b><br>";
 echo strchr($str1, $str2);
 echo "<hr>";
+
+// task 9
+$str = "hello world";
+$str = ucfirst($str);
+
+echo "<b>Task 9:</b><br>";
+echo "$str <hr>";
