@@ -72,3 +72,12 @@ $str = lcfirst($str);
 
 echo "<b>Task 10:</b><br>";
 echo "$str <hr>";
+
+// task 11
+$str = "An example of the wordwrap function to break the string";
+$width = 12;
+$break = "</br>";
+
+echo "<b>Task 11:</b><br>";
+echo wordwrap($str, $width, $break);
+echo "<hr>";
