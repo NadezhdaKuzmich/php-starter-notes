@@ -88,9 +88,10 @@ $search = 'Hii';
 $replace = 'Hello';
 
 echo "<b>Task 12:</b><br>";
-echo '<b>String before replacement:</br></b>';
-echo "$string </br>";
+echo '<b>String before replacement:</b><br>';
+echo "$string <br>";
 
 $newstr = str_replace($search, $replace, $string, $count);
-echo "$newstr </br>";
+echo '<b>New replaced string is:</b><br>';
+echo "$newstr <br>";
 echo "Number of replacement: $count";
