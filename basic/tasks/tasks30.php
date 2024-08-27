@@ -81,3 +81,16 @@ $break = "</br>";
 echo "<b>Task 11:</b><br>";
 echo wordwrap($str, $width, $break);
 echo "<hr>";
+
+// task 12
+$string = "Hii everyone!";
+$search = 'Hii';
+$replace = 'Hello';
+
+echo "<b>Task 12:</b><br>";
+echo '<b>String before replacement:</br></b>';
+echo "$string </br>";
+
+$newstr = str_replace($search, $replace, $string, $count);
+echo "$newstr </br>";
+echo "Number of replacement: $count";
