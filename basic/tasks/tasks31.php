@@ -12,3 +12,8 @@ echo "$replace2 <hr>";
 echo "<b>Task 2:</b><br>";
 $replace = substr_replace("PHP!", "Hello ", 0, 0);
 echo "$replace1 <hr>";
+
+// task 3
+echo "<b>Task 3:</b><br>";
+echo strcoll("Hello php", "hello") . " because the first string is less than the second string.<br>";
+echo strcoll("hello", "Hello") . " because the first string is greater than the second string.<hr>";
