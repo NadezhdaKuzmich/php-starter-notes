@@ -17,3 +17,8 @@ echo "$replace1 <hr>";
 echo "<b>Task 3:</b><br>";
 echo strcoll("Hello php", "hello") . " because the first string is less than the second string.<br>";
 echo strcoll("hello", "Hello") . " because the first string is greater than the second string.<hr>";
+
+// task 4
+echo "<b>Task 4:</b><br>";
+echo strip_tags("Hello <b>world!</b>");
+echo "<hr>";
