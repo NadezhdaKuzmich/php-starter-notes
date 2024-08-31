@@ -26,6 +26,16 @@ echo "<hr>";
 // task 5
 $str = "Hello PHP";
 
-echo "<b>Task 4:</b><br>";
+echo "<b>Task 5:</b><br>";
 echo "Your string is: $str <br>";
 echo "By using str_pad function: " . str_pad($str, 20, ".");
+echo "<hr>";
+
+// task 6
+$arr = ["PhP", "Python", "Java"];
+
+echo "<b>Task 6:</b><br>";
+echo "Your array string is: ['PhP', 'Python', 'Java']<br>";
+echo '<pre>';
+print_r(str_ireplace("Java", "JavaScript", $arr, $count));
+echo "</pre>Replacements: $count<hr>";
