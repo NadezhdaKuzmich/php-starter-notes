@@ -22,3 +22,10 @@ echo strcoll("hello", "Hello") . " because the first string is greater than the 
 echo "<b>Task 4:</b><br>";
 echo strip_tags("Hello <b>world!</b>");
 echo "<hr>";
+
+// task 5
+$str = "Hello PHP";
+
+echo "<b>Task 4:</b><br>";
+echo "Your string is: $str <br>";
+echo "By using str_pad function: " . str_pad($str, 20, ".");
