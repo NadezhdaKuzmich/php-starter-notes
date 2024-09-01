@@ -39,3 +39,11 @@ echo "Your array string is: ['PhP', 'Python', 'Java']<br>";
 echo '<pre>';
 print_r(str_ireplace("Java", "JavaScript", $arr, $count));
 echo "</pre>Replacements: $count<hr>";
+
+// task 7
+$str = "Good Morning!";
+$searchStr = "Morning! Good";
+
+echo "<b>Task 7:</b><br>";
+$matchChar = strspn($str, $searchStr);
+echo "Number of characters matched: $matchChar<hr>";
