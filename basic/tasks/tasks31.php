@@ -47,3 +47,9 @@ $searchStr = "Morning! Good";
 echo "<b>Task 7:</b><br>";
 $matchChar = strspn($str, $searchStr);
 echo "Number of characters matched: $matchChar<hr>";
+
+// task 8
+echo "<b>Task 8:</b><br>";
+echo "Before using 'str_repeat' function:('?,10)<br>";
+echo "After using 'str_repeat()' function:" . str_repeat('?', 10);
+echo "<hr>";
