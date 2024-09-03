@@ -53,3 +53,8 @@ echo "<b>Task 8:</b><br>";
 echo "Before using 'str_repeat' function:('?,10)<br>";
 echo "After using 'str_repeat()' function:" . str_repeat('?', 10);
 echo "<hr>";
+
+// task 9
+echo "<b>Task 9:</b><br>";
+parse_str("name=Nadiia", $output);
+echo "My Name: $output[name] <hr>";
