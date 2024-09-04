@@ -58,3 +58,8 @@ echo "<hr>";
 echo "<b>Task 9:</b><br>";
 parse_str("name=Nadiia", $output);
 echo "My Name: $output[name] <hr>";
+
+// task 10
+$str = "Hello PHP";
+echo "<b>Task 10:</b><br>";
+echo strrev($str) . "<hr>";
