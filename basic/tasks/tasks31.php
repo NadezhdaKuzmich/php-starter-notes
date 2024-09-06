@@ -63,3 +63,8 @@ echo "My Name: $output[name] <hr>";
 $str = "Hello PHP";
 echo "<b>Task 10:</b><br>";
 echo strrev($str) . "<hr>";
+
+// task 11
+echo "<b>Task 11:</b><br>";
+similar_text("Hello PHP", "Hello ", $percent);
+echo "$percent %<hr>";
