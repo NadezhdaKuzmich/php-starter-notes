@@ -70,11 +70,11 @@ similar_text("Hello PHP", "Hello ", $percent);
 echo "$percent %<hr>";
 
 // task 12
-function display($number)
+function display($num)
 {
-  if ($number <= 5) {
-    echo "$number <br/>";
-    display($number + 1);
+  if ($num <= 5) {
+    echo "$num <br/>";
+    display($num + 1);
   }
 }
 
