@@ -68,3 +68,15 @@ echo strrev($str) . "<hr>";
 echo "<b>Task 11:</b><br>";
 similar_text("Hello PHP", "Hello ", $percent);
 echo "$percent %<hr>";
+
+// task 12
+function display($number)
+{
+  if ($number <= 5) {
+    echo "$number <br/>";
+    display($number + 1);
+  }
+}
+
+echo "<b>Task 12:</b><br>";
+display(1);
