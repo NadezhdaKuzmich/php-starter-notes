@@ -13,3 +13,8 @@ function factorial($n)
 echo "<b>Task 1:</b><br>";
 echo factorial(5);
 echo "<hr>";
+
+// task 2
+echo "<b>Task 2:</b><br>";
+echo hebrev("What ?????");
+echo "<hr>";
