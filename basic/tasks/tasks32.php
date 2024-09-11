@@ -25,3 +25,15 @@ $str = "Hello, welcome to PhP.";
 echo "<b>Task 3:</b><br><pre>";
 print_r(explode(" ", $str));
 echo "</pre><hr>";
+
+// task 4
+$str1 = "Hi everyone! Welcome to PhP";
+$del = "e";
+
+$token = strtok($str1, $del);
+echo "<b>Task 4:</b><br><pre>";
+while ($token !== false) {
+  echo "$token <br>";
+  $token = strtok($del);
+}
+echo "<hr>";
