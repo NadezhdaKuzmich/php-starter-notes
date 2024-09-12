@@ -31,9 +31,16 @@ $str1 = "Hi everyone! Welcome to PhP";
 $del = "e";
 
 $token = strtok($str1, $del);
-echo "<b>Task 4:</b><br><pre>";
+echo "<b>Task 4:</b><br>";
 while ($token !== false) {
   echo "$token <br>";
   $token = strtok($del);
 }
 echo "<hr>";
+
+// task 5
+$nums = [1, 3, 5, 7, 9];
+
+echo "<b>Task 5:</b><br>";
+$last = end($nums);
+echo "$last <hr>";
