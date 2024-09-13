@@ -44,3 +44,15 @@ $nums = [1, 3, 5, 7, 9];
 echo "<b>Task 5:</b><br>";
 $last = end($nums);
 echo "$last <hr>";
+
+// task 6
+$colors = ["Blue", "Red", "Black", "Green", "Gray", "White"];
+echo "<b>Task 3:</b><br><pre>";
+echo "Arraylist: ";
+print_r($color);
+$removed = array_shift($colors);
+echo "</br>Removed element from array is: ";
+print_r($removed);
+echo "</br>Updated arraylist: ";
+print_r($colors);
+echo "</pre><hr>";
