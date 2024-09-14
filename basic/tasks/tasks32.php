@@ -47,7 +47,7 @@ echo "$last <hr>";
 
 // task 6
 $colors = ["Blue", "Red", "Black", "Green", "Gray", "White"];
-echo "<b>Task 3:</b><br><pre>";
+echo "<b>Task 6:</b><br><pre>";
 echo "Arraylist: ";
 print_r($color);
 $removed = array_shift($colors);
@@ -56,3 +56,23 @@ print_r($removed);
 echo "</br>Updated arraylist: ";
 print_r($colors);
 echo "</pre><hr>";
+
+// task 7
+$phoneNumbers = [
+  "Alex" => "415-235-8573",
+  "Jessica" => "415-492-4856",
+];
+
+echo "<b>Task 7:</b><br>";
+if (array_key_exists("Alex", $phoneNumbers)) {
+  echo "Alex's phone number is " . $phoneNumbers["Alex"] . "<br />";
+} else {
+  echo "Alex's phone number is not in the phone book!<br />";
+}
+
+if (array_key_exists("Michael", $phoneNumbers)) {
+  echo "Michael's phone number is " . $phoneNumbers["Michael"] . "<br />";
+} else {
+  echo "Michael's phone number is not in the phone book!<br />";
+}
+echo "<hr>";
