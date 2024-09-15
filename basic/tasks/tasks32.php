@@ -49,7 +49,7 @@ echo "$last <hr>";
 $colors = ["Blue", "Red", "Black", "Green", "Gray", "White"];
 echo "<b>Task 6:</b><br><pre>";
 echo "Arraylist: ";
-print_r($color);
+print_r($colors);
 $removed = array_shift($colors);
 echo "</br>Removed element from array is: ";
 print_r($removed);
@@ -76,3 +76,9 @@ if (array_key_exists("Michael", $phoneNumbers)) {
   echo "Michael's phone number is not in the phone book!<br />";
 }
 echo "<hr>";
+
+// task 8
+echo "<b>Task 8:</b><br><pre>";
+print_r(array_keys($phoneNumbers));
+print_r(array_values($phoneNumbers));
+echo "</pre><hr>";
