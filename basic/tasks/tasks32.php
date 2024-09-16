@@ -82,3 +82,11 @@ echo "<b>Task 8:</b><br><pre>";
 print_r(array_keys($phoneNumbers));
 print_r(array_values($phoneNumbers));
 echo "</pre><hr>";
+
+// task 9
+$filename = "image.png";
+$extension = substr($filename, strlen($filename) - 3);
+
+echo "<b>Task 5:</b><br>";
+echo "The extension of the file is $extension";
+echo "<hr>";
