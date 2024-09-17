@@ -87,6 +87,15 @@ echo "</pre><hr>";
 $filename = "image.png";
 $extension = substr($filename, strlen($filename) - 3);
 
-echo "<b>Task 5:</b><br>";
+echo "<b>Task 9:</b><br>";
 echo "The extension of the file is $extension";
+echo "<hr>";
+
+// task 10
+$oddNums = [1, 3, 5, 7, 9];
+$evenNums = [2, 4, 6, 8, 10];
+$allNums = array_merge($oddNums, $evenNums);
+
+echo "<b>Task 10:</b><br>";
+print_r($allNums);
 echo "<hr>";
