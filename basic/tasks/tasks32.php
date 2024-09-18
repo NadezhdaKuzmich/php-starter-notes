@@ -99,3 +99,10 @@ $allNums = array_merge($oddNums, $evenNums);
 echo "<b>Task 10:</b><br>";
 print_r($allNums);
 echo "<hr>";
+
+// task 11
+$nums = [1, 2, 3, 4, 5];
+$firstItem = reset($nums);
+
+echo "<b>Task 11:</b><br>";
+echo "$firstItem<hr>";
