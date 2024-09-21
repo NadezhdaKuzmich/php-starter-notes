@@ -106,3 +106,16 @@ $firstItem = reset($nums);
 
 echo "<b>Task 11:</b><br>";
 echo "$firstItem<hr>";
+
+// task 12
+function sum(...$nums)
+{
+  $sum = 0;
+  foreach ($nums as $n) {
+    $sum += $n;
+  }
+  return $sum;
+}
+
+echo "<b>Task 12:</b><br>";
+echo sum(1, 2, 3, 4);
