@@ -13,13 +13,18 @@ try {
   echo "Connection failed: $error";
 }
 
-$query = $connection->prepare("SELECT id, name FROM Users");
+$type = 'superuser';
+
+// $query = $connection->prepare("SELECT id, name, type FROM Users");
+// $query = $connection->prepare("SELECT * FROM Users");
+// $query = $connection->prepare("SELECT * FROM Users WHERE type='superuser'");
+$query = $connection->prepare("SELECT * FROM Users WHERE type='$type'");
 $query->execute();
 
 $result = $query->setFetchMode(PDO::FETCH_ASSOC);
 
 foreach (new RecursiveArrayIterator($query->fetchAll()) as $key => $value) {
-  echo $value["name"] . "<br>";
+  echo $value["id"] . ' : ' . $value["name"] . ' - ' . $value["type"] . '<br>';
 }
 
 $connection = null;
