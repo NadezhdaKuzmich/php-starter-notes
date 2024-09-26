@@ -18,7 +18,11 @@ $type = 'superuser';
 // $query = $connection->prepare("SELECT id, name, type FROM Users");
 // $query = $connection->prepare("SELECT * FROM Users");
 // $query = $connection->prepare("SELECT * FROM Users WHERE type='superuser'");
-$query = $connection->prepare("SELECT * FROM Users WHERE type='$type'");
+// $query = $connection->prepare("SELECT * FROM Users WHERE type='$type'");
+// $query = $connection->prepare("SELECT * FROM Users WHERE name LIKE '%n'"); // has to end on the 'n'
+// $query = $connection->prepare("SELECT * FROM Users WHERE name LIKE '%n%'"); // contain 'n'
+$query = $connection->prepare("SELECT * FROM Users");
+
 $query->execute();
 
 $result = $query->setFetchMode(PDO::FETCH_ASSOC);
