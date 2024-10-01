@@ -23,9 +23,10 @@ $type = 'superuser';
 // $query = $connection->prepare("SELECT * FROM Users WHERE name LIKE '%n%'"); // contain 'n'
 
 // $query = $connection->prepare("INSERT INTO Users (name, type) VALUES ('Vadym', 'superuser'), ('Superman', 'user')");
+// $lastID = $connection->lastInsertId();
+// echo "Last id: $lastID <hr />";
 
 $query = $connection->prepare("SELECT Users.id, Users.name, Cars.car_name FROM Users LEFT JOIN Cars ON Users.id=Cars.user_id");
-
 $query->execute();
 
 $result = $query->setFetchMode(PDO::FETCH_ASSOC);
