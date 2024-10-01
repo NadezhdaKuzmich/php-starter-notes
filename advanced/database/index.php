@@ -26,6 +26,11 @@ $type = 'superuser';
 // $lastID = $connection->lastInsertId();
 // echo "Last id: $lastID <hr />";
 
+// $connection->beginTransaction();
+// $connection->exec("INSERT INTO Users (name, type) VALUES ('Venom', 'superuser')");
+// $connection->exec("INSERT INTO Users (name, type) VALUES ('Igor', 'user')");
+// $connection->commit();
+
 $query = $connection->prepare("SELECT Users.id, Users.name, Cars.car_name FROM Users LEFT JOIN Cars ON Users.id=Cars.user_id");
 $query->execute();
 
