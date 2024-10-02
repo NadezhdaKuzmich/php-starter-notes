@@ -31,6 +31,9 @@ $type = 'superuser';
 // $connection->exec("INSERT INTO Users (name, type) VALUES ('Igor', 'user')");
 // $connection->commit();
 
+$query = $connection->prepare("UPDATE Users SET name='Superuser' WHERE id=3");
+$query->execute();
+
 $query = $connection->prepare("SELECT Users.id, Users.name, Cars.car_name FROM Users LEFT JOIN Cars ON Users.id=Cars.user_id");
 $query->execute();
 
