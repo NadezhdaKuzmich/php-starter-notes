@@ -50,3 +50,13 @@ switch ($favcolor) {
     echo "Your favorite color is neither red, blue, nor green!";
 }
 echo "<hr>";
+
+// task 4
+$age = ["Peter" => "35", "Ben" => "37", "Joe" => "43"];
+asort($age);
+
+echo "<b>Task 4:</b><br>";
+foreach ($age as $key => $value) {
+  echo "$key => $value <br>";
+}
+echo "<hr>";
