@@ -60,3 +60,9 @@ foreach ($age as $key => $value) {
   echo "$key => $value <br>";
 }
 echo "<hr>";
+
+// task 5
+$age = ["Vadym" => "32", "Dmytro" => "37", "Kate" => "43"];
+echo "<b>Task 5:</b><br><pre>";
+print_r(array_change_key_case($age, CASE_UPPER));
+echo "</pre><hr>";
