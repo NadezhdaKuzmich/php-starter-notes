@@ -37,6 +37,9 @@ $query->execute();
 $query = $connection->prepare("SELECT Users.id, Users.name, Cars.car_name FROM Users LEFT JOIN Cars ON Users.id=Cars.user_id");
 $query->execute();
 
+$query = $connection->prepare("DELETE FROM Users WHERE id=8");
+$query->execute();
+
 $result = $query->setFetchMode(PDO::FETCH_ASSOC);
 
 foreach (new RecursiveArrayIterator($query->fetchAll()) as $key => $value) {
