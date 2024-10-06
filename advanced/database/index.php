@@ -34,17 +34,20 @@ $type = 'superuser';
 $query = $connection->prepare("UPDATE Users SET name='Superuser' WHERE id=3");
 $query->execute();
 
-$query = $connection->prepare("SELECT Users.id, Users.name, Cars.car_name FROM Users LEFT JOIN Cars ON Users.id=Cars.user_id");
+// $query = $connection->prepare("SELECT Users.id, Users.name, Cars.car_name FROM Users LEFT JOIN Cars ON Users.id=Cars.user_id");
+// $query->execute();
+
+// $query = $connection->prepare("DELETE FROM Users WHERE id=8");
+// $query->execute();
+
+$query = $connection->prepare("TRUNCATE TABLE Cars");
 $query->execute();
 
-$query = $connection->prepare("DELETE FROM Users WHERE id=8");
-$query->execute();
+// $result = $query->setFetchMode(PDO::FETCH_ASSOC);
 
-$result = $query->setFetchMode(PDO::FETCH_ASSOC);
-
-foreach (new RecursiveArrayIterator($query->fetchAll()) as $key => $value) {
-  // echo $value["id"] . ' : ' . $value["name"] . ' - ' . $value["type"] . '<br>';
-  echo $value["id"] . ' : ' . $value["name"] . ' - ' . ($value["car_name"] ? $value["car_name"] : 'has no car') . '<br>';
-}
+// foreach (new RecursiveArrayIterator($query->fetchAll()) as $key => $value) {
+//   // echo $value["id"] . ' : ' . $value["name"] . ' - ' . $value["type"] . '<br>';
+//   echo $value["id"] . ' : ' . $value["name"] . ' - ' . ($value["car_name"] ? $value["car_name"] : 'has no car') . '<br>';
+// }
 
 $connection = null;
