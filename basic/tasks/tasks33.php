@@ -66,3 +66,11 @@ $age = ["Vadym" => "32", "Dmytro" => "37", "Kate" => "43"];
 echo "<b>Task 5:</b><br><pre>";
 print_r(array_change_key_case($age, CASE_UPPER));
 echo "</pre><hr>";
+
+// task 6
+$arr = ["a" => "red", "b" => "green", "c" => "blue", "d" => "yellow"];
+$result = array_flip($arr);
+
+echo "<b>Task 6:</b><br><pre>";
+print_r($result);
+echo "</pre><hr>";
