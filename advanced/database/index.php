@@ -40,14 +40,20 @@ $query->execute();
 // $query = $connection->prepare("DELETE FROM Users WHERE id=8");
 // $query->execute();
 
-$query = $connection->prepare("TRUNCATE TABLE Cars");
+// $query = $connection->prepare("TRUNCATE TABLE Cars");
+// $query->execute();
+
+// $query = $connection->prepare(query: "DROP TABLE Cars");
+// $query->execute();
+
+$query = $connection->prepare("SELECT * FROM Users");
 $query->execute();
 
 // $result = $query->setFetchMode(PDO::FETCH_ASSOC);
 
-// foreach (new RecursiveArrayIterator($query->fetchAll()) as $key => $value) {
-//   // echo $value["id"] . ' : ' . $value["name"] . ' - ' . $value["type"] . '<br>';
-//   echo $value["id"] . ' : ' . $value["name"] . ' - ' . ($value["car_name"] ? $value["car_name"] : 'has no car') . '<br>';
-// }
+foreach (new RecursiveArrayIterator($query->fetchAll()) as $key => $value) {
+  echo $value["id"] . ' : ' . $value["name"] . ' - ' . $value["type"] . '<br>';
+  // echo $value["id"] . ' : ' . $value["name"] . ' - ' . ($value["car_name"] ? $value["car_name"] : 'has no car') . '<br>';
+}
 
 $connection = null;
