@@ -91,3 +91,13 @@ $result = array_diff_ukey($a1, $a2, "myFunc");
 echo "<b>Task 7:</b><br><pre>";
 print_r($result);
 echo "</pre><hr>";
+
+// task 8
+$arr1 = [3, 4, "blue"];
+$arr2 = [0, 1, "red"];
+
+echo "<b>Task 8:</b><br><pre>";
+print_r($arr1);
+echo "<br>";
+print_r($arr2);
+echo "</pre><hr>";
