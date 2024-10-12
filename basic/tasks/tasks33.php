@@ -101,3 +101,11 @@ print_r($arr1);
 echo "<br>";
 print_r($arr2);
 echo "</pre><hr>";
+
+// task 9
+$str = "The rain in Ukraine falls mainly on the plains.";
+$pttrn = "/ain/i";
+
+echo "<b>Task 9:</b><br>";
+echo preg_match_all($pttrn, $str);
+echo "<hr>";
