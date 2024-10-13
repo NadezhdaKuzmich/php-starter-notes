@@ -109,3 +109,11 @@ $pttrn = "/ain/i";
 echo "<b>Task 9:</b><br>";
 echo preg_match_all($pttrn, $str);
 echo "<hr>";
+
+// task 10
+$str = "Hello world!";
+$pattern = "/hello/i";
+
+echo "<b>Task 10:</b><br>";
+echo preg_replace($pattern, "Bye", $str);
+echo "<hr>";
