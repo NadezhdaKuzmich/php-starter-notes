@@ -46,7 +46,9 @@ $query->execute();
 // $query = $connection->prepare(query: "DROP TABLE Cars");
 // $query->execute();
 
-$query = $connection->prepare("SELECT * FROM Users");
+// $query = $connection->prepare("SELECT * FROM Users");
+// $query = $connection->prepare("SELECT * FROM Users LIMIT 2");
+$query = $connection->prepare("SELECT * FROM Users WHERE id<=3");
 $query->execute();
 
 // $result = $query->setFetchMode(PDO::FETCH_ASSOC);
