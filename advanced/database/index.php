@@ -58,4 +58,16 @@ foreach (new RecursiveArrayIterator($query->fetchAll()) as $key => $value) {
   // echo $value["id"] . ' : ' . $value["name"] . ' - ' . ($value["car_name"] ? $value["car_name"] : 'has no car') . '<br>';
 }
 
+// $query = $connection->prepare("
+// CREATE TABLE Test
+// (
+// id int,
+// name varchar(32),
+// age int
+// )");
+
+// $query = $connection->prepare("CREATE TABLE NewUsers LIKE Users");
+// $query = $connection->prepare("INSERT INTO NewUsers SELECT * FROM Users");
+// $query->execute();
+
 $connection = null;
