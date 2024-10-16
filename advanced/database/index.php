@@ -70,4 +70,20 @@ foreach (new RecursiveArrayIterator($query->fetchAll()) as $key => $value) {
 // $query = $connection->prepare("INSERT INTO NewUsers SELECT * FROM Users");
 // $query->execute();
 
+// $query = $connection->prepare("
+// ALTER TABLE NewUsers 
+// ADD country varchar(64)
+// ");
+
+// $query = $connection->prepare("
+// ALTER TABLE NewUsers 
+// DROP COLUMN country
+// ");
+
+$query = $connection->prepare("
+ALTER TABLE NewUsers 
+MODIFY COLUMN name varchar(64)
+");
+$query->execute();
+
 $connection = null;
