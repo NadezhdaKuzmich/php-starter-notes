@@ -117,3 +117,10 @@ $pattern = "/hello/i";
 echo "<b>Task 10:</b><br>";
 echo preg_replace($pattern, "Bye", $str);
 echo "<hr>";
+
+// task 11
+$a = [1 => "red", 2 => "green", 3 => "blue"];
+
+echo "<b>Task 11:</b><br>";
+echo array_search("red", $a);
+echo "<hr>";
