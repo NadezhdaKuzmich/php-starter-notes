@@ -124,3 +124,12 @@ $a = [1 => "red", 2 => "green", 3 => "blue"];
 echo "<b>Task 11:</b><br>";
 echo array_search("red", $a);
 echo "<hr>";
+
+// task 12
+$arr = ["red", "green", "blue", "yellow", "brown"];
+$randomKeys = array_rand($arr, 3);
+
+echo "<b>Task 12:</b><br>";
+echo $arr[$randomKeys[0]] . "<br>";
+echo $arr[$randomKeys[1]] . "<br>";
+echo $arr[$randomKeys[2]];
