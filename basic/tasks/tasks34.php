@@ -15,3 +15,10 @@ $colors = ["red", "green", "yellow"];
 echo "<b>Task 2:</b><br><pre>";
 print_r(array_pad($colors, 5, "blue"));
 echo "</pre><hr>";
+
+// task 3
+$nums = [2, 16, 28, 24, 65];
+
+echo "<b>Task 3:</b><br>";
+echo array_sum($nums);
+echo "<hr>";
