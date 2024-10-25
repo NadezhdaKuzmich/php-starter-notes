@@ -22,3 +22,14 @@ $nums = [2, 16, 28, 24, 65];
 echo "<b>Task 3:</b><br>";
 echo array_sum($nums);
 echo "<hr>";
+
+// task 4
+function prepareStr($str1, $str2)
+{
+  return "$str1 - $str2";
+}
+$animals = ["Dog", "Cat", "Mouse"];
+
+echo "<b>Task 4:</b><br>";
+print_r(array_reduce($animals, "myfunction"));
+echo "<hr>";
