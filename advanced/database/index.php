@@ -54,9 +54,27 @@ $query->execute();
 // $query = $connection->prepare(query: "DROP TABLE Cars");
 // $query->execute();
 
-// $query = $connection->prepare("SELECT * FROM Users");
+
+// SQL Injection & Prepared Statements
+// v1
+// $name = '<b>Darth Vader</b>';
+// $name = htmlentities($name);
+
+// $params = [':n' => $name, ':t' => 'superuser'];
+// $query = $connection->prepare("INSERT INTO Users (name, type) VALUES (:n, :t)");
+// $query->execute($params);
+
+// v2
+// $name = '<b>Darth Vader 2</b>';
+// $name = htmlentities($name);
+
+// $params = [$name, 'superuser'];
+// $query = $connection->prepare("INSERT INTO Users (name, type) VALUES (?, ?)");
+// $query->execute($params);
+
+$query = $connection->prepare("SELECT * FROM Users");
 // $query = $connection->prepare("SELECT * FROM Users LIMIT 2");
-$query = $connection->prepare("SELECT * FROM Users WHERE id<=3");
+// $query = $connection->prepare("SELECT * FROM Users WHERE id<=3");
 $query->execute();
 
 // $result = $query->setFetchMode(PDO::FETCH_ASSOC);
