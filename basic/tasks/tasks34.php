@@ -31,5 +31,5 @@ function prepareStr($str1, $str2)
 $animals = ["Dog", "Cat", "Mouse"];
 
 echo "<b>Task 4:</b><br>";
-print_r(array_reduce($animals, "myfunction"));
+print_r(array_reduce($animals, "prepareStr"));
 echo "<hr>";
