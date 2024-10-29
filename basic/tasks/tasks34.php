@@ -33,3 +33,14 @@ $animals = ["Dog", "Cat", "Mouse"];
 echo "<b>Task 4:</b><br>";
 print_r(array_reduce($animals, "prepareStr"));
 echo "<hr>";
+
+// task 5 
+function ediStr($value, $key)
+{
+  echo "The key $key has the value $value<br>";
+}
+
+echo "<b>Task 5:</b><br>";
+$arr = ["1" => "one", "2" => "two", "3" => "three"];
+array_walk($arr, "ediStr");
+echo "<hr>";
