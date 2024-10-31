@@ -44,3 +44,14 @@ echo "<b>Task 5:</b><br>";
 $arr = ["1" => "one", "2" => "two", "3" => "three"];
 array_walk($arr, "ediStr");
 echo "<hr>";
+
+// task 6
+$firstname = "Nadiia";
+$lastname = "Kuzmich";
+$age = "28";
+
+$result = compact("firstname", "lastname", "age");
+
+echo "<b>Task 6:</b><br>";
+print_r($result);
+echo "<hr>";
