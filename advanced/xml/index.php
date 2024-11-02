@@ -1,27 +1,40 @@
 <?php
 
+// parse from string
 $xmlData = "<?xml version='1.0' encoding='UTF-8'?>
 <note>
-<to>Tove</to>
-<from> Jani</from>
+<to>Kate</to>
+<from>John</from>
 <heading>Reminder</heading>
-<body>Don't forget me this weekend!</body>
+<body>Learn PHP!</body>
 </note>
 ";
 
-$parsed = simplexml_load_string($xmlData);
+$parsedFromStr = simplexml_load_string($xmlData);
 
-if (!$parsed) {
+// parse from file
+$parsedFromFile = simplexml_load_file('./data/test.xml');
+
+if (!$parsedFromStr) {
   echo 'Failed to parse XML! <br/>';
 
   foreach (libxml_get_errors() as $error) {
     echo "$error->message <br/>";
   }
 } else {
-  echo '<pre>';
-  print_r($parsed);
+  echo 'Parse from string: <pre>';
+  print_r($parsedFromStr);
 
   echo '<br/>';
-  echo $parsed->body;
+  echo $parsedFromStr->body;
+  echo '</pre>';
+
+  echo '<br/>' . str_repeat('*', 40) . '<br/><br/>';
+
+  echo 'Parse from file: <pre>';
+  print_r($parsedFromFile);
+
+  echo '<br/>';
+  echo $parsedFromFile->body;
   echo '</pre>';
 }
