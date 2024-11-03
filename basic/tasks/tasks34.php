@@ -26,7 +26,7 @@ echo "<hr>";
 // task 4
 function prepareStr($str1, $str2)
 {
-  return "$str1 - $str2";
+  return "$str1 - $str2 -";
 }
 $animals = ["Dog", "Cat", "Mouse"];
 
@@ -37,7 +37,7 @@ echo "<hr>";
 // task 5 
 function ediStr($value, $key)
 {
-  echo "The key $key has the value $value<br>";
+  echo "The key $key has the value '$value'<br>";
 }
 
 echo "<b>Task 5:</b><br>";
@@ -52,6 +52,6 @@ $age = "28";
 
 $result = compact("firstname", "lastname", "age");
 
-echo "<b>Task 6:</b><br>";
+echo "<b>Task 6:</b><br><pre>";
 print_r($result);
-echo "<hr>";
+echo "</pre><hr>";

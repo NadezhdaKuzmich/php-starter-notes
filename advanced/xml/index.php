@@ -35,6 +35,9 @@ if (!$parsedFromStr) {
   print_r($parsedFromFile);
 
   echo '<br/>';
-  echo $parsedFromFile->body;
+  echo $parsedFromFile->note->body . '<br/>';
+  echo $parsedFromFile->note->body->anothernote . '<br/><br/>';
+
+  echo $parsedFromFile->note[1]->body;
   echo '</pre>';
 }
