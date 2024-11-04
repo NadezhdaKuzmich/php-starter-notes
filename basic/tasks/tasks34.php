@@ -55,3 +55,11 @@ $result = compact("firstname", "lastname", "age");
 echo "<b>Task 6:</b><br><pre>";
 print_r($result);
 echo "</pre><hr>";
+
+// task 7
+$colors = ["a" => "red", "b" => "green", "c" => "blue"];
+
+echo "<b>Task 7:</b><br><pre>";
+echo array_shift($colors) . "<br>";
+print_r($colors);
+echo "</pre><hr>";
