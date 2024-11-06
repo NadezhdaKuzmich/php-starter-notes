@@ -35,9 +35,21 @@ if (!$parsedFromStr) {
   print_r($parsedFromFile);
 
   echo '<br/>';
-  echo $parsedFromFile->note->body . '<br/>';
-  echo $parsedFromFile->note->body->anothernote . '<br/><br/>';
+  // echo $parsedFromFile->note->body . '<br/>';
+  // echo $parsedFromFile->note->body->anothernote . '<br/><br/>';
 
-  echo $parsedFromFile->note[1]->body;
+  // echo $parsedFromFile->note[1]->body;
+
+  foreach ($parsedFromFile->children() as $note) {
+    echo "$note->to <br/>";
+    echo "$note->from <br/>";
+    echo "$note->heading <br/>";
+    echo "$note->body <br/>";
+
+    echo $note->body->anothernote ? $note->body->anothernote . '<br/><br/>' : '<br/>';
+  }
+
   echo '</pre>';
+
+  echo str_repeat('*', 40) . '<br/><br/>';
 }
