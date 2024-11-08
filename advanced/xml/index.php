@@ -41,6 +41,7 @@ if (!$parsedFromStr) {
   // echo $parsedFromFile->note[1]->body;
 
   foreach ($parsedFromFile->children() as $note) {
+    echo "<b>" . $note["overview"] . "</b><br/>";
     echo "$note->to <br/>";
     echo "$note->from <br/>";
     echo "$note->heading <br/>";
