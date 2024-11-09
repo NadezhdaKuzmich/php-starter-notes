@@ -63,3 +63,10 @@ echo "<b>Task 7:</b><br><pre>";
 echo array_shift($colors) . "<br>";
 print_r($colors);
 echo "</pre><hr>";
+
+// task 8
+$arr = ["Cat", "Cat", "Dog", "Mouse", "Dog"];
+
+echo "<b>Task 8:</b><br><pre>";
+print_r(array_count_values($arr));
+echo "</pre><hr>";
