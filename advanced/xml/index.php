@@ -54,3 +54,48 @@ if (!$parsedFromStr) {
 
   echo str_repeat('*', 40) . '<br/><br/>';
 }
+
+// The XML Expat Parser
+$parser = xml_parser_create();
+
+function start($parser, $elementName, $elementAttr)
+{
+  switch ($elementName) {
+    case 'NOTE':
+      echo '<b>** Note **</b> <br/>';
+      break;
+    case 'TO':
+      echo '<small>To</small>: ';
+      break;
+    case 'FROM':
+      echo '<small>From</small>: ';
+      break;
+    case 'HEADING':
+      echo '<small>Heading</small>: ';
+      break;
+    case 'BODY':
+      echo '<small>Body</small>: ';
+      break;
+  }
+}
+
+function stop($parser, $elementName)
+{
+  echo '<br/>';
+}
+
+function char($parser, $data)
+{
+  echo $data;
+}
+
+xml_set_element_handler($parser, 'start', 'stop');
+xml_set_character_data_handler($parser, 'char');
+
+$file = fopen('./data/test2.xml', 'r');
+
+while ($data = fread($file, 4096)) {
+  xml_parse($parser, $data, feof($file)) or die(sprintf("XML error occured %s at line number %d", xml_error_string(xml_get_error_code($parser)), xml_get_current_line_number($parser)));
+}
+
+xml_parser_free($parser);
