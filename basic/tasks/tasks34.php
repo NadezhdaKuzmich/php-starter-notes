@@ -70,3 +70,11 @@ $arr = ["Cat", "Cat", "Dog", "Mouse", "Dog"];
 echo "<b>Task 8:</b><br><pre>";
 print_r(array_count_values($arr));
 echo "</pre><hr>";
+
+// task 9
+$arr = ["Dog", "Cat", "Mouse"];
+
+list($a, $b, $c) = $arr;
+echo "<b>Task 9:</b><br>";
+echo "I have several animals, a $a, a $b and a $c.";
+echo "<hr>";
