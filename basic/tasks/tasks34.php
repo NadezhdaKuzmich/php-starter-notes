@@ -65,16 +65,23 @@ print_r($colors);
 echo "</pre><hr>";
 
 // task 8
-$arr = ["Cat", "Cat", "Dog", "Mouse", "Dog"];
+$animals = ["Cat", "Cat", "Dog", "Mouse", "Dog"];
 
 echo "<b>Task 8:</b><br><pre>";
-print_r(array_count_values($arr));
+print_r(array_count_values($animals));
 echo "</pre><hr>";
 
 // task 9
-$arr = ["Dog", "Cat", "Mouse"];
+$animals = ["Dog", "Cat", "Mouse"];
+list($a, $b, $c) = $animals;
 
-list($a, $b, $c) = $arr;
 echo "<b>Task 9:</b><br>";
 echo "I have several animals, a $a, a $b and a $c.";
+echo "<hr>";
+
+// task 10
+$animals = ["Dog", "Cat", "Mouse"];
+
+echo "<b>Task 10:</b><br>";
+echo pos($animals);
 echo "<hr>";
