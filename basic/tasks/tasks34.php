@@ -85,3 +85,15 @@ $animals = ["Dog", "Cat", "Mouse"];
 echo "<b>Task 10:</b><br>";
 echo pos($animals);
 echo "<hr>";
+
+// task 11
+function printLine($value, $key)
+{
+  echo "The key $key has the value $value<br>";
+}
+$arr1 = ["a" => "red", "b" => "green"];
+$arr2 = [$arr1, "1" => "blue", "2" => "yellow"];
+
+echo "<b>Task 11:</b><br>";
+array_walk_recursive($arr2, "printLine");
+echo "<hr>";
