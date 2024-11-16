@@ -97,3 +97,14 @@ $arr2 = [$arr1, "1" => "blue", "2" => "yellow"];
 echo "<b>Task 11:</b><br>";
 array_walk_recursive($arr2, "printLine");
 echo "<hr>";
+
+// task 12
+function square($num)
+{
+  return $num * $num;
+}
+$nums = [1, 2, 3, 4, 5];
+
+echo "<b>Task 8:</b><br><pre>";
+print_r(array_map("square", $nums));
+echo "</pre>";
