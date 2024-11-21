@@ -15,3 +15,13 @@ echo current($users) . "<br>";
 echo next($users) . "<br>";
 echo prev($users);
 echo "<hr>";
+
+// task 2
+$colors_1 = ["a" => "red", "b" => "green", "c" => "blue", "d" => "yellow"];
+$colors_2 = ["a" => "purple", "b" => "orange"];
+
+array_splice($colors_1, 0, 2, $colors_2);
+
+echo "<b>Task 3:</b><br><pre>";
+print_r($colors_1);
+echo "</pre><hr>";
