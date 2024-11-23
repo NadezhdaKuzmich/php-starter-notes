@@ -25,3 +25,15 @@ array_splice($colors_1, 0, 2, $colors_2);
 echo "<b>Task 3:</b><br><pre>";
 print_r($colors_1);
 echo "</pre><hr>";
+
+// task 3
+// Magic Constants
+echo __DIR__ . "<br>";
+echo __FILE__ . "<br>";
+echo __LINE__ . "<br>";
+
+function myFunc()
+{
+  return __FUNCTION__;
+}
+echo myFunc() . "<br>";
