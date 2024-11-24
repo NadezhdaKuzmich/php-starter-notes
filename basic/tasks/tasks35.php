@@ -16,7 +16,7 @@ echo next($users) . "<br>";
 echo prev($users);
 echo "<hr>";
 
-// task 2
+// task 3
 $colors_1 = ["a" => "red", "b" => "green", "c" => "blue", "d" => "yellow"];
 $colors_2 = ["a" => "purple", "b" => "orange"];
 
@@ -26,8 +26,9 @@ echo "<b>Task 3:</b><br><pre>";
 print_r($colors_1);
 echo "</pre><hr>";
 
-// task 3
+// task 4
 // Magic Constants
+echo "<b>Task 4:</b><br><pre>";
 echo __DIR__ . "<br>";
 echo __FILE__ . "<br>";
 echo __LINE__ . "<br>";
@@ -37,3 +38,15 @@ function myFunc()
   return __FUNCTION__;
 }
 echo myFunc() . "<br>";
+
+// task 5
+$nums = [4, 6, 2, 1, 3, 5];
+rsort($nums);
+$arrLength = count($nums);
+
+echo "<b>Task 5:</b><br>";
+for ($i = 0; $i < $arrLength; $i++) {
+  echo $nums[$i];
+  echo "<br>";
+}
+echo "<hr>";
