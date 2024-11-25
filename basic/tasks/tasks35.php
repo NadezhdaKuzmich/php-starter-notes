@@ -28,7 +28,7 @@ echo "</pre><hr>";
 
 // task 4
 // Magic Constants
-echo "<b>Task 4:</b><br><pre>";
+echo "<b>Task 4:</b><br>";
 echo __DIR__ . "<br>";
 echo __FILE__ . "<br>";
 echo __LINE__ . "<br>";
@@ -50,3 +50,10 @@ for ($i = 0; $i < $arrLength; $i++) {
   echo "<br>";
 }
 echo "<hr>";
+
+// task 6
+$colors = ["red", "green", "blue", "yellow", "black", "white"];
+
+echo "<b>Task 6:</b><br><pre>";
+print_r(array_slice($colors, 2));
+echo "</pre><hr>";
