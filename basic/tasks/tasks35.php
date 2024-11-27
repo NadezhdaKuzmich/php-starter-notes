@@ -57,3 +57,6 @@ $colors = ["red", "green", "blue", "yellow", "black", "white"];
 echo "<b>Task 6:</b><br><pre>";
 print_r(array_slice($colors, 2));
 echo "</pre><hr>";
+
+$arr = array_fill(3, 4, "blue");
+print_r($arr);
