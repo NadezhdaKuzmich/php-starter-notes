@@ -58,5 +58,9 @@ echo "<b>Task 6:</b><br><pre>";
 print_r(array_slice($colors, 2));
 echo "</pre><hr>";
 
+// task 7
 $arr = array_fill(3, 4, "blue");
+
+echo "<b>Task 7:</b><br><pre>";
 print_r($arr);
+echo "</pre><hr>";
