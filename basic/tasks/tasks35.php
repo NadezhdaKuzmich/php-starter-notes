@@ -64,3 +64,18 @@ $arr = array_fill(3, 4, "blue");
 echo "<b>Task 7:</b><br><pre>";
 print_r($arr);
 echo "</pre><hr>";
+
+// task 8
+function compare($a, $b)
+{
+  if ($a === $b) {
+    return 0;
+  }
+  return $a > $b ? 1 : -1;
+}
+
+$arr1 = ["a" => "red", "b" => "green", "c" => "blue"];
+$arr2 = ["a" => "blue", "b" => "black", "e" => "blue"];
+
+$result = array_uintersect($arr1, $arr2, "compare");
+print_r($result);
