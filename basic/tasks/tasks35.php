@@ -79,3 +79,8 @@ $arr2 = ["a" => "blue", "b" => "black", "e" => "blue"];
 
 $result = array_uintersect($arr1, $arr2, "compare");
 print_r($result);
+
+// task 9
+$animals = ["Dog", "Cat", "Mouse", "Bear", "Fish"];
+array_multisort($animals);
+print_r($animals);
