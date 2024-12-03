@@ -78,7 +78,9 @@ $arr1 = ["a" => "red", "b" => "green", "c" => "blue"];
 $arr2 = ["a" => "blue", "b" => "black", "e" => "blue"];
 
 $result = array_uintersect($arr1, $arr2, "compare");
+echo "<b>Task 8:</b><br><pre>";
 print_r($result);
+echo "</pre><hr>";
 
 // task 9
 $animals = ["Dog", "Cat", "Mouse", "Bear", "Fish"];
