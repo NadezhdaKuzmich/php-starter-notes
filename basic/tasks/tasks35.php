@@ -85,4 +85,7 @@ echo "</pre><hr>";
 // task 9
 $animals = ["Dog", "Cat", "Mouse", "Bear", "Fish"];
 array_multisort($animals);
+
+echo "<b>Task 9:</b><br><pre>";
 print_r($animals);
+echo "</pre><hr>";
