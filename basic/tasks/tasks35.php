@@ -89,3 +89,11 @@ array_multisort($animals);
 echo "<b>Task 9:</b><br><pre>";
 print_r($animals);
 echo "</pre><hr>";
+
+// task 10
+$users = ["Peter" => "35", "Ben" => "37", "Joe" => "43"];
+asort($users);
+
+foreach ($users as $key => $value) {
+  echo "$key: $value<br>";
+}
