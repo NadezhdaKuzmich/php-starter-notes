@@ -94,6 +94,8 @@ echo "</pre><hr>";
 $users = ["Peter" => "35", "Ben" => "37", "Joe" => "43"];
 asort($users);
 
+echo "<b>Task 10:</b><br>";
 foreach ($users as $key => $value) {
   echo "$key: $value<br>";
 }
+echo "<hr>";
