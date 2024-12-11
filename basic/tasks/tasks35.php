@@ -100,15 +100,18 @@ foreach ($users as $key => $value) {
 }
 echo "<hr>";
 
+// task 11
 function isPalindrome($str)
 {
   $str = strtolower(preg_replace('/[^a-z0-9]/', '', $str));
   return $str === strrev($str);
 }
 
+echo "<b>Task 11:</b><br>";
 $word = "Madam";
 if (isPalindrome($word)) {
-  echo "$word is a palindrome.";
+  echo "$word is a palindrome.<br>";
 } else {
-  echo "$word is not a palindrome.";
+  echo "$word is not a palindrome.<br>";
 }
+echo "<hr>";
