@@ -115,3 +115,24 @@ if (isPalindrome($word)) {
   echo "$word is not a palindrome.<br>";
 }
 echo "<hr>";
+
+$people = array(
+  array(
+    'id' => 0,
+    'first_name' => 'Peter',
+    'last_name' => 'Griffin',
+  ),
+  array(
+    'id' => 1,
+    'first_name' => 'Ben',
+    'last_name' => 'Smith',
+  ),
+  array(
+    'id' => 2,
+    'first_name' => 'Joe',
+    'last_name' => 'Doe',
+  )
+);
+
+$last_names = array_column($people, 'last_name');
+print_r($last_names);
