@@ -116,23 +116,25 @@ if (isPalindrome($word)) {
 }
 echo "<hr>";
 
-$people = array(
-  array(
+// task 12 
+$people = [
+  [
     'id' => 0,
     'first_name' => 'Peter',
     'last_name' => 'Griffin',
-  ),
-  array(
+  ],
+  [
     'id' => 1,
     'first_name' => 'Ben',
     'last_name' => 'Smith',
-  ),
-  array(
+  ],
+  [
     'id' => 2,
     'first_name' => 'Joe',
     'last_name' => 'Doe',
-  )
-);
+  ]
+];
 
+echo "<b>Task 12:</b><br>";
 $last_names = array_column($people, 'last_name');
 print_r($last_names);
