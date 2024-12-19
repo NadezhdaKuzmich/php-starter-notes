@@ -10,3 +10,7 @@ if (array_key_exists("Volvo", $cars)) {
   echo "Key does not exist!";
 }
 echo "<hr>";
+
+// task 2
+$str = "Hello World!";
+echo substr($str, -5, 3);
