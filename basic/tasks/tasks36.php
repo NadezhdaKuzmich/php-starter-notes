@@ -13,4 +13,12 @@ echo "<hr>";
 
 // task 2
 $str = "Hello World!";
+
+echo "<b>Task 2:</b><br>";
 echo substr($str, -5, 3);
+echo "<hr>";
+
+// task 3
+echo "<b>Task 3:</b><br>";
+echo substr($str, 6, 5);
+echo "<hr>";
