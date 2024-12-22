@@ -22,3 +22,10 @@ echo "<hr>";
 echo "<b>Task 3:</b><br>";
 echo substr($str, 6, 5);
 echo "<hr>";
+
+// task 4
+echo "<b>Task 4:</b><br>";
+echo strlen($str) . "<br>";
+echo str_word_count($str) . "<br>";
+echo strpos($str, "world");
+echo "<hr>";
