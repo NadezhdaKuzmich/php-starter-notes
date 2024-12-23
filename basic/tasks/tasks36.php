@@ -28,4 +28,5 @@ echo "<b>Task 4:</b><br>";
 echo strlen($str) . "<br>";
 echo str_word_count($str) . "<br>";
 echo strpos($str, "world");
+echo str_replace("Hello", "Bye", $str);
 echo "<hr>";
