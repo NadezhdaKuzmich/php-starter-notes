@@ -30,3 +30,7 @@ echo str_word_count($str) . "<br>";
 echo strpos($str, "world");
 echo str_replace("Hello", "Bye", $str);
 echo "<hr>";
+
+// task 5
+echo "<b>Task 5:</b><br>";
+echo "Today is " . date("d.m.Y") . "<hr>";
