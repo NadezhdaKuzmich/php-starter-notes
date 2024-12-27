@@ -33,4 +33,5 @@ echo "<hr>";
 
 // task 5
 echo "<b>Task 5:</b><br>";
-echo "Today is " . date("d.m.Y") . "<hr>";
+echo "Today is " . date("d.m.Y") . "<br>";
+echo "Today is " . date("Y/m/d") . "<hr>";
