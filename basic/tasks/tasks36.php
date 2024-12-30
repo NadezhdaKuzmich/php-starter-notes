@@ -35,3 +35,8 @@ echo "<hr>";
 echo "<b>Task 5:</b><br>";
 echo "Today is " . date("d.m.Y") . "<br>";
 echo "Today is " . date("Y/m/d") . "<hr>";
+
+// task 6
+$str = "The rain in SPAIN falls mainly on the plains.";
+$pattern = "/ain/i";
+echo preg_match_all($pattern, $str);
