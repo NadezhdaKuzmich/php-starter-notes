@@ -43,3 +43,7 @@ $pattern = "/ain/i";
 echo "<b>Task 6:</b><br>";
 echo preg_match_all($pattern, $str);
 echo "<hr>";
+
+// task 7
+$cars = ["brand" => "Ford", "model" => "Mustang"];
+$cars += ["color" => "red", "year" => 1964];
