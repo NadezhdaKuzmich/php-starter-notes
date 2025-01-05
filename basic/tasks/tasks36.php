@@ -46,4 +46,7 @@ echo "<hr>";
 
 // task 7
 $cars = ["brand" => "Ford", "model" => "Mustang"];
+
+echo "<b>Task 7:</b><br>";
 $cars += ["color" => "red", "year" => 1964];
+echo "<hr>";
