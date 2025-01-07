@@ -50,3 +50,8 @@ $cars = ["brand" => "Ford", "model" => "Mustang"];
 echo "<b>Task 7:</b><br>";
 $cars += ["color" => "red", "year" => 1964];
 echo "<hr>";
+
+// task 8
+$json_obj = '{"One":1,"Two":2,"Three":3}';
+
+var_dump(json_decode($json_obj));
