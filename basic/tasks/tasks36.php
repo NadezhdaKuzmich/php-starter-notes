@@ -57,3 +57,8 @@ $json_obj = '{"One":1,"Two":2,"Three":3}';
 echo "<b>Task 8:</b><br><pre>";
 var_dump(json_decode($json_obj));
 echo "</pre><hr>";
+
+// task 9
+$obj = ["One" => 1, "Two" => 2, "Three" => 3];
+
+echo json_encode($obj);
