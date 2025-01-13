@@ -61,4 +61,6 @@ echo "</pre><hr>";
 // task 9
 $obj = ["One" => 1, "Two" => 2, "Three" => 3];
 
+echo "<b>Task 9:</b><br>";
 echo json_encode($obj);
+echo "<hr>";
