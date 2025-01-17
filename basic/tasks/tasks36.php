@@ -64,3 +64,18 @@ $obj = ["One" => 1, "Two" => 2, "Three" => 3];
 echo "<b>Task 9:</b><br>";
 echo json_encode($obj);
 echo "<hr>";
+
+// task 10
+function divide($dividend, $divisor)
+{
+  if ($divisor == 0) {
+    throw new Exception("Division by 0!");
+  }
+  return $dividend / $divisor;
+}
+
+try {
+  echo divide(5, 0);
+} catch (Exception $e) {
+  echo "Unable to divide.";
+}
