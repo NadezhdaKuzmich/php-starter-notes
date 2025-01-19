@@ -74,8 +74,11 @@ function divide($dividend, $divisor)
   return $dividend / $divisor;
 }
 
+echo "<b>Task 10:</b><br>";
 try {
-  echo divide(5, 0);
+  echo divide(25, 5) . "<br>";
+  echo divide(5, 0) . "<br>";
 } catch (Exception $e) {
   echo "Unable to divide.";
 }
+echo "<hr>";
