@@ -86,8 +86,10 @@ echo "<hr>";
 // task 11
 $int = 100;
 
+echo "<b>Task 11:</b><br>";
 if (filter_var($int, FILTER_VALIDATE_INT)) {
   echo "Integer is valid";
 } else {
   echo "Integer is not valid";
 }
+echo "<hr>";
