@@ -93,3 +93,12 @@ if (filter_var($int, FILTER_VALIDATE_INT)) {
   echo "Integer is not valid";
 }
 echo "<hr>";
+
+// task 12
+$firstname = "Peter";
+$lastname = "Griffin";
+$age = "41";
+
+$result = compact("firstname", "lastname", "age");
+
+print_r($result);
