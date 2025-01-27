@@ -95,10 +95,10 @@ if (filter_var($int, FILTER_VALIDATE_INT)) {
 echo "<hr>";
 
 // task 12
-$firstname = "Peter";
-$lastname = "Griffin";
-$age = "41";
+$firstname = "Nadiia";
+$lastname = "Kuzmich";
+$age = "28";
 
-$result = compact("firstname", "lastname", "age");
-
-print_r($result);
+echo "<b>Task 12:</b><br>";
+$user = compact("firstname", "lastname", "age");
+print_r($user);
