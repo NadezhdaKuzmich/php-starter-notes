@@ -24,9 +24,14 @@ class Dog
 }
 
 $dog = new Dog();
-
 $dog->name = 'Szarik';
 $dog->age = 1;
 $dog->color = 'black';
 
+echo "<b>Task 3:</b><br><pre>";
 var_dump($dog);
+echo "</pre><hr>";
+
+// task 4
+$list = ['b', 'c'];
+array_unshift($list, 'a');
