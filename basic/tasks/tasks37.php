@@ -35,5 +35,8 @@ echo "</pre><hr>";
 // task 4
 $list = ['b', 'c'];
 array_unshift($list, 'a');
+echo "<b>Task 4:</b><br><pre>";
+var_dump($list);
+echo "</pre><hr>";
 
 substr($name, 2, 2);
