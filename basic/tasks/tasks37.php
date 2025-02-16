@@ -39,4 +39,9 @@ echo "<b>Task 4:</b><br><pre>";
 var_dump($list);
 echo "</pre><hr>";
 
-substr($name, 2, 2);
+// task 5
+$name = 'Nadiia';
+
+echo "<b>Task 5:</b><br>";
+echo substr($name, 2, 2);
+echo "<hr>";
