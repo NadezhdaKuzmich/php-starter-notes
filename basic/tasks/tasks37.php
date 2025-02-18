@@ -45,3 +45,7 @@ $name = 'Nadiia';
 echo "<b>Task 5:</b><br>";
 echo substr($name, 2, 2);
 echo "<hr>";
+
+// task 6
+$str = 'hello world!';
+$str = ucfirst($str);      
