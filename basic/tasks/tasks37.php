@@ -48,4 +48,10 @@ echo "<hr>";
 
 // task 6
 $str = 'hello world!';
-$str = ucfirst($str);      
+
+echo "<b>Task 6:</b><br>";
+$str = ucfirst($str);
+echo "<hr>";
+
+$letter = "B";
+echo str_increment($letter);
