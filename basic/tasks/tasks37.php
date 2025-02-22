@@ -53,5 +53,16 @@ echo "<b>Task 6:</b><br>";
 $str = ucfirst($str);
 echo "<hr>";
 
+// task 7
+echo "<b>Task 7:</b><br>";
 $letter = "B";
 echo str_increment($letter);
+echo "<hr>";
+
+// task 8
+print "
+   Multi-line
+   string can be output  
+   by echo as well as 
+   print statement in PHP
+   ";
