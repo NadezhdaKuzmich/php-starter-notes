@@ -60,9 +60,18 @@ echo str_increment($letter);
 echo "<hr>";
 
 // task 8
+echo "<b>Task 8:</b><br>";
 print "
    Multi-line
    string can be output  
    by echo as well as 
    print statement in PHP
    ";
+echo "<hr>";
+
+// task 9
+$nums = ["ONe" => 1, "two" => 2, "ThRee" => 3 ];
+
+echo "<b>Task 9:</b><br><pre>";
+var_dump(array_change_key_case($nums, CASE_UPPER));
+echo "</pre><hr>";
