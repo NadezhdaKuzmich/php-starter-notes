@@ -75,3 +75,12 @@ $nums = ["ONe" => 1, "two" => 2, "ThRee" => 3 ];
 echo "<b>Task 9:</b><br><pre>";
 var_dump(array_change_key_case($nums, CASE_UPPER));
 echo "</pre><hr>";
+
+// task 10
+$nums = ['first' => 1, 'second' => 2];
+
+echo "<b>Task 10:</b><br>";
+if (array_key_exists('first', $nums)) {
+  echo "The 'first' element is in the array";
+}
+echo "<hr>";
