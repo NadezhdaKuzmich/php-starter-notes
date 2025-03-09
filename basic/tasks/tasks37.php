@@ -84,3 +84,10 @@ if (array_key_exists('first', $nums)) {
   echo "The 'first' element is in the array";
 }
 echo "<hr>";
+
+// task 11
+$nums = [1, 2, 3];
+
+echo "<b>Task 11:</b><br>";
+print_r(array_product($nums));
+echo "<hr>";
