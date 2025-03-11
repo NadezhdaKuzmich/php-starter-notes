@@ -91,3 +91,11 @@ $nums = [1, 2, 3];
 echo "<b>Task 11:</b><br>";
 print_r(array_product($nums));
 echo "<hr>";
+
+// task 12
+$arr1 = ["10", 100, 100, "a"];
+$arr2 = [1, 3, "2", 1];
+
+array_multisort($arr1, $arr2);
+var_dump($input1);
+var_dump($input2);
