@@ -14,3 +14,12 @@ $arr = ["1" => "a", "2" => "b", "3" => "c"];
 echo "<b>Task 2:</b><br>";
 print_r(array_rand($arr));
 echo "<hr>";
+
+// task 3
+$nums = [1, 2, 3, 4];
+
+$mode = current($nums);
+print "$mode <br />";
+
+$mode = prev($nums);
+print "$mode <br />";
