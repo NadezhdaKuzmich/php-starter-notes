@@ -18,8 +18,21 @@ echo "<hr>";
 // task 3
 $nums = [1, 2, 3, 4];
 
+echo "<b>Task 3:</b><br>";
 $mode = current($nums);
 print "$mode <br />";
 
 $mode = prev($nums);
-print "$mode <br />";
+print $mode;
+echo "<hr>";
+
+// task 4
+// Constant Arrays
+define('FRUITS', [
+  "Banana",
+  "Apple",
+  "Orange",
+  "Blackberry",
+]);
+
+print_r(FRUITS);
