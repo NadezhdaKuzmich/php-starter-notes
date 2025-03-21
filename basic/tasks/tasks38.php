@@ -36,3 +36,9 @@ define('FRUITS', [
 ]);
 
 print_r(FRUITS);
+
+// task 5
+$arr = ["a" => "one", "two", "b" => "one", "three", "four"];
+$result = array_unique($arr);
+
+print_r($arr);
