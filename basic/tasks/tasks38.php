@@ -35,10 +35,14 @@ define('FRUITS', [
   "Blackberry",
 ]);
 
+echo "<b>Task 4:</b><br>";
 print_r(FRUITS);
+echo "<hr>";
 
 // task 5
 $arr = ["a" => "one", "two", "b" => "one", "three", "four"];
 $result = array_unique($arr);
 
+echo "<b>Task 5:</b><br>";
 print_r($arr);
+echo "<hr>";
