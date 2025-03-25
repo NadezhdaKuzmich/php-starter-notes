@@ -46,3 +46,16 @@ $result = array_unique($arr);
 echo "<b>Task 5:</b><br>";
 print_r($arr);
 echo "<hr>";
+
+// task 6
+class SomeObj
+{
+  public $str;
+}
+
+$obj = new SomeObj();
+$copy = clone $obj;
+
+echo $obj->str . '<br/>';
+$copy->str = "Hello PHP";
+echo $copy->str;
