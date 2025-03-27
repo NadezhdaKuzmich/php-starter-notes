@@ -56,6 +56,7 @@ class SomeObj
 $obj = new SomeObj();
 $copy = clone $obj;
 
+echo "<b>Task 6:</b><br>";
 echo $obj->str . '<br/>';
 $copy->str = "Hello PHP";
 echo $copy->str;
